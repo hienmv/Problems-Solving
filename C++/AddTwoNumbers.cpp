@@ -105,3 +105,8 @@ public:
 };
 
 // no test -- if you want to test, please write testcase yourself or paste this solution in the Leetcode website.
+int main () {
+
+    int a = 4;
+    cout << a << endl;
+}
