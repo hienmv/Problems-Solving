@@ -19,22 +19,19 @@ string to_encoding(string s) {
     string result = "";
     if (s.empty())
         return s;
-    if (s.length() == 1) {
-        return "1" + string (1, s[0]);
-    }
-    else {
-        for(int i = 1; i < s.length(); ++i) {
-            if (s[i] == s[i-1]) {
-                ++count;
-            } else {
-                result +=  to_string(count) + string(1, s[i-1]);
-                count = 1;
-            }
+    
+    for(int i = 0; i < s.length() - 1; ++i) {
+        if (s[i] == s[i+1]) {
+            ++count;
+        } else {
+            result +=  to_string(count) + string(1, s[i]);
+            count = 1;
         }
-        
-        // add the last element
-        result += to_string(count) + string(1, s[s.length() - 1]);
     }
+    
+    // add the last element
+    result += to_string(count) + string(1, s[s.length() - 1]);
+    
     return result;
 }
 

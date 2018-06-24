@@ -15,22 +15,22 @@ using namespace std;
 
 // check character is closing brackets ? 
 bool checkEndCharacter(char input, char &target) {
-    bool endflg = false;
-    if (input == ')' || input == ']' || input == '}') {
-        if (input == ')')
+    target = ' ';
+    if (input == ')')
         target = '(';
-        else if (input == ']') 
+    else if (input == ']') 
         target = '[';
-        else
+    else if (input == '}')
         target = '{';
-        endflg = true;
-    }else {
-        target = ' ';
-    }
+
+    if (target == ' ')
+        return false;
     
-    return endflg;
+    return true;
 }
 
+// Idea: if s[i] is closing bracket, 
+// check the previous element is corrosponding opening bracket? 
 bool isBalancedBrackets(string s) {
     char openChar = ' ';
     stack<char> st;
@@ -39,14 +39,15 @@ bool isBalancedBrackets(string s) {
     for(int i = 0; i < s.length(); ++i)
     {
         if(!checkEndCharacter(s[i], openChar)){
-        st.push(s[i]);
+            st.push(s[i]);
         }
         else {
-        if (st.top() != openChar) {
-            balanceFlg = false;
-            break;
-        } else
-            st.pop();
+            if (st.top() != openChar) {
+                balanceFlg = false;
+                break;
+            } else {
+                st.pop();
+            }
         }
     }
     if(!st.empty())
@@ -57,7 +58,7 @@ bool isBalancedBrackets(string s) {
 
 //test
 int main() {
-  string s =  "((()";
+  string s = "([)]";
   
   if(isBalancedBrackets(s))
     cout << "TRUE"<<endl;
