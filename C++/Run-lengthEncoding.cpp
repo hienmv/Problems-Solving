@@ -17,41 +17,38 @@ You can assume the string to be decoded is valid.
 string to_encoding(string s) {
     int count = 1;
     string result = "";
-    string temp = "";
     if (s.empty())
         return s;
     if (s.length() == 1) {
-        return "1" + string ( 1, s[0]);
+        return "1" + string (1, s[0]);
     }
     else {
         for(int i = 1; i < s.length(); ++i) {
             if (s[i] == s[i-1]) {
                 ++count;
             } else {
-                temp =  to_string(count) + string(1, s[i-1]);
-                result += temp;
+                result +=  to_string(count) + string(1, s[i-1]);
                 count = 1;
             }
         }
         
-        if (count != 1) {
-            temp = to_string(count) + string(1, s[s.length() - 1]);
-            result += temp;
-        }
+        // add the last element
+        result += to_string(count) + string(1, s[s.length() - 1]);
     }
     return result;
 }
 
-// decoding
-string sub_decoding(char s, int n) {
+// sub-decoding : 4A -> AAAA
+string sub_decoding(char c, int n) {
     string result = "";
     while(n){
-        result += string(1,s);
+        result += string(1,c);
         --n;
     }
     return result;
 }
 
+// decoding
 string to_decoding(string s) {
     string result = "";
     int count = 0;
