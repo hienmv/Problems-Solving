@@ -7,15 +7,13 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class IceCave {
-    static boolean isValidPoint(int x, int y, char[][] graph, boolean[][] freezeGraph) {
+    static boolean isValidPoint(int x, int y, char[][] graph) {
         if (x < 0 || x >= graph.length) return false;
         if (y < 0 || y >= graph[0].length) return false;
-        if (freezeGraph[x][y]) return false;
         return true;
     }
     static boolean canReachDestinantion(Point startPoint, Point targetPoint, char[][] graph) {
         Deque<Point> queue = new LinkedList<>(); 
-        boolean[][] freezeGraph = new boolean[graph.length][graph[0].length];
         // re-initilize start Point
         graph[startPoint.x][startPoint.y] = '.';
         queue.addLast(startPoint);
@@ -26,16 +24,12 @@ public class IceCave {
             if (p.equals(targetPoint) && graph[targetPoint.x][targetPoint.y] == 'X') {
                 return true;
             }
-            if (!freezeGraph[p.x][p.y]) {
-                if (graph[p.x][p.y] == '.') {
-                    graph[p.x][p.y] = 'X';
-                    for (int i=0; i < dx.length; i++) {
-                        if (isValidPoint(p.x + dx[i], p.y + dy[i], graph, freezeGraph)) {
-                            queue.add(new Point(p.x + dx[i], p.y + dy[i]));
-                        }
+            if (graph[p.x][p.y] == '.') {
+                graph[p.x][p.y] = 'X';
+                for (int i=0; i < dx.length; i++) {
+                    if (isValidPoint(p.x + dx[i], p.y + dy[i], graph)) {
+                        queue.add(new Point(p.x + dx[i], p.y + dy[i]));
                     }
-                } else {
-                    freezeGraph[p.x][p.y] = true;
                 }
             }
         }
