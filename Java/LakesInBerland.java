@@ -1,58 +1,62 @@
 /* https://codeforces.com/contest/723/problem/D
-*  idea: DFS
+*  idea: DFS/BFS
 */
 
 import java.util.Scanner;
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import static java.util.stream.Collectors.*;
-import static java.util.Map.Entry.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class LakesInBerland {
     
-    static boolean isValidLakePoint(int row, int col, char[][] graph, boolean[][] visitedGraph) {
+    static boolean isValidLakePoint(int row, int col, char[][] graph) {
         if (row < 0 || row > graph.length-1) return false;
         if (col < 0 || col > graph[0].length-1) return false;
-        if (visitedGraph[row][col]) return false;
         if (graph[row][col]== '*') return false;
         return true;
     }
 
-    static void DFS(Point startPoint, char[][] graph, boolean[][] visitedGraph, HashMap<Point, Integer> lakesResult){
+    static int DFS(Point startPoint, char[][] graph, boolean[][] visitedGraph){
         Deque<Point> queue = new LinkedList<>();
         queue.add(startPoint);
         int[] dx = {-1, 1, 0, 0};
         int[] dy = {0, 0, -1, 1};
         int count = 0;
+        boolean isValid = true;
+        visitedGraph[startPoint.x][startPoint.y] = true;
+
         while (!queue.isEmpty()) { 
             Point p = queue.pollLast();
             count++;
-            visitedGraph[p.x][p.y] = true;
+            if (p.x == 0 || p.x == graph.length - 1 || p.y == 0 || p.y == graph[0].length - 1) {
+                isValid = false;
+            }
             for (int i=0; i < dx.length; i++) {
-                if(isValidLakePoint(p.x + dx[i], p.y + dy[i], graph, visitedGraph)) {
-                    queue.addLast(new Point(p.x + dx[i], p.y + dy[i]));
+                Point temp = new Point(p.x + dx[i], p.y + dy[i]);
+                if(isValidLakePoint(temp.x, temp.y, graph) && !visitedGraph[temp.x][temp.y]) {
+                    visitedGraph[temp.x][temp.y] = true;
+                    queue.addLast(temp);
                 }
             }
         }
-        if (lakesResult != null) {
-            lakesResult.put(startPoint, count);
-        }
+        if (isValid == false)
+            return -count;
+        return count;
     }
 
     static void fillLand(Point startPoint, char[][] graph) {
-        boolean[][] visitedGraph = new boolean[graph.length][graph[0].length];
         Deque<Point> queue = new LinkedList<>();
         queue.add(startPoint);
         int[] dx = {-1, 1, 0, 0};
         int[] dy = {0, 0, -1, 1};
+        graph[startPoint.x][startPoint.y] = '*';
         while (!queue.isEmpty()) { 
             Point p = queue.pollLast();
-            visitedGraph[p.x][p.y] = true;
-            graph[p.x][p.y] = '*';
             for (int i=0; i < dx.length; i++) {
-                if(isValidLakePoint(p.x + dx[i], p.y + dy[i], graph, visitedGraph)) {
+                if(isValidLakePoint(p.x + dx[i], p.y + dy[i], graph)) {
+                    graph[p.x + dx[i]][p.y + dy[i]] = '*';
                     queue.addLast(new Point(p.x + dx[i], p.y + dy[i]));
                 }
             }
@@ -71,63 +75,45 @@ public class LakesInBerland {
         }
         
         boolean[][] visitedGraph = new boolean[graph.length][graph[0].length];        
-        
-        // check the invalid lake
-        Deque<Point> invalidLakePointQueue = new LinkedList<>();
-        for (int row = 0; row < graph.length; row += graph.length-1) {
+
+        ArrayList<Lake> lakesResult = new ArrayList<>();
+        for(int row=0; row < graph.length; row++) {
             for(int col=0; col < graph[0].length; col++) {
-                if(graph[row][col] == '.') {
-                    invalidLakePointQueue.addLast(new Point(row, col));
+                if(isValidLakePoint(row, col, graph) && visitedGraph[row][col] == false) {
+                    int count = DFS(new Point(row, col), graph, visitedGraph);
+                    if (count > 0) {
+                        lakesResult.add(new Lake( new Point(row, col), count));
+                    }
                 }
             }
         }
-        for (int row=1; row < graph.length-1; row++) {
-            for(int col=0; col < graph[0].length; col += graph[0].length-1) {
-                if (graph[row][col] == '.') {
-                    invalidLakePointQueue.addLast(new Point(row, col));
-                }
-            }
-        }
-        
-        while(!invalidLakePointQueue.isEmpty()) {
-            Point point = invalidLakePointQueue.pollFirst();
-            DFS(point, graph, visitedGraph, null);
-        }
-       
-        HashMap<Point, Integer> lakesResult = new HashMap<>();
-        for(int row=1; row < graph.length-1; row++) {
-            for(int col=1; col < graph[0].length-1; col++) {
-                if(isValidLakePoint(row, col, graph, visitedGraph)) {
-                    DFS(new Point(row, col), graph, visitedGraph, lakesResult);
-                }
-            }
-        }
-
-        // result
-        HashMap<Point, Integer> sortedLakesResult = lakesResult.entrySet().stream().sorted((e1, e2)-> {
-            if (e1.getValue() != e2.getValue()) {
-                return e1.getValue().compareTo(e2.getValue());
-            } else {
-                if (e1.getKey().x != e2.getKey().x) {
-                    return e1.getKey().x - (e2.getKey().x);
+        Comparator<Lake> cp = new Comparator<Lake>() {
+            public int compare(Lake l1, Lake l2) {
+                if (l1.size != l2.size) {
+                    return l1.size - l2.size;
                 } else {
-                    return e1.getKey().y - (e2.getKey().y);
+                    if (l1.startPoint.x != l2.startPoint.x) {
+                        return l1.startPoint.x - l2.startPoint.x;
+                    } else {
+                        return l1.startPoint.y - l2.startPoint.y; 
+                    }
                 }
             }
-        }).collect(toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
-
-        int result = lakesResult.size()-k;
-        System.out.println(result);
-        if( result > 0) {
-            int count=0;
-            for(Point p: sortedLakesResult.keySet()) {
-                if (count >= result) {
-                    break;
-                }
-                fillLand(p, graph);
-                count++;
+        };
+        Collections.sort(lakesResult, cp);
+        // result
+        int result = 0;
+        int needFill = lakesResult.size() - k;
+        int count=0;
+        for(Lake l: lakesResult) {
+            if (count >= needFill) {
+                break;
             }
+            fillLand(l.startPoint, graph);
+            count++;
+            result += l.size;
         }
+        System.out.println(result);
         
         for(char[] row: graph) {
             for(char c: row){
@@ -145,8 +131,13 @@ class Point {
         this.x = x;
         this.y = y;
     }
+}
 
-    boolean equals(Point other) {
-        return this.x == other.x && this.y == other.y;
+class Lake {
+    Point startPoint;
+    int size;
+    Lake(Point s, int si) {
+        startPoint = s;
+        size = si;
     }
 }
