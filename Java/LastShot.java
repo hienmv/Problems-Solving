@@ -1,13 +1,21 @@
 /** https://www.spoj.com/problems/LASTSHOT/
  * idea: dfs
  */
+/**
+ *  1 3
+ *  1 4
+ *  4 5
+ *  2 1
+ *  expected output: 5
+ */
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 
 class LastShot {
-    static int getImpact(int vertex, ArrayList<ArrayList<Integer>> graph, boolean[] visitedArr) {
+    static int getImpact(int vertex, ArrayList<ArrayList<Integer>> graph, int totalVertex) {
+        boolean[] visitedArr = new boolean[totalVertex];
         int count = 0;
         Deque<Integer> queue = new LinkedList<>();
         visitedArr[vertex] = true;
@@ -38,14 +46,12 @@ class LastShot {
             int b = sc.nextInt();
             graph.get(a).add(b);
         }
-        boolean[] visitedArr = new boolean[n+1];
+       
         int maxImpact = 1;
         for (int node=1; node < graph.size(); node++) {
-            if (!visitedArr[node]) {
-                int count = getImpact(node, graph, visitedArr);
-                if (count > maxImpact) {
-                    maxImpact = count;
-                }
+            int count = getImpact(node, graph, n+1);
+            if (count > maxImpact) {
+                maxImpact = count;
             }
         }
         System.out.println(maxImpact);
