@@ -1,48 +1,49 @@
-# Series Giải thuật cơ bản , phần 1: tìm hiểu về mảng động (vector trong C++ / Arraylist trong Java...)
+# Cấu trúc dữ liệu và thuật toán cơ bản
 
-He lô, kồn ni chi wa, xin chào các bạn!
-Đây chỉ là bài viết đầu tiên của mình , mong các bạn ủng hộ , và góp ý cho mình nhé nhé.
+Xin chào các bạn!
+Bài viết đầu tiên của mình về chủ đề cấu trúc dữ liệu và thuật toán cơ bản. Đây thực chất chỉ là ghi chép cá nhân của mình trong việc ôn tập, nâng cao kỹ năng giải quyết vấn đề trong lập trình, nên không thể tránh được nhiều sai sót, rất mong nhận được nhiều sự đóng góp ý kiến, chia sẻ của các bạn. 
 
-Đây thực chất chỉ là note cá nhân của mình trong việc ôn tập, nâng cao kỹ năn g giải uyết vấn đề trong lập trình, và theo mình, giải thuật là một trong những  kiến thức  quan trọng  cần phải  nắm vững để có thể  sớm đạt được cảnh giới của một Software Engineer giỏi. 
-
-Summary: 
 Bài viết gồm 3 phần.
-- Góc nhìn của bản thân về  tầm quan trọng của giải thuật trong việc giải quyết vấn đề .
-- Những kiến thức cần tìm hiểu về cấu trúc dữ liệu và giải thuật căn bản. 
-- Khái quát về mảng động, và ví dụ liên quan. 
+- Tầm quan trọng của việc nắm vững cấu trúc dữ liệu và thuật toán trong việc giải quyết vấn đề trong tin học.
+- Những kiến thức cần tìm hiểu về cấu trúc dữ liệu và thuật toán cơ bản. 
+- Ví dụ về việc áp dụng kiến thức về cấu trúc dữ liệu và thuật toán trong một vấn đề thực tế.
 
-# Tầm quan trọng của giải thuật trong việc giải quyết vấn đề.
+# Tầm quan trọng của thuật toán trong việc giải quyết vấn đề trong tin học.
 
- Theo mình có ba miền kiến thức quan trọng, mà mỗi chúng ta cần phải nắm vững, để có thể trở thành một Software Engineer (SE) giỏi:
- - Kiến thức căn bản: cấu trúc dữ liệu và giải thuật, lập trình hướng đối tượng, TCP/IP, HTTP, Process and Thread...
+Có ba miền kiến thức quan trọng, mà mỗi chúng ta cần phải nắm vững, để có thể trở thành một Software Engineer (SE) giỏi:
+ - Kiến thức căn bản: cấu trúc dữ liệu và thuật toán, lập trình hướng đối tượng, TCP/IP, HTTP, Process and Thread...
  - Kiến thức theo từng domain (Web Development, Mobile Development, Embedded System..) mà bạn muốn theo đuổi.
- - Kiến thức để phân tích, thiết kế hệ thống.
+ - Kiến thức phân tích, thiết kế hệ thống.
 
-Trong bài viết này, mình xin đề cập kiến thức về cấu trúc dữ liệu và giải thuật nằm ở nội dung thứ nhất - kiến thức căn bản. 
- Hầu hết chúng ta đều đã học về cấu trúc dữ liệu và giải thuât cơ bản chúng ta ở trường đại học, tuy nhiên chúng ta hay quên chúng, vì thông thường, thời gian đầu khi đi làm, chúng ta tập trung vào việc sử dụng, tìm hiểu 
- về các kiến thức theo từng domain mà chúng ta theo đuổi nhiều hơn, vì đó là kiến thức chúng ta phải dùng hàng ngày. Sau một vài năm, kinh qua nhiều ngôn ngữ, thì chúng ta nhận ra 
- những kiến thức căn bản ở trên, là những kiến thức quan trọng, mà bất kỳ làm domain nào, cũng đều thấy bóng dáng của nó. 
- Giả sử như hệ thống bạn đang phát triển, cần lấy dữ liệu từ Database kèm theo nhiều điều kiện ràng buộc, sau đó hiển thị lên màn hình để cho người dùng thao tác, xử lý.
- Đây hẳn là một thao tác cơ bản trong nhiều hệ thống. Lúc này, chúng ta không chỉ cần có kiến thức về ngôn ngữ mà chúng ta đang sử dụng, mà chúng ta còn cần vận dụng các hiểu biết về cấu trúc dữ liệu và giải thuật, để xác định việc sử dụng cấu trúc dữ liệu nào để lưu trữ dữ liệu cho phù hợp với từng yêu cầu cụ thể về bộ nhớ, 
- thời gian thực thi...
- Vì vậy, nếu muốn nhanh chóng trở thành một SE giỏi, thì chúng ta cần nắm vững chúng.
+Trong bài viết này, mình xin đề cập kiến thức về cấu trúc dữ liệu và thuật toán nằm ở nội dung thứ nhất - kiến thức căn bản. 
+Việc nắm vững kiến thức về cấu trúc dữ liệu và thuật toán là rất quan trọng trong việc giải quyết vấn đề. Việc bạn có thể tìm kiếm nhanh được thông tin trên Google Search, hay bạn được gợi ý các sản phẩm khi mua sắm online, hay gợi ý video khi bạn xem video trên Youtube... tất cả những tính năng này hoạt động hiệu quả là nhờ việc các công ty này áp dụng mạnh mẽ các thuật toán. 
+
+Đối với lập trình viên, việc xử lý một thao tác cơ bản của hệ thống như: lấy dữ liệu từ Database kèm theo nhiều điều kiện ràng buộc, sau đó hiển thị lên màn hình để cho người dùng thao tác và xử lý, không chỉ cần có kiến thức về ngôn ngữ mà chúng ta đang sử dụng, mà chúng ta còn cần vận dụng các hiểu biết về cấu trúc dữ liệu và giải thuật, để xác định việc sử dụng cấu trúc dữ liệu nào là phù hợp với từng yêu cầu cụ thể về bộ nhớ, thời gian thực thi...
+
+Việc nắm vững kiến thức về cấu trúc dữ liệu và thuật toán giúp chúng ta nhanh chóng tìm ra hướng giải quyết vấn đề, cũng như đánh giá được thời gian xử lý, dung lượng sử dụng của source code, từ đó có thể nâng cao chất lượng của hệ thống.
  
 # Những kiến thức cần tìm hiểu về cấu trúc dữ liệu và giải thuật căn bản.
-
-Việc nắm vững kiến thức về cấu trúc dữ liệu và giải thuật căn bản là rất quan trọng trong việc giải quyết vấn đề.
 Đối với mỗi ngôn ngữ, các cấu trúc dữ liệu có thể được implement khác nhau, nhưng đều có cùng ý nghĩa chung.
-Dưới đây mình xin liệt kê một số kiến thức mà chúng ta cần tìm hiểu để master cấu trúc dữ liệu và giải thuật: 
-
+Dưới đây mình xin liệt kê một số kiến thức cấu trúc dữ liệu và thuật toán cơ bản:
 1. Mảng động (ví dụ: vector trong C++, ArrayList trong Java...)
 2. Các thuật toán về sorting, stack, queue.
-3. Thuật toán về đồ thị, BFS, DFS, Dijkstra, Bellman-Ford, Floyd-Warshall
+3. Thuật toán về đồ thị, BFS, DFS, Dijkstra.
 4. Cấu trúc dữ liệu và giải thuật liên quan tới Tree như Binary Search, Binary Search Tree.
 5. Cấu trúc dữ liệu nâng cao, cấu trúc cây tiền tố. 
 
-Bạn có thể học những kiến thức trên ở đâu ?
-Có rất nhiều khoá học mà bạn có thể tìm kiếm. Mình xin phép liệt kê một số link dưới đây.
-* [Breakdance](http://breakdance.io) - HTML to Markdown converter
-
+## Bạn có thể học những kiến thức trên ở đâu ?
+Bạn hoàn toàn có thể tự học được những kiến thức cơ bản trên, vì có rất nhiều tài liệu, và khoá học mà bạn có thể tìm kiếm. 
+Mình xin phép liệt kê một số nguồn tài liệu, khoá học mà mình thấy cực kỳ chất lượng:
+### Tiếng việt
+* [VNOI](http://vnoi.info) - Diễn đàn tin học, thuật toán Việt nam. Đây là một nguồn cực kỳ bổ ích cho các bạn muốn nâng cao về thuật toán.
+* [BigOCoding](http://bigocoding.com) - Học thuật toán với chuyên gia. Đây là trung tâm chuyên dạy thuật toán, vì vậy sẽ mất phí :D, đổi lại chất lượng giảng dạy cực kỳ chất lượng.
+### Tiếng anh
+* [MIT - Introduction to Algorithms](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb) - Chuỗi videos giới thiệu thuật toán của trường đại học MIT danh tiếng.
+* [Coursea - Algorithms Specialization](https://www.coursera.org/specializations/algorithms) Chuỗi khoá học về thuật toán của trường đại học Stanford.
+### Sách về thuật toán. 
+* [Cracking the Coding Interview: 189 Programming Questions and Solutions](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)
+* [Algorithms, Java](https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/)
+* [Data Structures and Algorithms in Python](https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275/)
 
 You can also:
   - Import and save files from GitHub, Dropbox, Google Drive and One Drive
