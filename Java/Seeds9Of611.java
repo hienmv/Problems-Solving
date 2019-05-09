@@ -73,9 +73,9 @@ import java.util.Collections;
         // print result
         int[][] graph = new int[w][h];
         for(int key : resultMap.keySet()) {
-			         for(Point p : resultMap.get(key)) {
-            	   graph[p.x][p.y] = 1;
-			         }
+		for(Point p : resultMap.get(key)) {
+			graph[p.x][p.y] = 1;
+		}
         }
         for (int[] row : graph) {
             for (int col: row) {
