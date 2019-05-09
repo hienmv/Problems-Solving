@@ -23,7 +23,7 @@ import java.util.Collections;
     }
  }
  
- public class Seeds9Of612 {
+ public class Seeds9Of611 {
     static boolean isInvalidPoint(Point p, HashMap<Integer, ArrayList<Point>> mapX) {
         int i = p.x - 2;
         if (i < 0) i = 0;
@@ -55,17 +55,15 @@ import java.util.Collections;
         Collections.shuffle(pointList);
 
         int count = 0;
-        HashMap<Integer, ArrayList<Point>> mapX = new HashMap<>();
-        ArrayList<Point> resultList = new ArrayList<>();
+        HashMap<Integer, ArrayList<Point>> resultMap = new HashMap<>();
         for(Point p: pointList) {
-            if (isInvalidPoint(p, mapX)) {
+            if (isInvalidPoint(p, resultMap)) {
                 continue;
             }
-            if (!mapX.containsKey(p.x)) {
-                mapX.put(p.x, new ArrayList<Point>());
+            if (!resultMap.containsKey(p.x)) {
+                resultMap.put(p.x, new ArrayList<Point>());
             }
-            mapX.get(p.x).add(p);
-            resultList.add(p);
+            resultMap.get(p.x).add(p);
             count += 1;
             if (count >= maxPointNum) {
                 break;
@@ -74,8 +72,10 @@ import java.util.Collections;
 
         // print result
         int[][] graph = new int[w][h];
-        for(Point p : resultList) {
-            graph[p.x][p.y] = 1;
+        for(int key : resultMap.keySet()) {
+			         for(Point p : resultMap.get(key)) {
+            	   graph[p.x][p.y] = 1;
+			         }
         }
         for (int[] row : graph) {
             for (int col: row) {
