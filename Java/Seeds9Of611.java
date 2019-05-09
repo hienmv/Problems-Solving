@@ -29,8 +29,8 @@ import java.util.Collections;
         if (i < 0) i = 0;
         int count = 0;
         for (; i < p.x + 3; ++i) {
-            if (mapX.containsKey(i)) {
-                for(Point point : mapX.get(i)) {
+            if (resultMap.containsKey(i)) {
+                for(Point point : resultMap.get(i)) {
                     if ( Math.abs(point.y - p.y) < 3) {
                         count++;
                     }
