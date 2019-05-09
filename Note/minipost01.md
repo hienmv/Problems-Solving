@@ -41,7 +41,7 @@ Bạn hoàn toàn có thể tự học được những kiến thức cơ bản 
 Mình xin phép liệt kê một số nguồn tài liệu, khoá học mà mình thấy rất hiệu quả:
 ### Tiếng việt
 * [VNOI](http://vnoi.info) - Diễn đàn tin học, thuật toán Việt nam. Đây là một nguồn cực kỳ bổ ích cho các bạn muốn nâng cao về thuật toán.
-* [BigOCoding](http://bigocoding.com) - Học thuật toán với chuyên gia. Đây là trung tâm chuyên dạy về thuật toán, vì vậy sẽ mất phí, đổi lại chất lượng giảng dạy cực kỳ chất lượng.
+* [BigOCoding](http://bigocoding.com) - Học thuật toán với chuyên gia. Đây là trung tâm chuyên dạy về thuật toán, vì vậy sẽ mất phí, đổi lại chất lượng giảng dạy rất tốt, và người đứng lớp có kinh nghiệm, nhiệt tình.
 ### Tiếng anh
 * [MIT - Introduction to Algorithms](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb) - Chuỗi video giới thiệu thuật toán của trường đại học MIT danh tiếng.
 * [Coursea - Algorithms Specialization](https://www.coursera.org/specializations/algorithms) - Chuỗi khoá học về thuật toán của trường đại học Stanford.
@@ -78,7 +78,7 @@ Các bạn suy nghĩ thử xem sao nhé.
 
 1. Yếu tố thứ nhất: tính ngẫu nhiên trong việc sắp xếp 9 phần quà.
 
-Nếu chúng ta random 2 giá trị toạ độ x,y để lấy ngẫu nhiên 1 vị trí bất kỳ trên bản đồ, và sau đó kiểm tra xem điểm đó có thoả mãn yếu tố thứ hai ở trên hay không, thì sẽ dẫn đến việc: random lại chính giá trị đã được random trước đó, dẫn tới có thể lặp nhiều lần, và trong trường hợp xấu nhất là lặp vô hạn.
+Nếu chúng ta random 2 giá trị toạ độ x,y để lấy ngẫu nhiên 1 vị trí bất kỳ trên bản đồ, và sau đó kiểm tra xem điểm đó có thoả mãn yếu tố thứ hai ở trên hay không, thì sẽ dẫn đến việc: có thể random lại chính giá trị đã được random trước đó, điều này có thể lặp nhiều lần, và trong trường hợp xấu nhất là lặp vô hạn.
 
 Để giải quyết vấn đề trên, thay vì random theo từng giá trị toạ độ x,y, chúng ta có thể tạo ra 1 danh sách các điểm trên bản đồ,
 sau đó trộn danh sách này để có được 1 danh sách các điểm được sắp xếp ngẫu nhiêu. -> đảm bảo được tính ngẫu nhiên.
