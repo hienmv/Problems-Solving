@@ -78,7 +78,7 @@ Các bạn suy nghĩ thử xem sao nhé.
 
 1. Yếu tố thứ nhất: tính ngẫu nhiên trong việc sắp xếp 9 phần quà.
 
-Nếu chúng ta random 2 giá trị toạ độ x,y để lấy ngẫu nhiên 1 vị trí bất kỳ trên bản đồ, và sau đó kiểm tra xem điểm đó có thoả mãn yếu tố thứ hai ở trên hay không, thì sẽ dẫn đến việc: có thể random lại chính giá trị đã được random trước đó, điều này có thể lặp nhiều lần, và trong trường hợp xấu nhất là lặp vô hạn.
+Nếu chúng ta random 2 giá trị toạ độ x,y để lấy ngẫu nhiên 1 vị trí bất kỳ trên bản đồ, và sau đó kiểm tra xem điểm đó có thoả mãn yếu tố thứ hai ở trên hay không, thì sẽ dẫn đến việc có thể random lại các giá trị đã được random trước đó, điều này có thể lặp nhiều lần, và trong trường hợp xấu nhất là lặp vô hạn.
 
 Để giải quyết vấn đề trên, thay vì random theo từng giá trị toạ độ x,y, chúng ta có thể tạo ra 1 danh sách các điểm trên bản đồ,
 sau đó trộn danh sách này để có được 1 danh sách các điểm được sắp xếp ngẫu nhiêu. -> đảm bảo được tính ngẫu nhiên.
@@ -109,13 +109,13 @@ Tuy nhiên, chúng ta không nhất thiết phải kiểm tra 2 điểm bất k�
 
 Dưới đây là mã nguồn minh hoạ bằng Java.
 ```java
-static boolean isInvalidPoint(Point p, HashMap<Integer, ArrayList<Point>> mapX) {
+static boolean isInvalidPoint(Point p, HashMap<Integer, ArrayList<Point>> resultMap) {
   int i = p.x - 2;
   if (i < 0) i = 0;
   int count = 0;
   for (; i < p.x + 3; ++i) {
-      if (mapX.containsKey(i)) {
-          for(Point point : mapX.get(i)) {
+      if (resultMap.containsKey(i)) {
+          for(Point point : resultMap.get(i)) {
               if ( Math.abs(point.y - p.y) < 3) {
                   count++;
               }
