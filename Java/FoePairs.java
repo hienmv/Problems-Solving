@@ -3,7 +3,6 @@
  *  number of pairs created from index i depend on number of pairs created from index i+1
  */
 
-import java.util.StringTokenizer;
 import java.io.*;
 
 public class FoePairs {
