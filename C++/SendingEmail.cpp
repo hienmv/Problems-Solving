@@ -1,5 +1,6 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1927
  *  idea: use dijkstra
+ *  can use pair that faster than Node object
 */
 
 #include<iostream>
@@ -16,11 +17,14 @@ public:
         this->id = id;
         this->take_time = take_time;
     }
-    friend bool operator<(const Node& l, const Node& r) {
-        return l.take_time < r.take_time;
-    }
-    friend bool operator>(const Node& l, const Node& r) {
-        return l.take_time > r.take_time;
+    // friend bool operator<(const Node& l, const Node& r) {
+    //     return l.take_time < r.take_time;
+    // }
+    // friend bool operator>(const Node& l, const Node& r) {
+    //     return l.take_time > r.take_time;
+    // }
+    bool operator>(const Node& other) const{ // faster than the above
+         return this->take_time > other.take_time;
     }
 };
 

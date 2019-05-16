@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/MICEMAZE/
- *  idea: use Dijktra
+ *  idea: use Dijktra, reverse graph
  */
 
 import java.util.Scanner;
@@ -7,15 +7,9 @@ import java.util.PriorityQueue;
 import java.util.ArrayList;
 
 class MiceMaze {
-    public static void Dijktra(ArrayList<ArrayList<Node>> graph, int[] exitVertexArr, int startVertex, int exitVertex, int limitTime) {
-        int len = graph.size();
-        int[] timeArr = new int[len];
-        for (int i=0; i < timeArr.length; i++) {
-            timeArr[i] = Integer.MAX_VALUE;
-        }
+    public static void Dijktra(ArrayList<ArrayList<Node>> graph, int[] timeArr, int startVertex) {
         PriorityQueue<Node> pq = new PriorityQueue<>();
         pq.add(new Node(startVertex, 0));
-        
         while(!pq.isEmpty()) {
             Node node = pq.poll();
             int id = node.id;
@@ -23,19 +17,12 @@ class MiceMaze {
             for (int i=0; i < graph.get(id).size(); i++) {
                 Node neighbor = graph.get(id).get(i);
                 int newTime = w + neighbor.time;
-                if (newTime <= limitTime && newTime <  timeArr[neighbor.id]) {
+                if (newTime <  timeArr[neighbor.id]) {
                     timeArr[neighbor.id] = newTime;
-                    if (neighbor.id == exitVertex){
-                        exitVertexArr[startVertex] = 1;
-                        return;
-                    } else if (exitVertexArr[neighbor.id] == -1) {
-                        continue;
-                    }
                     pq.add(new Node(neighbor.id, timeArr[neighbor.id]));
                 }
             }
         }
-        exitVertexArr[startVertex] = -1;
     }
 
     public static void main(String[] args) {
@@ -53,19 +40,18 @@ class MiceMaze {
             int sr = sc.nextInt();
             int ds = sc.nextInt();
             int time = sc.nextInt();
-            graph.get(sr).add(new Node(ds, time));
+            graph.get(ds).add(new Node(sr, time));
         }
-        int[] exitVertexArr = new int[n+1];
-        for (int i=1; i < graph.size(); i++){
-            if (i != exitVertex) {
-                Dijktra(graph, exitVertexArr, i, exitVertex, limitTime);
-            }
+        int[] timeArr = new int[n+1];
+        for (int i=0; i < timeArr.length; i++) {
+            timeArr[i] = Integer.MAX_VALUE;
         }
-        
+        Dijktra(graph, timeArr, exitVertex);
+
         // result
         int sum = 1;
-        for (int i : exitVertexArr){
-            if (i == 1) sum += 1;
+        for (int i : timeArr){
+            if (i <= limitTime) sum += 1;
         }
         System.out.println(sum);
     }

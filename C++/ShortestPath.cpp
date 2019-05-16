@@ -35,6 +35,7 @@ void Dijkstra(vector<vector<Node> > graph, int source, int** miniCostArr ) {
     distArr[source] = 0;
     priority_queue<Node, vector<Node>, greater<Node> > pq;
     pq.push(Node(source, 0));
+#ifndef LOGIC_CODE
     while (!pq.empty()) {
         Node node = pq.top();
         pq.pop();
@@ -51,6 +52,25 @@ void Dijkstra(vector<vector<Node> > graph, int source, int** miniCostArr ) {
         miniCostArr[source][i] = distArr[i];
         miniCostArr[i][source] = distArr[i]; 
     }
+#else 
+    while (!pq.empty()) {
+        Node node = pq.top();
+        pq.pop();
+        int id = node.id;
+        int w = node.dist;
+        if (w == distArr[id]) {
+            miniCostArr[source][i] = w;
+            miniCostArr[i][source] = w;
+
+            for (Node neighbour : graph.at(id)) {
+                if (w + neighbour.dist < distArr[neighbour.id]) {
+                    distArr[neighbour.id] = w + neighbour.dist;
+                    pq.push(Node(neighbour.id, distArr[neighbour.id]));
+                }
+            }
+        }
+    }
+#endif
 }
 
 int main() 
