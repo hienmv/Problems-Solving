@@ -1,5 +1,10 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3296
- * idea: use dijkstra k times
+ * idea: use dijkstra k from S and T.
+ * each (u, v, w)
+ *      if distS[u] + w + distT[v] == minDist -> (u,v,w) belong to the minimum path
+ * create new Graph with edge exclude all above edge
+ * 
+ *  <<break down the path>
 */
 #include<iostream>
 #include<vector>
@@ -23,8 +28,7 @@ public:
 
 int max_val = (int)1e8;
 
-int Dijkstra(vector<vector<Node> > graph, int source, int destination, 
-    vector<int> pathArr, vector<int> distArr, vector<bool> visitedPath) 
+void Dijkstra(vector<vector<Node> >& graph, int source, vector<int>& distArr) 
 {
     distArr[source] = 0;
     priority_queue<Node, vector<Node>, greater<Node> > pq;
@@ -36,24 +40,16 @@ int Dijkstra(vector<vector<Node> > graph, int source, int destination,
         pq.pop();
         int id = node.id;
         int w = node.dist;
-        if (w > distArr[id] || visitedPath[id]) {
+        if (w > distArr[id]) {
             continue;
         }
         for (Node& neighbour : graph.at(id)) {
-            if ( !visitedPath[neighbour.id] && (w + neighbour.dist < distArr[neighbour.id])) {
+            if (w + neighbour.dist < distArr[neighbour.id]) {
                 distArr[neighbour.id] = w + neighbour.dist;
-                pathArr[neighbour.id] = id;
                 pq.push(Node(neighbour.id, distArr[neighbour.id]));
             }
         }
     }
-
-    int st = pathArr[destination];
-    while (st != -1 && st != source) {
-        visitedPath[st] = true;
-        st = pathArr[st];
-    }
-    return distArr[destination] == max_val ? (-1) : distArr[destination];
 }
 
 int main() {
@@ -64,33 +60,39 @@ int main() {
 
         int source, destination;
         cin >> source >> destination;
-        vector<vector<Node> > graph(n);
+        vector<vector<Node> > graphS(n);
+        vector<vector<Node> > graphT(n);
         for (int i=0; i < m; ++i) {
             int u, v, p;
             cin >> u >> v >> p;
-            graph.at(u).push_back(Node(v,p));
+            graphS[u].push_back(Node(v,p));
+            graphT[v].push_back(Node(u,p));
         }
-        // bool visitedPath[n];
-        // int pathArr[n];
-        // int distArr[n];
-        // for (int i=0; i < n; i++) {
-        //     visitedPath[i] = false;
-        //     pathArr[i] = -1;
-        //     distArr[i] = max_val;
-        // }
-        vector<bool> visitedPath(n, false);
-        vector<int> pathArr(n, -1);
-        vector<int> distArr(n, max_val);
-        vector<int> dist(n, max_val);
-        
-        int minimumCost = Dijkstra(graph, source, destination, pathArr, dist, visitedPath);
-        int almostMinimumCost = minimumCost;
-        while(minimumCost != -1 && almostMinimumCost == minimumCost) {
-            std::copy(distArr.begin(), distArr.end(), dist.begin());
-            almostMinimumCost = Dijkstra(graph, source, destination, pathArr, dist, visitedPath);
+
+        vector<int> distArrS(n, max_val);
+        vector<int> distArrT(n, max_val);
+        Dijkstra(graphS, source, distArrS);
+        Dijkstra(graphT, destination, distArrT);
+
+        int minimumCost = distArrS[destination];
+        if (minimumCost == -1) {
+            cout << -1 << endl;
+        } else {
+            // get all edge is valid to findout the almost shortest path
+            vector<vector<Node> > graph(n);
+            for (int i=0; i < n; i++) {
+                for (Node node : graphS[i]) {
+                    if (distArrS[i] + node.dist + distArrT[node.id] != minimumCost) {
+                        graph[i].push_back(Node(node.id, node.dist));
+                    }
+                }
+            }
+
+            vector<int> distArr(n, max_val);
+            Dijkstra(graph, source, distArr);
+            int almostMinimumCost = (distArr[destination] != max_val) ? distArr[destination] : (-1);
+            cout << almostMinimumCost << endl;
         }
-        
-        cout << almostMinimumCost << endl;
     }
     return 0;
 }
