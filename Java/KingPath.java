@@ -1,43 +1,23 @@
 /** https://codeforces.com/problemset/problem/242/C
  *  idea: use Dijkstra with adjacency matrix
+ * 
+ *  other way: use HashMap, HashSet.
+ *          override equals and hashCode of Point class 
+ *          (hashCode: x*p1 + y*p2 - max_val), p1, p2 is prime number and p1 # p2.
+ *      weak point: take time to hashCode,.. not better than above way.
+ *                  (time limited at test case #23)
  */
 
 import java.util.Scanner;
 import java.util.PriorityQueue;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
-class Point implements Comparable<Point>{
-    int x, y;
-    Point( int _x, int _y) {
-        this.x = _x; 
-        this.y = _y;
-    }
-
-    public int compareTo(Point other) {
-        if (this.x == other.x){
-            return this.y - other.y;
-        } else {
-            return this.x - other.x; 
-        }
-    }
-}
-
-class Node implements Comparable<Node>{
-    Point p;
-    int dist;
-    Node(Point _p, int _dist) {
-        this.p = _p;
-        this.dist = _dist;
-    }
-    public int compareTo(Node other) {
-        return this.dist - other.dist;
-    }
-}
 public class KingPath {
+   
     static int max_val = (int)1e9 + 1;
-    static boolean isValidPoint(HashSet<Point> graph, HashSet<Point>visitedPoint, Point point) {
+    static boolean isValidPoint(TreeSet<Point> graph, TreeSet<Point>visitedPoint, Point point) {
         if (point.x < 0 || point.x >= max_val) return false;
         if (point.y < 0 || point.y >= max_val) return false;
         if (!graph.contains(point)) return false;
@@ -45,19 +25,18 @@ public class KingPath {
         return true;
     }
 
-    static void Dijkstra(HashSet<Point> graph,  Point source, Point destination) {
-        HashSet<Point> visitedPoint = new HashSet<>();
-        visitedPoint.add(source);
+    static void Dijkstra(TreeSet<Point> graph,  TreeMap<Point, Integer> dist, Point source, Point destination) {
+       
         int[] dx = {-1, -1, -1, 0, 0, 1 ,1, 1};
         int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
         
-        HashMap<Point, Integer> dist = new HashMap<>();        
+        TreeSet<Point> visitedPoint = new TreeSet<>();
+        visitedPoint.add(source);
         dist.put(source, 0);
-
         Node startVertex = new Node(source, 0);
         PriorityQueue<Node> pq = new PriorityQueue<>();
         pq.add(startVertex);
-
+        
         while (!pq.isEmpty()) {
             Node node = pq.poll();
             Point point = node.p;
@@ -78,13 +57,6 @@ public class KingPath {
                 }
             }
         }
-
-        if (dist.containsKey(destination)) {
-            System.out.println(dist.get(destination));
-        } else {
-            System.out.println(-1);
-        }
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -93,7 +65,7 @@ public class KingPath {
         int x1 = sc.nextInt();
         int y1 = sc.nextInt();
         int n = sc.nextInt();
-        HashSet<Point> graph = new HashSet<>();
+        TreeSet<Point> graph = new TreeSet<>();
         for(int i=0; i < n; i++) {
             int r = sc.nextInt();
             int a = sc.nextInt();
@@ -102,7 +74,44 @@ public class KingPath {
                 graph.add(new Point(r, a++));
             }
         }
+        TreeMap<Point, Integer> dist = new TreeMap<>();  
+        Point source = new Point(x0, y0);
+        Point destination = new Point(x1, y1);     
+        Dijkstra(graph, dist, source, destination);  
 
-        Dijkstra(graph, new Point(x0, y0), new Point(x1, y1));        
+        if (dist.containsKey(destination)) {
+            System.out.println(dist.get(destination));
+        } else {
+            System.out.println(-1);
+        }
+    }
+}
+
+
+class Point implements Comparable<Point> {
+    int x, y;
+    Point(int _x, int _y) {
+        this.x = _x; 
+        this.y = _y;
+    }
+
+    public int compareTo(Point other) {
+        if (this.x == other.x) {
+            return this.y - other.y;
+        } else {
+            return this.x - other.x;
+        }
+    }
+}
+
+class Node implements Comparable<Node>{
+    Point p;
+    int dist;
+    Node(Point _p, int _dist) {
+        this.p = _p;
+        this.dist = _dist;
+    }
+    public int compareTo(Node other) {
+        return this.dist - other.dist;
     }
 }
