@@ -17,11 +17,10 @@ import java.util.TreeSet;
 public class KingPath {
    
     static int max_val = (int)1e9 + 1;
-    static boolean isValidPoint(TreeSet<Point> graph, TreeSet<Point>visitedPoint, Point point) {
+    static boolean isValidPoint(TreeSet<Point> graph, Point point) {
         if (point.x < 0 || point.x >= max_val) return false;
         if (point.y < 0 || point.y >= max_val) return false;
         if (!graph.contains(point)) return false;
-        if (visitedPoint.contains(point)) return false;
         return true;
     }
 
@@ -30,8 +29,6 @@ public class KingPath {
         int[] dx = {-1, -1, -1, 0, 0, 1 ,1, 1};
         int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
         
-        TreeSet<Point> visitedPoint = new TreeSet<>();
-        visitedPoint.add(source);
         dist.put(source, 0);
         Node startVertex = new Node(source, 0);
         PriorityQueue<Node> pq = new PriorityQueue<>();
@@ -41,10 +38,12 @@ public class KingPath {
             Node node = pq.poll();
             Point point = node.p;
             int w = node.dist;
-            visitedPoint.add(point);
+            if (dist.containsKey(point) && w > dist.get(point)) {
+                continue;
+            }
             for (int i=0; i < dx.length; i++) {
                 Point tmp = new Point(point.x + dx[i], point.y + dy[i]);
-                if (isValidPoint(graph, visitedPoint, tmp)) {
+                if (isValidPoint(graph, tmp)) {
                     if (dist.containsKey(tmp)) {
                         if ( w + 1 < dist.get(tmp)) {
                             dist.replace(tmp, w+1);
