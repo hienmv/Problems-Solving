@@ -1,4 +1,6 @@
-// idea: Dijkstra
+/*  https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1594
+*   idea: Dijkstra
+*/
 import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.TreeMap;
