@@ -118,6 +118,9 @@ int main() {
            
             getline(cin, line);
         }
+        if (t < testcases - 1) {
+            cout << endl;
+        }
     }
 
     return 0;
