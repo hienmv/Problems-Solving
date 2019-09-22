@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class SortTheArray {
 
-	static void canSortArrayWithRevertingOneSegment() {
+	static void canorgArrayWithRevertingOneSegment() {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int[] orgArr = new int[n];
@@ -52,6 +52,6 @@ public class SortTheArray {
 	}
 
 	public static void main(String[] args) {
-		canSortArrayWithRevertingOneSegment();	
+		canorgArrayWithRevertingOneSegment();	
 	}
 }

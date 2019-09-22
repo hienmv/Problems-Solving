@@ -1,6 +1,7 @@
 .DS_Store
 t
 .vsCode
+.txt
 *.class
 Note_Algorithms.txt
 Test/
