@@ -1,11 +1,11 @@
-/**
+/** https://codeforces.com/problemset/problem/448/C
  * idea: divide and conquer
  [L, R]
 
- - Tô dọc (R - L + 1)
- - Tô ngang
-  + tim min
-  + giam h[i] - min
+ - Stroke vertical (R - L + 1)
+ - Stroke horizontal
+  + find min
+  + decrease h[i] - min
   + cost: min
   + D&C
  
