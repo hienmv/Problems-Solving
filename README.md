@@ -5,7 +5,7 @@ My implementation of useful data structures, algorithms, as well as my solutions
 
 Practice with C++, Java and Python
 
-## Top coding problems (205)
+## Top coding problems (204)
 
  1. ACMContestBlackout (java) #prim
  2. AGGRCOW (java) #binary-search
