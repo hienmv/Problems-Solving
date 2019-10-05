@@ -1,6 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=400
- *  idea: DSU
- * 
+ *  #dsu
  */
 
 import java.util.Scanner;

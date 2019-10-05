@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/81/A
- *  idea: use deque
+#deque #implementation
  */
 import java.io.*;
 import java.util.Deque;

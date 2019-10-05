@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/652/C
- *  idea: two pointer, iterator from last index to first index
+ *  #two-pointer, iterator from last index to first index
  *  number of pairs created from index i depend on number of pairs created from index i+1
  */
 #include<iostream>

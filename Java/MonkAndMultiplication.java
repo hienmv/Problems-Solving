@@ -1,5 +1,6 @@
 /** https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/practice-problems/algorithm/monk-and-multiplication/
- *  idea: each 3 elements will create to a heap.
+ * #heap #priorityqueue 
+ * each 3 elements will create to a heap.
 0 1 2 3 4
 1 6 5 4 3
 

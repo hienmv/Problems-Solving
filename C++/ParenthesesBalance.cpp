@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=614
- * idea: use stack
+ * #stack
  */
 #include<iostream>
 #include<string>

@@ -1,5 +1,5 @@
 /** https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1338
- * 
+#prim 
  * /*
 
 4             -> number of building

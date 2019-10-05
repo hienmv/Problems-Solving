@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/161/problem/A
-	idea: compare min value of array a and array b.
+#binary-search #greedy #two-pointers
+	compare min value of array a and array b.
 	max value of array a and array b.
 	note: when it's satisfying the condition
 */

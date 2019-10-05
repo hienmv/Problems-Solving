@@ -1,5 +1,5 @@
-/**
- * idea: TopoList
+/** https://codeforces.com/problemset/problem/510/C
+ * #topological-sort #graph #dfs-and-similar
  */
 
 import java.util.Scanner;

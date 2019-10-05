@@ -1,5 +1,5 @@
 /** http://codeforces.com/contest/1006/problem/C
-    idea: two pointer
+    #two-pointer #binary-search
  */
 
  #include<iostream>

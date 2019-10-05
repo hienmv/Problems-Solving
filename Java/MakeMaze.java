@@ -1,5 +1,6 @@
 /** https://www.spoj.com/problems/MAKEMAZE/
- *  idea: set all the valid point in the border.
+ * #bfs
+ *  set all the valid point in the border.
  *  count > 2, check each couple of them that there are any road between them
  */
 

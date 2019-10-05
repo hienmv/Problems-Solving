@@ -1,5 +1,5 @@
 /** https://www.hackerrank.com/contests/womens-codesprint-2/challenges/minimum-loss
- *  idea: BinarySearchTree
+ *  #binary-search-tree
  */
 import java.io.*;
 import java.math.*;

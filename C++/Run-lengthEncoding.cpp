@@ -1,6 +1,3 @@
-#include<iostream>
-#include<string>
-using namespace std;
 /*
 This problem was asked by Amazon.
 
@@ -11,7 +8,13 @@ Run-length encoding is a fast and simple method of encoding strings.
 Implement run-length encoding and decoding. 
 You can assume the string to be encoded have no digits and consists solely of alphabetic characters. 
 You can assume the string to be decoded is valid.
+
+#implementation
 */
+
+#include<iostream>
+#include<string>
+using namespace std;
 
 // encoding
 string to_encoding(string s) {

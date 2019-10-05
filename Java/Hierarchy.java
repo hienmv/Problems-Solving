@@ -1,5 +1,6 @@
-/**
-* idea: Topo sorting, add edge
+/** https://www.spoj.com/problems/MAKETREE/
+* #topological-sort
+add edge
     2 1 3 4 
     -> result: ith depends on previous element. (i-1 th).
  */

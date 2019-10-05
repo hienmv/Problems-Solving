@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/monk-and-binary-array-1/
- *  idea: Bit
+ *  #bit-manipulation
  */
 /*
         0 1 2 3 4 5 6 7 8 9

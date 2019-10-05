@@ -1,3 +1,6 @@
+/* https://www.spoj.com/problems/STPAR/
+* #queue #stack #ad-hoc-1 #todo
+*/
 import java.util.Scanner;
 import java.util.LinkedList;
 import java.util.Deque;

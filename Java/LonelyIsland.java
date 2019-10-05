@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/algorithms/graphs/topological-sort/practice-problems/algorithm/lonelyisland-49054110/
- *  idea: TopoSort, Graph
+ *  #topological-sort
  */
 /*
     0 -> 1

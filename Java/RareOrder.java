@@ -1,6 +1,5 @@
-/**
- * https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3140
- * idea: topoSort
+/** https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3140
+ * #topological-sort
  */
 
 import java.util.Scanner;

@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/279/problem/B
-	idea: max (get number of books can be read that counted from i-th element)
+	tag:    #binary-search #implementation #two-pointers
+	max (get number of books can be read that counted from i-th element)
 */
 /* Example:
   10 15

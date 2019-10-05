@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/609/problem/B
-	idea: find out A - the number of ways choosing any 2 book in n books.
+	tag: #constructive-algorithms #implementation
+	find out A - the number of ways choosing any 2 book in n books.
 	B - the number of ways choosing any 2 book in n books that these books are same genre.
 	result A - B
 */

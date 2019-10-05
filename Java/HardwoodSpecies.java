@@ -1,5 +1,5 @@
 /*	https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1167
-*	idea: greedy
+*	#greedy #implementation
 */
 
 import java.util.Scanner;

@@ -1,5 +1,6 @@
-/** https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541
- *  idea: run Prim algorithms double times
+/** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541
+ * tag: #prim algorithms 
+ * run Prim algorithms double times
  */
 
 import java.util.Scanner;

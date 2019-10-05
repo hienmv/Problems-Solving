@@ -1,5 +1,5 @@
-/**
- * idea: BackTracking
+/** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=670
+ * #backtracking
  */
 
 import java.util.Scanner;

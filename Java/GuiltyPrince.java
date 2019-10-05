@@ -1,5 +1,5 @@
 /** http://lightoj.com/volume_showproblem.php?problem=1012
- *  idea: a BFS problems.
+ *  #bfs
  */
 import java.util.Scanner;
 import java.util.Deque;

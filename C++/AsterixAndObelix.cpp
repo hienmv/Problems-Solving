@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1187
- *  idea: use Dijkstra
+ *  #dijkstra #shortest-path
  * giả sử U là đỉnh có feast lớn nhất
 
     đường đi tối ưu đi qua U mà nhận U lớn nhất

@@ -1,5 +1,5 @@
 /* https://codeforces.com/contest/723/problem/D
-*  idea: DFS/BFS
+*  #dfs #dsu #greedy
 */
 
 import java.util.Scanner;

@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1111/C
- * idea: Divide and conquer, binary search
+ * #divide-and-conquer #binary-search
  */
 
 import java.util.Arrays;

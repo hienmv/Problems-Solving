@@ -1,5 +1,6 @@
 /** https://codeforces.com/problemset/problem/268/B
- *  idea: n, calculate worse-case from n->1
+ * tag: #implementation #math
+ *  n, calculate worse-case from n->1
  *  n = 3; res = 3 + (2 + (2-1)*1) + (1 + (1-1)*2)
  *  n = 4; res = 4 + (3 + (3-1)*1) + (2 + (2-1)*2) + (1 + (1-1)*3)
  */

@@ -1,5 +1,5 @@
 /** https://www.hackerrank.com/challenges/qheap1/problem
- *  idea: just use data structure heap
+ * #heap #priorityqueue
  *  https://www.interviewsansar.com/2015/05/16/what-is-time-complexity-for-offer-poll-and-peek-methods-in-priority-queue
  */
 

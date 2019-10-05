@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1415
- *  idea: use binary search to find the first idx
+ *  #binary-search to find the first idx
  */
 
 #include<iostream>

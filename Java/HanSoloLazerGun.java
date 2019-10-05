@@ -1,5 +1,6 @@
 /*  https://codeforces.com/problemset/problem/514/B
-*   idea: Binary Search Tree with the formular factor
+#brute-force #geometry #math #binary-search
+*  Binary Search Tree with the formular factor
 * 
 other way: characteristic of 3 point in a line. 
 (average line)

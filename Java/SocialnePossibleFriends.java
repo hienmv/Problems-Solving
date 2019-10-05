@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/SOCIALNE/
- *  idea: Floyd-Warshall
+ *  #floyd-warshall
  */
 
 import java.util.Scanner;

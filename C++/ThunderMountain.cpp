@@ -1,5 +1,5 @@
 /* https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1744
-   idea: use Flyod WarShall
+   #floyd-warshall #shortest-path
 */
 
 #include<iostream>

@@ -1,5 +1,6 @@
-/*
+/* http://lightoj.com/volume_showproblem.php?problem=1008&language=english&type=pdf
 Fibsieve Fantabulous
+#implementation
 */
 
 import java.util.Scanner;

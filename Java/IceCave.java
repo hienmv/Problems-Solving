@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/540/C
- *  idea: use BFS (customized)
+ * #dfs-and-similar #bfs-customized
  */
 
 import java.util.Scanner;

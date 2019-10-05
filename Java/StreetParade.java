@@ -1,5 +1,6 @@
 /** https://www.spoj.com/problems/STPAR/
- *  idea: use queue for main street.
+ * #queue #stack #ad-hoc-1
+ *  use queue for main street.
  *  use stact for side street
  */
 import java.util.Scanner;

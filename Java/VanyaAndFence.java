@@ -1,5 +1,6 @@
 /*  https://codeforces.com/contest/677/problem/A
-    idea: compare the height of each person with the height of fence.
+#implementation
+compare the height of each person with the height of fence.
 */
 
 import java.util.Scanner;

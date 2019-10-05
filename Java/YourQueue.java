@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3359
- *  idea: use a help-queue
+ * #heap #queue
  *  note: not all elements shown
  */
 

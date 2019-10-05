@@ -1,5 +1,5 @@
 /*	https://codeforces.com/contest/158/problem/B
-	idea: 
+   #special-problem #greedy #implementation
 	find out: number of group of 4 people
 	min number of (group of 1 person, group of 3 people)
 	remained group of 3 people

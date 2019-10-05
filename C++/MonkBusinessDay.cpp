@@ -1,5 +1,5 @@
 /*  https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/practice-problems/algorithm/monks-business-day/description/
-    idea: bellman ford, find negative-weight cycles
+#bellman-ford #shortest-path find negative-weight cycles
 */
 
 #include<iostream>

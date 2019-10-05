@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/SHPATH/en/
- *  idea: use Dijkstra
+ *  #shortest-path #dijkstra-s-algorithm
  */
 
 import java.util.Scanner;

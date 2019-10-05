@@ -1,5 +1,5 @@
 /** http://acm.timus.ru/problem.aspx?space=1&num=1837
- *  idea: BFS
+ *  #bfs
  */
 import java.util.Scanner;
 import java.util.Deque;

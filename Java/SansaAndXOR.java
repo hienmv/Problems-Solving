@@ -1,5 +1,6 @@
-/** 
- * idea: XOR
+/** https://www.hackerrank.com/challenges/sansa-and-xor/problem
+ * #bit-manipulation #dp
+ * XOR
  * mindset / method DP, .. 
 
  a[0] + a[1] + a[2] + (a[0] + a[1]) + (a[1] + a[2]) + (a[0] + a[1] + a[2])

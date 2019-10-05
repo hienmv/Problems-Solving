@@ -1,10 +1,11 @@
+/* https://leetcode.com/problems/number-of-digit-one/
+#math
+*/
+
 #include<iostream>
 #include<math.h>
 using namespace std;
-/*
-	Find numbers in range [0, numbers] containning number 1 in this
-	Example: input 22, Output: 12  { 1, 10 , 11, 12, 13, 14, 15, 16, 17, 18, 19, 21}
-*/
+
 int sub(int n){
 	if ( n < 10){
 		return 1;

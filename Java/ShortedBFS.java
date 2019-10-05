@@ -1,3 +1,6 @@
+/**
+ * #bfs
+ */
 import java.util.Scanner;
 import java.util.Deque;
 import java.util.LinkedList;

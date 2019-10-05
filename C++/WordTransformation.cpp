@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=370
- *  idea: Dijkstra
+ *  #dijkstra #shortest-path
 */
 
 #include<iostream>

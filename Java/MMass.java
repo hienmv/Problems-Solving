@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/MMASS/
- *  idea: use stack
+ *  #ad-hoc-1 #stack
  */
 import java.util.Deque;
 import java.util.LinkedList;

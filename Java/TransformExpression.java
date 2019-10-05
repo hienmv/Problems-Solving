@@ -1,5 +1,5 @@
 /*  https://www.spoj.com/problems/ONP/
-    idea: use stack
+    #stack
 */
 import java.util.Deque;
 import java.util.Scanner;

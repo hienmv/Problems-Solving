@@ -1,5 +1,5 @@
-/** https-//www.spoj.com/problems/EKO/
- * idea: binary search
+/** https://www.spoj.com/problems/EKO/
+ * #binary-search
  */
 import java.util.StringTokenizer;
 import java.io.IOException;

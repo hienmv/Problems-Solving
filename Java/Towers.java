@@ -1,6 +1,6 @@
-
 /*	https://codeforces.com/contest/37/problem/A
-	idea: two way (use map / plain array)
+#sortings #map
+	two way (use map / plain array)
 */
 import java.util.Scanner;
 import java.util.HashMap;

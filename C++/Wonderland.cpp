@@ -1,5 +1,5 @@
 /* https://www.spoj.com/problems/UCV2013B/
-    idea: Bellman Ford
+#shortest-path #bellman-ford
 */
 
 #include<iostream>

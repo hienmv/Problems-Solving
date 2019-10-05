@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/451/problem/B
-	idea: sort the original array (A) to having the sorted array (B)
+#sorting #implementation
+	sort the original array (A) to having the sorted array (B)
 	find out the segment in A that differ the corresponding segment in B.
 	and revert the segment,	compare reverted segment with the corresponding segment in B.
 */

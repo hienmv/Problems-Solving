@@ -1,5 +1,7 @@
 /*	https://codeforces.com/contest/387/problem/B
-	idea: compare min-element of arrays B and arrays A, 
+#greedy #two-pointer
+
+	compare min-element of arrays B and arrays A, 
 	max-element of arrays B and arrays A,
 */
 

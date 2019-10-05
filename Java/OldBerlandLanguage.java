@@ -1,5 +1,5 @@
 /** https://codeforces.com/contest/37/problem/C
- *  idea: TRIE
+ *  #greedy #tree #trie
  *  prefix -> think about TRIE ? 
  */
 import java.util.Scanner;

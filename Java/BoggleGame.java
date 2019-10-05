@@ -1,5 +1,5 @@
-/**
- * idea: backtracking
+/** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=545
+ * tag: #backtracking
  other implements: 
 //  // set state -> initilize state
 

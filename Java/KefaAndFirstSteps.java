@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/580/problem/A
-	idea: compare i-th element with the (i - 1) -th to find out 
+#brute-force #dp #implementation
+	compare i-th element with the (i - 1) -th to find out 
 	whether they are in non-decreasing order
 */
 

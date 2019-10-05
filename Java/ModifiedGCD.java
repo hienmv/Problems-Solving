@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/75/C
- *  idea: binary search 
+ * #binary-search #number-theory
  */
 import java.util.Scanner;
 

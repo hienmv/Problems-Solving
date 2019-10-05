@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/68/B
- *  idea: binary search
+ *  #binary-search
  * 
  * 
 sumTransfer = sum(a[i] - M, if a[i] > M)

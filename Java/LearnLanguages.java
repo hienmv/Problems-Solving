@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/277/A
- * idea: DSU 
+ * #dsu #dfs-and-similar 
  * 
  * other way: treat m languages as : n+1 -> n+m, as a node in graph.
  * */

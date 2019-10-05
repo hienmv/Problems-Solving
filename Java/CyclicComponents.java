@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/977/E
- *  idea: DSU / DFS
+ *  #dsu #dfs
  *  if degree of a vertex is not equal 2 -> not cycle.
  */
 /*
@@ -17,7 +17,7 @@
 import java.util.Scanner;
 import java.util.HashSet;
 
-/* idea: DSU
+/* DSU
 public class CyclicComponents {
     public static void makeSet(int[] parent, int[] size) {
         int sz = parent.length;
@@ -86,7 +86,7 @@ public class CyclicComponents {
 }
 */
 
-/** idea: DFS */
+/** DFS */
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;

@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=508
- *  use: BFS
+ *  #bfs 
  */
 #include<iostream>
 #include<vector>

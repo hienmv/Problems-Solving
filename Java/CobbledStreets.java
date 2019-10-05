@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/CSTREET/
- *  idea: Prim algorithm
+ * tag: #prim #mst
  */
 import java.util.Scanner;
 import java.util.PriorityQueue;

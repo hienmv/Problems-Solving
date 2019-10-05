@@ -1,17 +1,16 @@
-#include <string>
-#include <cstdio>
-using namespace std;
-
 /*
  find expressions combined with 4 main operators and elements of Array arr that its result is to target.
  example : 
  input : arr = {5, 2, 3, 4, 1, 6, 7, 8, 9}; target = 100.
  one of output expression: 5 - 2 + 3 * 4 + 1 * 6 + 7 + 8 * 9 
  explain: 5 - 2 + 3 * 4 + 1 * 6 + 7 + 8 * 9  = 100
+
+#recursion #implementation
 */
 
-
-
+#include <string>
+#include <cstdio>
+using namespace std;
 
 // arr : input Array
 // size Of arr

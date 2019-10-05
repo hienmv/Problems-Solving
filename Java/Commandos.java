@@ -1,5 +1,6 @@
 /** http://www.lightoj.com/volume_showproblem.php?problem=1174
- *  idea: use dijkstra from each vertex to S and T. 
+ * tag: #dijktra #shortest-path
+ *  use dijkstra from each vertex to S and T. 
  *  get maximum of each cost of path S-> T via each vertex
  *  <<break down the path>>
  */

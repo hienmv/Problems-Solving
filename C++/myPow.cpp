@@ -1,4 +1,3 @@
-#include<iostream>
 /*
 https://leetcode.com/explore/interview/card/top-interview-questions-medium/113/math/818/
 
@@ -21,7 +20,11 @@ Note:
 
 -100.0 < x < 100.0
 n is a 32-bit signed integer, within the range [−231, 231 − 1]
+
+#recursion #implementation
 */
+
+#include<iostream>
 
 // Solution 1, Time Complexity : O(log(n)) / Space Complexity : O(log(n))
 double fastPow(double x, int n) {

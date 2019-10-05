@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1876
- *  idea: use queue
+ *  #queue
  */
 import java.util.Scanner;
 import java.util.Deque;

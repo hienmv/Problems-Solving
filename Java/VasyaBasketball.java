@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/493/C
- *  idea: binary search, two pointer
+ *  #binary-search #brute-force #sorting #two-pointer
  * 
  * other:
  *  /* method 1

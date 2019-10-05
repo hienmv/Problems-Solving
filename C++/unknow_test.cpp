@@ -1,10 +1,11 @@
-#include<iostream>
-using namespace std;
-
 /* 
 https://developers.google.com/edu/c++/cpp-in-depth
 More Practice with pointer
+#pointer
 */
+
+#include<iostream>
+using namespace std;
 
 void Unknown(int *p, int num);
 void HardToFollow(int *p, int q, int *num);

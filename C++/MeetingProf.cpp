@@ -1,5 +1,5 @@
 /*  https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1112
-    idea: Floyd Warshall
+#floyd-warshall #shortest-path
 */
 #include<iostream>
 #include<map>

@@ -1,5 +1,5 @@
 /* https://codeforces.com/contest/1185/problem/C1
-    idea: greedy, priority_queue;
+#greedy #sorting #priorityqueue
  */
 
 #include<iostream>

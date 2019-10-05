@@ -1,5 +1,5 @@
-/** 
- * idea: bit mapulation
+/** https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/aish-and-xor-2/
+ * tag: #bit-manipulation
  */
 
 import java.util.Scanner;

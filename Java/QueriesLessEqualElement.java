@@ -1,5 +1,6 @@
 /** https://codeforces.com/problemset/problem/600/B
- *  idea: sort the first array, use binarySearch each element of second array.
+ * #sorting #binary-search #two-pointers
+ * sort the first array, use binarySearch each element of second array.
  */
 
 import java.util.Scanner;

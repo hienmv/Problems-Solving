@@ -1,7 +1,7 @@
 /*	https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=989
-	idea: Dijkstra
-
-	other way : tao 1 cay khung. Tim duong di tu 1 dinh toi cay khung do.
+	tag: #dijkstra #shortest-path #prim
+	another way : creat a prim tree, find the path from one vertex to the prim tree.
+	tao 1 cay khung. Tim duong di tu 1 dinh toi cay khung do.
 */
 
 import java.util.Scanner;

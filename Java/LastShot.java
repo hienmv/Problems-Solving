@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/LASTSHOT/
- * idea: dfs
+ * #dfs
  */
 /**
  *  1 3

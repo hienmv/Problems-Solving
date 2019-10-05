@@ -1,5 +1,5 @@
 /** https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2498
- *  idea: DSU
+ *  #dsu
  */
 import java.util.Scanner;
 import java.util.ArrayList;

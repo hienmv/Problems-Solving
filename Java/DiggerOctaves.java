@@ -1,5 +1,5 @@
-/**
- * idea: backtracking
+/** https://www.spoj.com/problems/UCI2009D/
+ * #backtracking #bit-manipulation
  * -> bit manipulation: -> 8x8 -> 64bit.
  */
 

@@ -1,5 +1,6 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3146
- *  idea: provided that the data structure is used is queue/stack/priorityQueue(maxHeap). 
+ * #queue #stack #priorityqueue
+ * provided that the data structure is used is queue/stack/priorityQueue(maxHeap). 
  */
 
 import java.util.Scanner;

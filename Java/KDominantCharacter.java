@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/888/C
- *  idea: two pointer
+ *  #two-pointer #binary-search
  */
 
 import java.util.Scanner;

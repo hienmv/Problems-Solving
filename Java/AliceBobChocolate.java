@@ -1,6 +1,7 @@
 /*	https://codeforces.com/problemset/problem/6/C
-	idea: count sumLeft, sumRight, 
-	the smaller sum += nextElement based on its side.
+ *	tag: #greedy  #two-pointers
+ *	count sumLeft, sumRight, 
+ *	the smaller sum += nextElement based on its side.
 */
 
 import java.util.Scanner;

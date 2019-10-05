@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/448/C
- * idea: divide and conquer
+ * #divide-and-conquer #dp #greedy
  [L, R]
 
  - Stroke vertical (R - L + 1)

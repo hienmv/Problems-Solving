@@ -1,5 +1,5 @@
 /*	http://lightoj.com/volume_showproblem.php?problem=1129
-	idea: TRIE
+#trie
 */
 
 #include<iostream>

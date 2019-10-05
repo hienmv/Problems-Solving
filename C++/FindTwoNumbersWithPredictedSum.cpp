@@ -1,11 +1,14 @@
-#include<iostream>
-#include<map>
-#include<vector>
-
 /*
 Given a List of numbers, return whether any two sums to k.
 For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
+
+#map #hash-table
 */
+
+#include<iostream>
+#include<map>
+#include<vector>
+using namespace std;
 
 // solution 1: use map. O(n)
 bool foundTwoNumber( vector<int>& numbers, int target) {

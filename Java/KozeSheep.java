@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/KOZE/
- * idea: BFS
+ * #bfs
  */
 import java.util.Scanner;
 import java.util.Deque;

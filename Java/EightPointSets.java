@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/334/problem/B
-	idea: treat each column as an array
+#sorting
+	treat each column as an array
 	check each array: have only 3 distinct number, each number that is not displayed excess 3 times.
 	check the poin(x2, y2) exist or not ? 
 */

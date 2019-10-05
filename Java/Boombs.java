@@ -1,5 +1,5 @@
 /*  https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1594
-*   idea: Dijkstra
+* tag: #dijktra #shortest-path
 */
 import java.util.Scanner;
 import java.util.TreeSet;

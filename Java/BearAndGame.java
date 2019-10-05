@@ -1,5 +1,6 @@
 /*  https://codeforces.com/contest/673/problem/A
-    idea: get the last minute that Bear Limark can watch, 
+    tag: #implementation
+    get the last minute that Bear Limark can watch, 
     and compare with the next interesting minute.
 */
 

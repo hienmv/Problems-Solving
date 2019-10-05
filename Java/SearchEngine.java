@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/algorithm/search-engine/
- *  idea: TRIE
+ *  #string #trie
  */
 
 import java.util.Scanner;

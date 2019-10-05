@@ -1,5 +1,5 @@
 /** https://codeforces.com/contest/1176/problem/E
- *  idea: dfs and related
+ #dfs-and-similar #dsu #shortest-path
  */
 #include<iostream>
 #include<vector>

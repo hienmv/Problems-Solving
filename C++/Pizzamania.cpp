@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/OPCPIZZA/
- *  idea: binary search
+ *  #binary-search
  */
 #include<iostream>
 #include<vector>

@@ -1,5 +1,5 @@
 /* https://www.hackerrank.com/challenges/primsmstsub/problem
-   idea: prim algorithm
+#prim
 */
 
 import java.util.Scanner;

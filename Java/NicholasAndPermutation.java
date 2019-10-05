@@ -1,5 +1,7 @@
 /*	https://codeforces.com/contest/676/problem/A
-	idea: get the index of max value, min value.
+  #constructive-algorithms #implementation
+  
+	get the index of max value, min value.
 	result is max(length - 1 - the greater index, smaller index)
 */
 

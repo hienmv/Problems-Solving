@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/26/B
- * idea: use stack;
+ * #greedy #stack
  */
 
 import java.util.Scanner;

@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1927
- *  idea: use dijkstra
+ *  #dijkstra #shortest-path
  *  can use pair that faster than Node object
 */
 

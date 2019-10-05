@@ -1,6 +1,7 @@
 /** https://codeforces.com/problemset/problem/242/C
- *  idea: use Dijkstra with adjacency matrix
- * 
+ * #dfs-and-similar #hashing #shortest-paths
+ *  
+ * use Dijkstra with adjacency matrix
  *  other way: use HashMap, HashSet.
  *          override equals and hashCode of Point class 
  *          (hashCode: x*p1 + y*p2 - max_val), p1, p2 is prime number and p1 # p2.

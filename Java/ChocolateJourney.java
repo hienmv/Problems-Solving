@@ -1,5 +1,6 @@
 /** https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/practice-problems/algorithm/successful-marathon-0691ec04/description/
- *  idea: use dijkstra with start vertex: source, destination 
+ * tag: #dijkstra #shortest-path
+ * use dijkstra with start vertex: source, destination 
  *  and get min dist from them to vertexes containing chocolate.
  *  Notice: 
  *     - wrapper classes and primitive types. (Integer and int) 

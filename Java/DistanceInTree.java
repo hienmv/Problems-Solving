@@ -1,5 +1,5 @@
 /** http://codeforces.com/problemset/problem/161/D
- *  DP on Tree. / Divide and Conquer.
+ *  #dp on Tree. #divide-and-conquer #dfs
  */
 /*
 5 2

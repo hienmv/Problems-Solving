@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/CAM5/
- *  idea: BFS/DFS
+ * tag: #bfs #dfs
  */
 
  import java.util.Scanner;

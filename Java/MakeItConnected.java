@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1095/F
- *  idea: DSU, MST
+ *  #dsu #mst #greedy
  *  note: wrong compare in compareTo. (int , long)
  */
  

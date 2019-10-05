@@ -1,7 +1,7 @@
 /**
  * have a an two-demention array.
  * find out 9 seeds that no triple of them can make a 3x3 array.
- * idea: create a list of all Points, and shuffle the list. (random characteristic)
+ * create a list of all Points, and shuffle the list. (random characteristic)
  *      for each point in the list, check whether it is valid or not ? ( check it with points that are selected and near it).
  */
 

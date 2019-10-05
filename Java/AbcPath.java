@@ -1,6 +1,5 @@
-/**
-    https://www.spoj.com/problems/ABCPATH/
-    idea: dfs recursion
+/** https://www.spoj.com/problems/ABCPATH/
+ * tag: #dfs #recursion
  */
 
 import java.util.Scanner;

@@ -1,5 +1,6 @@
 /** https://www.hackerrank.com/challenges/camelCase/problem
- *  idea: just count uppercase Chacter.
+ * tag: #implementation
+ * just count uppercase Chacter.
  */
 import java.util.Scanner;
 public class CamelCase {

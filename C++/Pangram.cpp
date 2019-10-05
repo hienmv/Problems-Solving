@@ -1,6 +1,5 @@
-/* 
-* https://codeforces.com/problemset/problem/520/A
-* idea: use a array[26] character
+/* https://codeforces.com/problemset/problem/520/A
+* #strings #implementation use a array[26] character
 */
 
 #include<iostream>

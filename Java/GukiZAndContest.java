@@ -1,6 +1,6 @@
 /*  https://codeforces.com/contest/551/problem/A
- *  idea: sort the array , and use binarySearch
- * */
+  #implementation #sorting #binary-search
+ */
 
 import java.util.Scanner;
 import java.util.Arrays;

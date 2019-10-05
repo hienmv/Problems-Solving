@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/486/problem/A
-	idea: n - even number, result = n / 2
+tag: #implementation #math
+	n - even number, result = n / 2
 	n - odd number, resultl = n / 2 - n
 */
 

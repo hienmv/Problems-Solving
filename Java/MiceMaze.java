@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/MICEMAZE/
- *  idea: use Dijktra, reverse graph
+ *  #shortest-path #bfs #dijkstra-s-algorithm reverse graph
  */
 
 import java.util.Scanner;

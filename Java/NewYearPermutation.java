@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/500/B
- *  idea: greedy
+ *  #dfs #dsu #greedy #math #sortings
  * 
  * 
  * -> vua xay, va xu ly tap hop

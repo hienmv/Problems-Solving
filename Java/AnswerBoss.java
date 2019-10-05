@@ -1,10 +1,9 @@
-/**
- * idea: TopoList
+/** https://www.spoj.com/problems/RPLA/
+ * tag: #topological-sort
  */
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.PriorityQueue;
 import java.util.Collections;
 
 class AnswerBoss {

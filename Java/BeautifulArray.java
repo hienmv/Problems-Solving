@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1155/D
-idea: divide and conquer -> TODO: DP
+ *  tag: #divide-and-conquer #dp #greedy #todo
 
 //
         L, R MAX

@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/242/problem/B
-	idea: assume each column as a min values array and max values array respectively.
+	tag: #implementation #sorting
+	assume each column as a min values array and max values array respectively.
 	find the minimum value and maximum value.
 	and find out if having an index i that 
 	min-array[i] = min-value, max-array[i] = max-value

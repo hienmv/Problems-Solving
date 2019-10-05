@@ -1,6 +1,6 @@
 /** https://www.codechef.com/problems/COMPILER 
- * idea: just use stack,
- */
+#stack
+*/
 
  import java.util.Scanner;
  import java.util.Deque;

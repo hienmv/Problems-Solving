@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/practice-problems/algorithm/monk-and-his-friends/description/
- *  idea: binary search tree
+ *  #binary-search-tree #map
  */
 import java.util.TreeSet;
 import java.util.StringTokenizer;

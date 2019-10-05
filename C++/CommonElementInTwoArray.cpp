@@ -1,5 +1,5 @@
-/*
-Given two shorted array, output is array containing common elements of two input arrays.
+/* https://leetcode.com/problems/intersection-of-two-arrays/
+#hash-table #sorting #binary-search #two-pointer
 */
 
 #include<iostream>

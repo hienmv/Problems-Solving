@@ -1,5 +1,6 @@
 /**  https://codeforces.com/problemset/problem/1011/A
- *  idea: two way: sort the character array.
+ * #greedy #sorting #implementation
+ *  two way: sort the character array.
  *  or use arr[26] to store characters.
 */
 

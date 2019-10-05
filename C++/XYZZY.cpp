@@ -1,5 +1,5 @@
 /*  https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1498
-    idea: Bellman Ford, BFS
+#bellman-ford #bfs #shortest-path
 */
 
 #include<iostream>

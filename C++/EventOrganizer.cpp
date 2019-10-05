@@ -1,5 +1,5 @@
 /** https://www.codechef.com/problems/MAXCOMP
- *  idea: use Bellman Ford
+ *  #bellman-ford #shortest-path
  */
 
 #include<iostream>

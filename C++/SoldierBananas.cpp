@@ -1,5 +1,5 @@
 /* https://codeforces.com/problemset/problem/546/A
-* idea: arithmetic progression
+* idea: arithmetic progression #math
 */
 #include<iostream>
 

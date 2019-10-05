@@ -1,5 +1,6 @@
 /*  https://codeforces.com/contest/691/problem/A
-    idea: count the number of 0 in the array.
+#implementation
+    count the number of 0 in the array.
     special case: when only have an array with length 1.
 */
 import java.util.Scanner;

@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/381/problem/A
-	idea: have two iterator: fist, last
+#greedy #implementation #two-pointer
+	have two iterator: fist, last
 	compare the elements at first-index and last-index.
 	note: the last step when n - odd number / even number.
 */

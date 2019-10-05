@@ -1,6 +1,5 @@
-/**
- /** https://www.hackerearth.com/ja/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/dhoom-4/description/
- *  idea: use BFS
+/** https://www.hackerearth.com/ja/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/dhoom-4/description/
+ *  #bfs
  *  comment: own key * other key -> a new key to check
  */
 

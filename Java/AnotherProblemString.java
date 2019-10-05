@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/165/C
- *  idea: two pointer
+ * tag: #binary-search #brute-force #dp #two-pointers
  *  other
  *  
 // prefixsum

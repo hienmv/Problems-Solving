@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1895
- *  idea: use min heap
+ * tag: #heap #priority-queue
  */
 
 import java.util.Scanner;

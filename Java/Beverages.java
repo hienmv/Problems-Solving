@@ -1,5 +1,5 @@
-/**
- * idea: TopoList
+/** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2001
+ * tag: #topological-sort
  */
 
 import java.util.Scanner;

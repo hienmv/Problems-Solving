@@ -1,5 +1,5 @@
-/** 
- * idea: Topo Sorting (Kahn)
+/** https://www.spoj.com/problems/TOPOSORT/
+ * #topological-sort(Kahn)
  */
 
 import java.util.Scanner;

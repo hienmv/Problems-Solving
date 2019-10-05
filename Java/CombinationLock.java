@@ -1,5 +1,6 @@
 /*  https://codeforces.com/problemset/problem/540/A
-    idea: compare a[i], b[i]
+tag: #implementation
+    compare a[i], b[i]
     if (a[i] - b[i]) > 5; result = a[i] - b[i] - 10;
 */
 import java.util.Scanner;

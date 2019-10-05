@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/TRVCOST/
- *  idea: Use Dijkstra
+ *  #graph-theory #dijkstra-s-algorithm
  */
 import java.util.Scanner;
 import java.util.HashMap;

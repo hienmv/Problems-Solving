@@ -1,10 +1,10 @@
 /** https://codeforces.com/problemset/problem/1106/C
- * idea: the max element must be divided in a group with another element that you have to make sure the the square of group is minimum
+ * #greedy #implementation #math #sorting
+ * the max element must be divided in a group with another element that you have to make sure the the square of group is minimum
  * => sort the array and make two pointer: from left, right => make efficient group
  */
 
- import java.util.Scanner;
-import java.security.interfaces.RSAMultiPrimePrivateCrtKey;
+import java.util.Scanner;
 import java.util.Arrays;
 
  public class NumberDivision {

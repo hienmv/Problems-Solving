@@ -1,5 +1,6 @@
 /*  https://codeforces.com/contest/378/problem/B
-    idea: 
+#sorting #implementation
+    
     not care about whick k should be choosen in each semifinal.
     first k element in each semifinals will be choose.
     in each semifinals, in each element in k-th -> n will be choose

@@ -1,5 +1,5 @@
 /** http://www.lightoj.com/volume_showproblem.php?problem=1002
- *  idea: dijkstra
+ *  #dijkstra #shortest-path
  * */
 
 import java.util.PriorityQueue;

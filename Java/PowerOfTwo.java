@@ -27,6 +27,8 @@ xet k->1:
 & xyzxyz
 ________
   10 0
+
+#bit-manipulation
 */
 
 import java.util.Scanner;

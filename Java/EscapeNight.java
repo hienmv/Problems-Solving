@@ -1,6 +1,6 @@
-/**
- * https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/escape-the-night/
- */
+/** https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/escape-the-night/
+#bit-manipulation 
+*/
 
 import java.util.Scanner;
 

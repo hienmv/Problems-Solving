@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/ARBITRAG/
- *  use: Floyd warshall
+ *  #floyd-warshall #shortest-path
  */
 
 #include<iostream>

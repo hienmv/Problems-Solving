@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/424/B
- *  idea: binary search
+ *  #binary-search #greedy
  */
 
  import java.util.Scanner;

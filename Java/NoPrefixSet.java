@@ -1,5 +1,5 @@
 /** https://www.hackerrank.com/challenges/no-prefix-set/problem
- *  idea : TRIE
+ *  #trie
  */
 
 import java.util.Scanner;

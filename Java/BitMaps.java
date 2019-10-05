@@ -1,6 +1,5 @@
 /* https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=119
-Bit Maps
-idea: Divide and conquer
+    tag: #divide-and-conquer
 */
 
 import java.util.Scanner;

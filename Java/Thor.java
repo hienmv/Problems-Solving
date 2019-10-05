@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/704/A
- *  idea: just use queue
+ *  #brute-force  #implementation #queue
  */
 /*
 

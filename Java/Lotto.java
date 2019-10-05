@@ -1,4 +1,6 @@
-/*
+/* https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=382
+#backtracking
+
 backtracking(state):
     // success
     row == N

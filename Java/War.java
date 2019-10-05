@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1099
- *  idea: DSU
+ *  #dsu
 /*
 (u, v)
 c = 1, setFriends
@@ -34,7 +34,7 @@ enemyArr: enemyArr[u] là phần tử đại diện cho tập enemy của tập 
 */
 /**
 other way: two version (1->n) (n+1->2n)
-idea:   is Friend ? connect
+        is Friend ? connect
         is enemy ? can not connect
 
 =>> in the same version -> friends

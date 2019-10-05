@@ -1,4 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3296
+ * tag: #dijkstra #shortest-path
  * idea: use dijkstra k from S and T.
  * each (u, v, w)
  *      if distS[u] + w + distT[v] == minDist -> (u,v,w) belong to the minimum path

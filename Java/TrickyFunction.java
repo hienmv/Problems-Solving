@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/429/D
- * idea: divide and conquer
+ * #geometry #divide-and-conquer
  */
 
 import java.util.ArrayList;

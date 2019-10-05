@@ -1,5 +1,5 @@
 /* https://codeforces.com/problemset/problem/1107/C
-   idea: two pointer
+#greedy #sortings #two-pointer
 */
 
 #include<iostream>

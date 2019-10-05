@@ -1,5 +1,6 @@
 /** https://codeforces.com/problemset/problem/644/B
- *  idea: use queue and calculat the finish time fo current process.
+ * #queue #*special-problem #constructive-algorithms #two-pointers
+ *  use queue and calculate the finish time fo current process.
  */
 
 import java.util.Scanner;

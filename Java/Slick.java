@@ -1,4 +1,5 @@
 /** https://www.spoj.com/problems/UCV2013H/
+ * #bfs
  */
 import java.util.Scanner;
 import java.util.Deque;

@@ -1,5 +1,5 @@
 /* http://www.lightoj.com/volume_showproblem.php?problem=1074
-   idea: Bellman Ford
+#bellman-ford
 */
 #include<iostream>
 #include<vector>

@@ -1,5 +1,5 @@
 /** http://lightoj.com/volume_showproblem.php?problem=1224
- *  idea: TRIE
+ *  #trie
  */
 
 import java.util.Scanner;

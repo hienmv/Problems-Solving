@@ -1,5 +1,5 @@
 /* https://codeforces.com/contest/1185/problem/C2
-    idea: greedy, priority_queue; // or use a arr[101] to check 0-> 100
+#greedy #priorityqueue #greedy #math // or use a arr[101] to check 0-> 100
  */
 // 2 100
 // 100 100

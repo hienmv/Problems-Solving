@@ -1,8 +1,5 @@
 /** https://www.hackerrank.com/challenges/candies/problem
- *  
- *  two idea: greedy / divide and conquer
- * 
- *  idea: binary search, divide and conquer
+ *  tag: #greedy #divide-and-conquer #binary-search
  */
 
 import java.util.Scanner;
@@ -75,7 +72,7 @@ class Candies {
 
 /**
  *
- * idea Greedy: run two time: left -> right  and right -> left
+ * Greedy: run two time: left -> right  and right -> left
  * 
 org:    1 2 3 4 4 1 2
 L1:     1 2 3 4 1 1 2   (left -> right)

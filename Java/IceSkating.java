@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/217/A
- *  idea: DSU or DFS/BFS
+ * #dfs-and-similar #dsu #bfs
  */
  
 import java.util.Scanner;

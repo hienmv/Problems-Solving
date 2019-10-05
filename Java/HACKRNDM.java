@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/OPCPIZZA/
- *  idea: binary search or two pointer
+ *  #binary-search #two-pointer
  */
 
 import java.util.*;

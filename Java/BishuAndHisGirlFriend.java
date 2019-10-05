@@ -1,5 +1,6 @@
 /** https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/practice-problems/algorithm/bishu-and-his-girlfriend/
- *  idea: can use BFS / DFS (stack/ recursion)
+ * tag: #dfs #bfs 
+ * use BFS / DFS (stack/ recursion)
  */
 import java.util.Scanner;
 import java.util.HashMap;

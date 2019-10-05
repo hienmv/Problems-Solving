@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/MST/
- *  idea: original Prim Algorithm
+ *  #mst #prim
  */
 
 import java.util.Scanner;

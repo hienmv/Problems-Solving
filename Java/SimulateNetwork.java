@@ -1,5 +1,5 @@
 /* https://www.hackerearth.com/ja/challenges/hiring/globalsoft-backend-hiring-challenge/algorithm/efficient-network/
-idea: use Prim algorithm and then adjust dist.
+use #prim algorithm and then adjust dist.
 */
 
 import java.util.Scanner;

@@ -1,5 +1,6 @@
 /** https://www.spoj.com/problems/AGGRCOW/
- *  idea: Binary Search: minimum distance between two position in a range. 
+ * tag: #binary-search
+ * minimum distance between two position in a range. 
  */
 
 import java.util.Scanner;

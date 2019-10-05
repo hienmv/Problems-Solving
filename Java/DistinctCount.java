@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/practice-problems/algorithm/distinct-count/
- *  idea: Binary Search Tree
+ *  #binary-search-tree
  */
 import java.util.Scanner;
 import java.util.TreeSet;

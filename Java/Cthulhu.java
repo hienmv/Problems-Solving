@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/103/B
- *  idea: DSU
+ *  #dfs #dsu
  */
 
 import java.util.Scanner;

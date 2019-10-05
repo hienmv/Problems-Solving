@@ -1,5 +1,5 @@
 /** http://codeforces.com/problemset/problem/676/C
-    idea: two pointer, queue
+#binary-search #dp #strings #two-pointer
     other: 
         // nA + k
         // đổi thành 'a': left -> right lớn nhất mà số kí tự b = k

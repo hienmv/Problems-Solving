@@ -1,5 +1,5 @@
 /** https://codeforces.com/contest/518/problem/B
- *  idea: greedy
+ *  #greedy #strings
  */
 import java.util.Scanner;
  

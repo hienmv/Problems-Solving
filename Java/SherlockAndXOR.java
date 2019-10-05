@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/sherlock-and-xor/description/
- idea: BIT Manipulation
+#bit-manipulation #math
  */
 
 import java.util.Scanner;

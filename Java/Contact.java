@@ -1,8 +1,9 @@
+/** https://www.hackerrank.com/challenges/contacts/problem
+ * #trie
+ */
 import java.io.*;
-import java.math.*;
-import java.text.*;
-import java.util.*;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Contact {
     static final int MAX = 26;

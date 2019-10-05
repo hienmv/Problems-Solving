@@ -1,5 +1,5 @@
 /* https://www.urionlinejudge.com.br/judge/en/problems/view/1655
-   idea: Bellman ford
+#bellman-ford #shortest-path
 */
 
 #include<iostream>

@@ -1,5 +1,5 @@
 /* https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4206
-    idea: toposort
+    #topological-sort
  */
 import java.util.Scanner;
 import java.util.ArrayList;

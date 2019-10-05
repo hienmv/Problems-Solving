@@ -1,5 +1,5 @@
-/**
- *  idea: DSU, MST
+/** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=975
+ *  #dsu #mst
  */
 
 import java.util.ArrayList;

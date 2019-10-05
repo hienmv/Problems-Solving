@@ -1,5 +1,6 @@
 /*	https://codeforces.com/problemset/problem/602/B
-	idea: check i-th element to update the max, min of [first index, i]
+ *	tag: #dp #two-pointers
+	check i-th element to update the max, min of [first index, i]
 	if (max - min > 1), update first index, max, min
 */
 import java.util.Scanner;

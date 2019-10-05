@@ -1,5 +1,6 @@
 /** https://codeforces.com/problemset/problem/1143/C
- *  idea: only check vertices that can be deleted.
+ * #dfs-and-similar
+ * only check vertices that can be deleted.
  */
 
 import java.util.Scanner;

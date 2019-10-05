@@ -1,5 +1,6 @@
 /*	https://codeforces.com/contest/224/problem/B
-	idea: find the last index that satisfying the given property
+	tag: #bitmasks #two-pointers
+	find the last index that satisfying the given property
 	move the first index to the right side to make sure
 	no [x,y] segment inside [f,l] that satisfying the given property
 

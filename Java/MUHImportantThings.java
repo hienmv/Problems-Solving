@@ -1,19 +1,5 @@
-/**
-It's time polar bears Menshykov and Uslada from the zoo of St. Petersburg and elephant Horace from the zoo of Kiev got down to business. In total, there are 
-N tasks for the day and each animal should do each of these tasks. For each task, they have evaluated its difficulty. Also animals decided to do the tasks in order of their difficulty. Unfortunately, some tasks can have the same difficulty, so the order in which one can perform the tasks may vary.
-Menshykov, Uslada and Horace ask you to deal with this nuisance and come up with individual plans for each of them. The plan is a sequence describing the order in which an animal should do all the 
-N tasks. Besides, each of them wants to have its own unique plan. Therefore three plans must form three different sequences. You are to find the required plans, or otherwise deliver the sad news to them by stating that it is impossible to come up with three distinct plans for the given tasks.
-Input
-The first line contains integer N(1≤N≤2000) — the number of tasks. The second line contains 
-N integers h1,h2,...,hN (1≤ hi​​ ≤2000), where hi​​ is the difficulty of the i​th​​ task. The larger number hi is, the more difficult the 
-i​th task is.
-
-Output
-In the first line print "YES" (without the quotes), if it is possible to come up with three distinct plans of doing the tasks. Otherwise print in the first line 
-"NO" (without the quotes). If three desired plans do exist, print in the second line N distinct integers that represent the numbers of the tasks in the order they are done according to the first plan. In the third and fourth line print two remaining plans in the same form.
-If there are multiple possible answers, you can print any of them.
-
-idea: Greedy
+/** https://codeforces.com/problemset/problem/471/B
+#sorting
 */
 
 import java.util.Scanner;

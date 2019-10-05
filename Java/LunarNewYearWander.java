@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1106/D
- *  idea: DFS
+ *  #dfs #greedy #shortest-path
     A           B
     1         [2, 3, 4]
     [1, 3, 2]    [4, 6, 7, 5]
