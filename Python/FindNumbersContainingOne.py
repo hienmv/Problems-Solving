@@ -1,9 +1,9 @@
+'''
+https://leetcode.com/problems/number-of-digit-one/
+#math
+'''
 
 def sub(number):
-	""" 
-	Find numbers in range [0, numbers] containning number 1 in this
-	Example: input 22, Output: 12  { 1, 10 , 11, 12, 13, 14, 15, 16, 17, 18, 19, 21}
-	"""
 	if number < 10:
 		return 1
 

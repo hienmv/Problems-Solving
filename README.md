@@ -172,20 +172,20 @@ Practice with C++, Java and Python
  163. War (java) #dsu
  164. XorAndProject (java) #bit-manipulation
  165. YourQueue (java) #heap #queue
- 166. AddTwoNumbers (c++) #implementation #linked-list #math
+ 166. AddTwoNumbers (c++) (python) #implementation #linked-list #math
  167. Arbitrage (c++) #floyd-warshall #shortest-path
  168. AsterixAndObelix (c++) #dijkstra #shortest-path
  169. BalanceBrackets (c++) #stack #implementation
- 170. BestTimetoBuyandSellStockII (c++) #implementation #greedy
+ 170. BestTimetoBuyandSellStockII (c++) (python) #implementation #greedy
  171. CommonElementInTwoArray (c++) #hash-table #sorting #binary-search #two-pointer
  172. CoverIt (c++) #dfs-and-similar #dsu #shortest-path
  173. DevuDumbGuy (c++) #sortings
  174. EventOrganizer (c++) #bellman-ford #shortest-path
  175. ExtendedTraffic (c++) #bellman-ford #shortest-path
- 176. FindNumbersContainingOne (c++) #math
+ 176. FindNumbersContainingOne (c++) (python) #math
  177. FindTwoNumbersWithPredictedSum (c++) #map #hash-table
  178. FindtheDuplicateNumber (c++) #arrays #binary-search #two-pointer
- 179. LengthOfLongestSubstring (c++) #hash-table #string #slicing-window #two-pointer
+ 179. LengthOfLongestSubstring (c++) (python) #hash-table #string #slicing-window #two-pointer
  180. Letters (c++) #binary-search #two-pointer
  181. MathExpression (c++) #recursion #implementation
  182. Median (c++) #priorityqueue #heap
@@ -209,5 +209,5 @@ Practice with C++, Java and Python
  200. XYZZY (c++) #bellman-ford #bfs #shortest-path
  201. easyExamInBerSU (c++) #greedy #sorting #priorityqueue
  202. hardExamInBerSU (c++) #greedy #priorityqueue #greedy #math
- 203. myPow (c++) #recursion #implementation
+ 203. myPow (c++) (python) #recursion #implementation
  204. unknow_test (c++) #pointer
