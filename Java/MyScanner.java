@@ -22,11 +22,10 @@ class MyScanner {
                 e.printStackTrace();
             }
         }
-        
         return st.nextToken();
     }
     public int nextInt(){
-        return Integer.parseInt(next());   
+        return Integer.parseInt(next());
     }
     public long nextLong() {
         return Long.parseLong(next());
@@ -34,6 +33,4 @@ class MyScanner {
     public double nextDouble() {
         return Double.parseDouble(next());
     }
-
-
 }
