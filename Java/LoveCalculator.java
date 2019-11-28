@@ -13,15 +13,34 @@ class LoveCalculator {
             int n = word2.length();
             int[][] L = new int [m+1][n+1];
             lcs(word1, m, word2, n, L);
+            int len = m + n - L[m][n];
             int uniques = getShortestStringNum(word1, m, word2, n, L);
-            System.out.println("Case " + t + ": " + L[m][n] + " " + uniques);
+            System.out.println("Case " + t + ": " + len + " " + uniques);
         }
     }
     public static int getShortestStringNum(String word1, int m, String word2, int n, int[][] L) {
+        /* calcuate numbers of order when merging two strings 
+        * that their lengths are a and b respectively.
+        */
+        int[][] permutation = new int[m+1][n+1];
+        for(int k=0; k <= m; k++) {
+            for(int l=0; l <=n; l++) {
+                if(k==0 || l==0) {
+                    permutation[k][l] = 1;
+                }
+                else {
+                    permutation[k][l] = permutation[k-1][l] + permutation[k][l-1];
+                }
+                //System.out.print(permutation[k][l] + ", ");
+            }
+            //System.out.println();
+        }
+        //System.out.println("AA");
+        
         int len = L[m][n];
         // edge case
         if (len == 0) {
-            return calculateOrderNums(m, n);
+            return permutation[m][n];
         }
 
         int i=m, j=n;
@@ -46,23 +65,18 @@ class LoveCalculator {
         for (Position p : common) {
             a = p.pos1 - i;
             b = p.pos2 - j;
-            result *= calculateOrderNums(a, b);
-            i = p.pos1;
-            j = p.pos2;
+            //System.out.print(a + "::" + b);
+            result *= permutation[a][b];
+            i = p.pos1 + 1;
+            j = p.pos2 + 1;
         } 
         if (i < m || j < n) {
-            a = m - 1 - i;
-            b = n - 1 - j;
-            result *= calculateOrderNums(a, b);
+            a = m - i;
+            b = n - j;
+            //System.out.print(a + "**" + b);
+            result *= permutation[a][b];
         }
         return result;
-    }
-    // calcuate numbers of order when merging two string that their length are a and b respectively.
-    public static int calculateOrderNums(int a, int b) {
-        // edge case
-        if (a < 1 || b < 1) return 1;
-
-        return 1;
     }
     public static void lcs(String word1, int m, String word2, int n, int[][] L) {
         for(int i=0; i <= m; i++) {
