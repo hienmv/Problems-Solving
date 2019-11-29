@@ -30,11 +30,15 @@ class AdvancedFruits {
         }
         
         int i=m, j=n;
-        Position[] common = new Position[len];
+        int a = m, b = n;
         while(i > 0 && j > 0) {
             if (str1.charAt(i-1) == str2.charAt(j-1)) {
-                common[len - 1] = new Position(i-1,j-1); 
-                i--; j--; len--;
+               result.insert(0, str1.substring(i, a));
+               result.insert(0, str2.substring(j, b));
+               result.insert(0, str1.charAt(i-1));
+                i--; j--;
+                a = i;
+                b = j;
             }
             else if (L[i-1][j] > L[i][j-1]) {
                 i--;
@@ -43,22 +47,31 @@ class AdvancedFruits {
                 j--;
             }
         }
-
-        // append to result
-        i = 0; j = 0;
-        for (Position p : common) {
-            result.append(str1.substring(i, p.pos1));
-            result.append(str2.substring(j, p.pos2));
-            result.append(str1.charAt(p.pos1));
-            i = p.pos1 + 1;
-            j = p.pos2 + 1;
-        } 
-        if (i < m) {
-            result.append(str1.substring(i, m));
-        }
-        if (j < n) {
-            result.append(str2.substring(j, n));
-        }
+        result.insert(0, str1.substring(0, a));
+        result.insert(0, str2.substring(0, b));
+        /*
+        while(i > 0 || j > 0) {
+            if (i == 0) {
+                result.append(str2.charAt(j-1));
+                j--;
+            } 
+            else if (j == 0) {
+                result.append(str1.charAt(i-1));
+                i--;
+            }
+            else if(str1.charAt(i-1) == str2.charAt(j-1)) {
+                result.append(str1.charAt(i-1));
+                i--; j--;
+            }
+            else if (L[i-1][j] > L[i][j-1]) {
+                result.append(str1.charAt(i-1));
+                i--;
+            }
+            else {
+                result.append(str2.charAt(j-1));
+                j--;
+            }
+        }*/
         System.out.println(result);
     }
     public static void lcs(String str1, int m, String str2, int n, int[][] L) {
@@ -75,14 +88,5 @@ class AdvancedFruits {
                 }
             }
         }
-    }
-}
-
-class Position {
-    int pos1;
-    int pos2;
-    Position(int pos1, int pos2) {
-        this.pos1 = pos1;
-        this.pos2 = pos2;
     }
 }
