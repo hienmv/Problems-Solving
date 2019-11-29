@@ -1,5 +1,6 @@
 /**
  * #dp #lcs
+ * #refactor #simple-way #optimized
  */
 import java.util.Scanner;
 class LoveCalculator {
@@ -11,93 +12,57 @@ class LoveCalculator {
             String word2 = sc.next();
             int m = word1.length();
             int n = word2.length();
-            int[][] L = new int [m+1][n+1];
-            lcs(word1, m, word2, n, L);
+            int[][] L = new int[m+1][n+1];
+            long[][] numWays = new long[m+1][n+1];
+            lcs(word1, m, word2, n, L, numWays);
             int len = m + n - L[m][n];
-            int uniques = getShortestStringNum(word1, m, word2, n, L);
-            System.out.println("Case " + t + ": " + len + " " + uniques);
+            System.out.println("Case " + t + ": " + len + " " + numWays[m][n]);
         }
     }
-    public static int getShortestStringNum(String word1, int m, String word2, int n, int[][] L) {
-        /* calcuate numbers of order when merging two strings 
-        * that their lengths are a and b respectively.
-        */
-        int[][] permutation = new int[m+1][n+1];
-        for(int k=0; k <= m; k++) {
-            for(int l=0; l <=n; l++) {
-                if(k==0 || l==0) {
-                    permutation[k][l] = 1;
-                }
-                else {
-                    permutation[k][l] = permutation[k-1][l] + permutation[k][l-1];
-                }
-                //System.out.print(permutation[k][l] + ", ");
-            }
-            //System.out.println();
-        }
-        //System.out.println("AA");
-        
-        int len = L[m][n];
-        // edge case
-        if (len == 0) {
-            return permutation[m][n];
-        }
-
-        int i=m, j=n;
-        Position[] common = new Position[len];
-        while(i > 0 && j > 0) {
-            if (word1.charAt(i-1) == word2.charAt(j-1)) {
-                common[len - 1] = new Position(i - 1, j - 1);
-                i--; j--; len--;
-            }
-            else if (L[i-1][j] > L[i][j-1]) {
-                i--;
-            }
-            else {
-                j--;
-            }
-        }
-
-        // calculate
-        int result = 1;
-        i = 0; j = 0;
-        int a, b;
-        for (Position p : common) {
-            a = p.pos1 - i;
-            b = p.pos2 - j;
-            //System.out.print(a + "::" + b);
-            result *= permutation[a][b];
-            i = p.pos1 + 1;
-            j = p.pos2 + 1;
-        } 
-        if (i < m || j < n) {
-            a = m - i;
-            b = n - j;
-            //System.out.print(a + "**" + b);
-            result *= permutation[a][b];
-        }
-        return result;
-    }
-    public static void lcs(String word1, int m, String word2, int n, int[][] L) {
+    public static void lcs(String word1, int m, String word2, int n, int[][] L, long[][] numWays) {
         for(int i=0; i <= m; i++) {
             for(int j=0; j <= n; j++) {
                 if (i==0 || j==0) {
                     L[i][j] = 0;
+                    numWays[i][j] = 1;
                 } 
                 else if (word1.charAt(i-1) == word2.charAt(j-1)) {
                     L[i][j] = L[i-1][j-1] + 1;
+                    numWays[i][j] = numWays[i-1][j-1];
                 }
                 else {
                     L[i][j] = Math.max(L[i-1][j], L[i][j-1]);
+                    if (L[i][j] == L[i-1][j]) {
+                        L[i][j] = L[i-1][j];
+                        numWays[i][j] += numWays[i-1][j];
+                    }
+                    if (L[i][j] == L[i][j-1]) {
+                        L[i][j] = L[i][j-1];
+                        numWays[i][j] += numWays[i][j-1];
+                    }
                 }
             }
         }
     }
-}
-class Position {
-    int pos1, pos2;
-    Position(int pos1, int pos2) {
-        this.pos1 = pos1;
-        this.pos2 = pos2;
+/*    
+    // simple-way
+    findWays() {
+        for(int i=0; i <= m; i++) {
+            for(int j=0; j <=n; j++) {
+                if(i==0 || j==0) {
+                    permutation[i][j] = 1;
+                }
+                else {
+                    // permutation[i][j] = permutation[i-1][j] + permutation[i][j-1];
+                    if( L[i][j] == L[i-1][j]) {
+                        permutation[i][j] += permutation[i-1][j];
+                    }
+                    if (L[i][j] == L[i][j-1]) {
+                         permutation[i][j] += permutation[i][j-1];
+                    }
+                }
+            }
+        }
     }
+    */
 }
