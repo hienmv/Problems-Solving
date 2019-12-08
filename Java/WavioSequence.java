@@ -38,7 +38,7 @@ class WavioSequence {
             System.out.println(result);
         }
     }
-    public static void LIS(int[] arr, int[] resultLeft) {
+    public static void LIS(int[] arr, int[] resultArr) {
         int len = 1;
         ArrayList<Integer> result = new ArrayList<>();
         result.add(0);
@@ -49,11 +49,11 @@ class WavioSequence {
             else if (arr[i] > arr[result.get(len - 1)]) {
                 result.add(i);
                 len++;
-                resultLeft[i] = len;
+                resultArr[i] = len;
             }
             else {
                 int pos = lowerBound(arr, result, len, arr[i]);
-                resultLeft[i] = pos;
+                resultArr[i] = pos;
                 result.set(pos, i);
             }
         }
