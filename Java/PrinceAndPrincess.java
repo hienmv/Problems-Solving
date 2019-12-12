@@ -1,5 +1,8 @@
 /**
 #dp #lis
+
+tim day chung (rieng biet) cua 2 day hoan vi/ hoac trong cung 1 tap
+-> lis
  */
 
 import java.util.Scanner;
@@ -22,6 +25,7 @@ class PrinceAndPrincess {
             int[] arr = new int[q+1];
             for (int i=0; i < q+1; i++) {
                 arr[i] = sc.nextInt();
+                // simple: arr[i] = rank[sc.nextInt()];
             }
             int result = LIS(rank, arr);
             System.out.println("Case " + t + ": " + result);
