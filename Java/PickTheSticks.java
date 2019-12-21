@@ -1,9 +1,33 @@
 /**
  * #dp #knapsack
- */
+ *  => han che goi bai toan nhieu lan.
+ *  => cai tien, chap nhan them 1 tham so nua..
+ *
+ * #dp
+  L = 5
+  n = 2
+  5 5
+  5 5
+    -> le idx -> x2
+
+  f[i][j] = i items with capacity j
+  ->  f[i][j][k] (k = 0, 1, 2)
+        f[i][j][k] = pick i items with capacity j, extend k
+          k = 0:  khong co thanh nao du ra
+          k = 1: 1 thanh du ra 
+          k = 2: 2 thanh du ra 2 dau
+      
+      
+      f[i][j][k]
+        khong chon: f[i-1][j][k]
+        chon:
+          if j >= 2 * a[i].length
+            khong bi du:    f[i-1][j - 2*length(i)][k]
+          if j >= a[i].length and k > 0
+            bi du ra:       f[i-1][j - length(i)][k - 1]
+*/
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 class PickTheSticks {
     public static void main(String[] args) {
@@ -15,94 +39,54 @@ class PickTheSticks {
             Item[] items = new Item[n+1];
             items[0] = new Item(0, 0);
             int a, v;
+            int maxValue = 0;
             for(int i=1; i <= n; i++) {
                 a = sc.nextInt();
                 v = sc.nextInt();
+                maxValue = Math.max(maxValue, v);
                 items[i] = new Item(a, v);
             }
-            long result;
-            // only one item
-            if (n == 1) {
-                result = items[1].value;
-            }
-            else {
-                // sort
-                Arrays.sort(items);
-                result = calculate(items, L);
-            }
+            long result = Math.max(maxValue, Knapsack(items, 2*L));
             System.out.println("Case #" + t + ": " + result);
         }
     }
-    public static long calculate(Item[] items, int L) {
-        long result = 0, val, val1, val2;
-        int i = 1, j = items.length - 1;
-        while (i < j) {
-            val = subCalculate(items, i, j, L);
-            val1 = 0; // i, j-1
-            val2 = 0; // i+1, j
-            if (i + 1 < j)
-            {
-                val1 = subCalculate(items, i, j-1, L);
-                val2 = subCalculate(items, i+1, j, L);
+
+    public static long Knapsack(Item[] items, int w) {
+        int n = items.length;
+        long[][][] K = new long[n][w+1][3];
+        for(int i=1; i < n; i++) {
+            for (int j=0; j <= w; j++) {
+                for (int k=0; k < 3; k++) {
+                    // not choose
+                    K[i][j][k] = K[i-1][j][k];
+
+                    // choose
+                    // inside
+                    if (j >= 2 * items[i].length) {
+                        K[i][j][k] = Math.max(K[i][j][k], items[i].value + K[i-1][j - 2 * items[i].length][k]);
+                    }
+                    // outside
+                    if (j >= items[i].length && k > 0) {
+                        K[i][j][k] = Math.max(K[i][j][k], items[i].value + K[i-1][j - items[i].length][k-1]);
+                    }
+                }
             }
-            System.out.printf("%d - %d - %d - %d - %d\n", i,  j, val1, val2, val);
-            if (val1 >= val2) {
-                j--;
+        }
+        long result = 0;
+        for (int j=0; j <= w; j++) {
+            for (int k=0; k < 3; k++) {
+                result = Math.max(result, K[n-1][j][k]);
             }
-            if (val2 >= val1) {
-                i++;
-            }
-            val = Math.max(val, Math.max(val1, val2));
-            result = Math.max(result, val);
         }
         return result;
     }
-    
-    public static long subCalculate(Item[] items, int i, int j, int L) {
-        int w =  L - ((items[i].length + 1) / 2 + (items[j].length + 1) / 2);
-        long val = 0;
-        if (w < 0) {
-            val = Math.max(items[i].value, items[j].value);
-        }
-        else if (w == 0) {
-            val = items[i].value + items[j].value;
-        } 
-        else {
-            val = items[i].value + items[j].value + Knapsack(items, w, i, j);
-        }
-        return val;
-    }
-
-    public static long Knapsack(Item[] items, int w, int invalidIdx1, int invalidIdx2) {
-        int n = items.length;
-        long[][] K = new long[n][w+1];
-        for(int i=1; i < n; i++) {
-            for (int j=0; j <= w; j++) {
-                if (items[i].length > j || i == invalidIdx1 || i == invalidIdx2) {
-                    K[i][j] = K[i-1][j];
-                }
-                else {
-                    long val1 = K[i-1][j];
-                    long val2 = items[i].value + K[i-1][j - items[i].length];
-                    K[i][j] = Math.max(val1, val2);
-                }
-            }
-        }
-        return K[n-1][w];
-    }
 }
 
-class Item implements Comparable<Item> {
+class Item {
     int length;
     int value;
     Item(int length, int value) {
         this.length = length;
         this.value = value;
-    }
-    public int compareTo(Item other) {
-        if (this.length != other.length) {
-            return this.length - other.length;
-        }
-        return this.value - other.value;
     }
 }
