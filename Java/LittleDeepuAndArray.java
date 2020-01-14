@@ -15,13 +15,13 @@ class LittleDeepuAndArray {
         for (int i = 0; i < m; i++) {
             hitArr[i] = sc.nextInt();
         }
+        
         /* case 1: brute force */
         // bruteforce(arr, hitArr);
 
         /* case 2: use segment tree */
         segmentTree(arr, hitArr);
     }
-
     private static void bruteforce(int[] arr, int[] hitArr) {
         int n = arr.length;
         int m = hitArr.length;
@@ -32,14 +32,12 @@ class LittleDeepuAndArray {
                 }
             }
         }
-
          // print result
          for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
-
     private static double log2(int n) {
         return Math.log(n) / Math.log(2);
     }
@@ -59,10 +57,11 @@ class LittleDeepuAndArray {
             updateQuery_minRangeLazy(segTree, lazy, 0, n - 1, 0, n - 1, query[i], -1 , 0);
         }
         updateQuery_minRangeLazy(segTree, lazy, 0, n - 1, 0, n - 1, Integer.MAX_VALUE, 0, 0);
-        for (int i=0; i < segTree.length; i++) {
-            System.out.print(segTree[i] + " ");
-        }
-        System.out.println();
+
+        // print result
+        StringBuilder result = new StringBuilder();
+        printResult(segTree, 0, result);
+        System.out.println(result.toString());
 
     }
     private static void buildTree(int[] arr, int[] segTree, int left, int right, int idx) {
@@ -79,6 +78,7 @@ class LittleDeepuAndArray {
         if (left > right) {
             return;
         }
+
         // make sure all propagation is done at idx
         if (lazy[idx] != 0) {
             segTree[idx] += lazy[idx];
@@ -101,9 +101,29 @@ class LittleDeepuAndArray {
             }
             return;
         }
+        
+        // a leaf node
+        if (left == right) {
+            return;
+        }
+        
         int mid = left + (right - left) / 2;
         updateQuery_minRangeLazy(segTree, lazy, left, mid, from, to, val, delta, 2 * idx + 1);
         updateQuery_minRangeLazy(segTree, lazy, mid + 1, right, from, to, val, delta, 2 * idx + 2);
         segTree[idx] = Math.min(segTree[2 * idx + 1], segTree[2 * idx + 2]);
     }
-}
+    private static void printResult(int[] segTree, int idx, StringBuilder sb) {
+        // refactor -> as a min query in a range  with same from - to.
+        
+        if (idx >= segTree.length || segTree[idx] == 0) {
+            return;
+        }
+        if (idx * 2 + 1 >= segTree.length || segTree[idx * 2 + 1] == 0) {
+            sb.append(segTree[idx] + " ");
+            return;
+        }
+
+        printResult(segTree, 2 * idx + 1, sb);
+        printResult(segTree, 2 * idx + 2, sb);
+    }
+} 
