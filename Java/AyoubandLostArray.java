@@ -36,15 +36,8 @@ public class AyoubAndLostArray {
                     L[i][j] = cnt[j];
                     continue;
                 }
-                if (j != 0) {
-                    L[i][j] = (L[i][j] + (cnt[j] * L[i - 1][0]) % MOD) % MOD;
-                    L[i][j] = (L[i][j] + (cnt[0] * L[i - 1][j]) % MOD) % MOD;
-                    L[i][j] = (L[i][j] + (cnt[3 - j] * L[i - 1][3 - j]) % MOD) % MOD;
-                }
-                else {
-                    L[i][j] = (L[i][j] + (cnt[j] * L[i - 1][0]) % MOD) % MOD;
-                    L[i][j] = (L[i][j] + (cnt[2] * L[i - 1][1]) % MOD) % MOD;
-                    L[i][j] = (L[i][j] + (cnt[1] * L[i - 1][2]) % MOD) % MOD;
+                for (int k = 0; k < 3; k++) {
+                    L[i][j] = (L[i][j] + cnt[k] * L[i - 1][(j + 3 - k) % 3] % MOD) % MOD;
                 }
             }
         }
