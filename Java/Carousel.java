@@ -1,22 +1,22 @@
 /** https://codeforces.com/contest/1328/problem/D
- * #implementation
+ * 
  */
 /**
 1 2 3 3 2 3 1 2
 1 2 1 1 2 1 2 3 
 1 2 1 2 1 2 1 2
-
+ 
 k = 3
-
+ 
 k = 1, 2, 3
-
+ 
 n even: k = 1, 2
   k = 1 ? arr[i] = arr[i+1]
   other k = 2 ?
     => 1, 2, 1, 2...
-
+ 
 n odd : K = 1, 2, 3
-
+ 
       => Find 1 pair (i, i+1) that has same type. => n even.
       
   k = 1 ? arr[i] = arr[i+1]
@@ -42,22 +42,40 @@ public class Carousel {
             int k = 1;
             result[0] = k;
             for (int i = 1; i < n; i++) {
-                result[i] = k;
                 if (arr[i] != arr[i - 1]) {
                     k = 2;
-                    for(int j = i; j < n; j++) {
-                        if (n % 2 != 0 && arr[j] == arr[j - 1]) {
-                            result[j] = result[j - 1];
-                        }
-                        else {
-                            result[j] = 3 - result[j - 1];
+                    break;
+                }
+            }
+
+            if (k == 1) {
+                for(int i = 0; i < n; i++) {
+                    result[i] = 1;
+                }
+            }
+            else { // k > 1
+                for (int i = 1; i < n; i++) {
+                    result[i] = 3 - result[i - 1];
+                }
+
+                if (n % 2 != 0 && arr[n - 1] != arr[0] && result[n - 1] == result[0]) {
+                    // k = 2
+                    boolean onlyTwoColor = false;
+                    for (int i = 1; i < n; i++) {
+                        if (arr[i] == arr[i - 1]) {
+                            onlyTwoColor = true;
+                            result[i] = result[i - 1];
+                            for (int j = i + 1; j < n; j++) {
+                                result[j] = 3 - result[j - 1];
+                            }
+                            break;
                         }
                     }
-                    if (arr[n - 1] != arr[0] && result[n - 1] == result[0]) {
+                    // k = 3
+                    if (!onlyTwoColor) {
                         result[n - 1] = 3;
                         k = 3;
                     }
-                    break;
                 }
             }
             System.out.println(k);
