@@ -9,11 +9,11 @@ public class ReadMeGenerator {
         String extension;
 
         Item(String path) {
-            this.path = path;
             int slash_index = path.lastIndexOf("/");
-            int dot_index = path.indexOf(".");
+            int dot_index = path.lastIndexOf(".");
             this.name = path.substring(slash_index + 1, dot_index);
             this.extension = path.substring(dot_index + 1);
+            this.path = path.replace("../", "");
         }
         public String getName() {
             return name;
@@ -33,61 +33,7 @@ public class ReadMeGenerator {
 
     private static TreeMap<String, ArrayList<Item>> files_group_by_tags_map;
     private static TreeMap<String, ArrayList<String>> files_group_by_sources_map;
-    private static String[] keywords = {
-        "#01knapsack",
-        "#ad-hoc-1",
-        "#array",
-        "#backtracking",
-        "#bellman-ford",
-        "#bfs",
-        "#binary-search",
-        "#binary-search-tree",
-        "#bit-manipulation",
-        "#brute-force",
-        "#constructive-algorithms",
-        "#deque",
-        "#dfs",
-        "#dijkstra",
-        "#divide-and-conquer",
-        "#dsu",
-        "#dynamic-programming",
-        "#floyd-warshall",
-        "#geometry",
-        "#graph",
-        "#greedy",
-        "#hash-table",
-        "#heap",
-        "#implementation",
-        "#kmp",
-        "#knapsack",
-        "#lcs",
-        "#linked-list",
-        "#lis",
-        "#map",
-        "#math",
-        "#mst",
-        "#number-theory",
-        "#optimized",
-        "#pointer",
-        "#prim",
-        "#priority-queue",
-        "#queue",
-        "#recursion",
-        "#refactor",
-        "#segment-tree",
-        "#shortest-path",
-        "#simple-way",
-        "#slicing-window",
-        "#sorting",
-        "#special-problem",
-        "#stack",
-        "#string",
-        "#todo",
-        "#topological-sort",
-        "#tree",
-        "#trie",
-        "#two-pointer",
-    };
+    private static ArrayList<String> tags;
 
     private static String[] getHeader() {
         String[] header = { 
@@ -98,13 +44,24 @@ public class ReadMeGenerator {
     }
 
     private static String[] getFolderPaths() {
-        String[] folder_paths = {"Java/", "C/", "C++/", "Python/"};
+        String[] folder_paths = {"../Java/", "../C/", "../C++/", "../Python/"};
         return folder_paths;
      }
  
     private static String getFilePath() {
-         return "README.md";
+         return "../README.md";
      }
+
+    private static ArrayList<String> getTags() throws Exception {
+        tags = new ArrayList<>();
+        Scanner scanner = new Scanner(new File("tags.env"));
+        while (scanner.hasNextLine()) {
+            String tag = scanner.nextLine();
+            tags.add(tag);
+        };
+        scanner.close();
+        return tags;
+    }
 
     private static ArrayList<String> getStatistic() {
         // TODO: separated by difficulty (easy/medium/hard)
@@ -161,7 +118,7 @@ public class ReadMeGenerator {
             // block header
             body.add("### " + entry.getKey() + " (" + line_map.size() + ")");
             // block body
-            String prefix = entry.getKey() != "#todo" ? "- [x] " : "- [ ] ";
+            String prefix = entry.getKey().equals("#todo") ? "- [ ] " : "- [x] ";
             for (Map.Entry<String, String> line_entry : line_map.entrySet()) {
                 body.add(prefix + line_entry.getKey() + line_entry.getValue());
             }
@@ -179,13 +136,11 @@ public class ReadMeGenerator {
     private static void analytics() throws Exception {
         // init
         files_group_by_tags_map = new TreeMap<>();
-        for( String keyword : keywords) {
-            files_group_by_tags_map.put(keyword, new ArrayList<>());
+        for(String tag : getTags()) {
+            files_group_by_tags_map.put(tag, new ArrayList<>());
         }
         files_group_by_sources_map = new TreeMap<>();
-
-        String[] folder_paths = getFolderPaths();
-        for (String folder_path : folder_paths) {
+        for (String folder_path : getFolderPaths()) {
             final File folder = new File(folder_path);
             for (final File fileEntry : folder.listFiles()) {
                 Scanner scanner = new Scanner(fileEntry);
