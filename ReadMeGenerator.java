@@ -3,6 +3,34 @@ import java.util.*;
 
 public class ReadMeGenerator {
 
+    private static class Item implements Comparable {
+        String name;
+        String path;
+        String extension;
+
+        Item(String path) {
+            this.path = path;
+            int slash_index = path.lastIndexOf("/");
+            int dot_index = path.indexOf(".");
+            this.name = path.substring(slash_index + 1, dot_index);
+            this.extension = path.substring(dot_index + 1);
+        }
+        public String getName() {
+            return name;
+        }
+        public String getPath() {
+            return " [(" + this.extension +")](./" + this.path + ")";
+        }
+
+        public int compareTo(Object o) {
+            Item other = (Item) o;
+            if (this.name.equals(other.name)) {
+                return this.extension.compareTo(other.extension);
+            }
+            return this.name.compareTo(other.name);
+        }
+    }
+
     private static TreeMap<String, ArrayList<Item>> files_group_by_tags_map;
     private static TreeMap<String, ArrayList<String>> files_group_by_sources_map;
     private static String[] keywords = {
@@ -68,7 +96,16 @@ public class ReadMeGenerator {
         };
         return header;
     }
-    
+
+    private static String[] getFolderPaths() {
+        String[] folder_paths = {"Java/", "C/", "C++/", "Python/"};
+        return folder_paths;
+     }
+ 
+    private static String getFilePath() {
+         return "README.md";
+     }
+
     private static ArrayList<String> getStatistic() {
         // TODO: separated by difficulty (easy/medium/hard)
         TreeMap<String, Integer> source_count = new TreeMap<>();
@@ -132,41 +169,11 @@ public class ReadMeGenerator {
 
         return body;
     }
-    private static String[] getFolderPaths() {
-       String[] folder_paths = {"Java/", "C/", "C++/", "Python/"};
-       return folder_paths;
-    }
 
-    private static String getFilePath() {
-        return "README.md";
-    }
-
-    private static class Item implements Comparable {
-        String name;
-        String path;
-        String extension;
-
-        Item(String path) {
-            this.path = path;
-            int slash_index = path.lastIndexOf("/");
-            int dot_index = path.indexOf(".");
-            this.name = path.substring(slash_index + 1, dot_index);
-            this.extension = path.substring(dot_index + 1);
-        }
-        public String getName() {
-            return name;
-        }
-        public String getPath() {
-            return " [(" + this.extension +")](./" + this.path + ")";
-        }
-
-        public int compareTo(Object o) {
-            Item other = (Item) o;
-            if (this.name.equals(other.name)) {
-                return this.extension.compareTo(other.extension);
-            }
-            return this.name.compareTo(other.name);
-        }
+    private static String getSource(String protocol, String url) {
+        int url_idx = url.indexOf(protocol);
+        int next_slash_idx = url.indexOf("/", url_idx + protocol.length());
+        return url.substring(url_idx + protocol.length(), next_slash_idx);
     }
 
     private static void analytics() throws Exception {
@@ -197,16 +204,10 @@ public class ReadMeGenerator {
                         {
                             String source = "";
                             if (word.contains("http://")) {
-                                String protocol = "http://";
-                                int url_idx = word.indexOf(protocol);
-                                int next_slash_idx = word.indexOf("/", url_idx + protocol.length());
-                                source = word.substring(url_idx + protocol.length(), next_slash_idx);
+                                source = getSource("http://", word);
                             }
                             else if (word.contains("https://")) {
-                                String protocol = "https://";
-                                int url_idx = word.indexOf(protocol);
-                                int next_slash_idx = word.indexOf("/", url_idx + protocol.length());
-                                source = word.substring(url_idx + protocol.length(), next_slash_idx);
+                                source = getSource("https://", word);
                             }
                             if (!source.isEmpty()) {
                                 if (source.startsWith("www.")) {
