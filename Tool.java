@@ -118,6 +118,10 @@ public class Tool {
             }
         }
 
+        flushToReadMe(map);
+    }
+
+    private static void flushToReadMe(TreeMap<String, ArrayList<Item>> map) throws Exception {
         FileWriter writer = new FileWriter("README.md"); 
         // header
         for(String line : getHeader()) {
