@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Tool {
 
-    static String[] keywords = {
+    private static String[] keywords = {
         "#01knapsack",
         "#ad-hoc-1",
         "#array",
@@ -67,6 +67,15 @@ public class Tool {
         };
         return header;
     }
+
+    private static String[] getFolderPaths() {
+       String[] folder_paths = {"Java/", "C/", "C++/", "Python/"};
+       return folder_paths;
+    }
+
+    private static String getFilePath() {
+        return "README.md";
+    }
     private static class Item implements Comparable {
         String name;
         String path;
@@ -95,14 +104,14 @@ public class Tool {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    private static TreeMap<String, ArrayList<Item>> getFilesGroupByTags() throws Exception {
         TreeMap<String, ArrayList<Item>> map = new TreeMap<>();
         for( String keyword : keywords) {
             map.put(keyword, new ArrayList<>());
         }
-        String[] folder_names = {"Java/", "C/", "C++/", "Python/"};
-        for (String name : folder_names) {
-            final File folder = new File(name);
+        String[] folder_paths = getFolderPaths();
+        for (String folder_path : folder_paths) {
+            final File folder = new File(folder_path);
             for (final File fileEntry : folder.listFiles()) {
                 Scanner scanner = new Scanner(fileEntry);
                 while (scanner.hasNextLine()) {
@@ -118,11 +127,12 @@ public class Tool {
             }
         }
 
-        flushToReadMe(map);
+        return map;
     }
 
     private static void flushToReadMe(TreeMap<String, ArrayList<Item>> map) throws Exception {
-        FileWriter writer = new FileWriter("README.md"); 
+        FileWriter writer = new FileWriter(getFilePath()); 
+
         // header
         for(String line : getHeader()) {
             writer.write(line + System.lineSeparator());
@@ -146,6 +156,12 @@ public class Tool {
                 writer.write("- [ ] " + line_entry.getKey() + line_entry.getValue() + System.lineSeparator());
             }
         }
+
         writer.close();
+    }
+
+    public static void main(String[] args) throws Exception {
+        TreeMap<String, ArrayList<Item>> filesGroupByTags = getFilesGroupByTags();
+        flushToReadMe(filesGroupByTags);
     }
 }
