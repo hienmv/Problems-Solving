@@ -63,7 +63,6 @@ public class Tool {
         String[] header = { 
             "# Problems-Solving",
             "My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.",
-            "## Top coding problems"
         };
         return header;
     }
@@ -131,18 +130,15 @@ public class Tool {
     }
 
     private static void flushToReadMe(TreeMap<String, ArrayList<Item>> map) throws Exception {
-        FileWriter writer = new FileWriter(getFilePath()); 
-
-        // header
-        for(String line : getHeader()) {
-            writer.write(line + System.lineSeparator());
-        }
         // body
+        ArrayList<String> body = new ArrayList<>();
+        HashSet<String> problem_names = new HashSet<>();
         for (Map.Entry<String, ArrayList<Item>> entry : map.entrySet()) {
             TreeMap<String, String> line_map = new TreeMap<>();
             ArrayList<Item> items = entry.getValue();
             Collections.sort(items);
             for(Item item : items) {
+                problem_names.add(item.getName());
                 if (line_map.containsKey(item.getName())) {
                     line_map.put(item.getName(), line_map.get(item.getName()) + item.getPath());
                 } else {
@@ -150,15 +146,31 @@ public class Tool {
                 }    
             }
             // block header
-            writer.write("### " + entry.getKey() + " (" + line_map.size() + ")" + System.lineSeparator());
+            body.add("### " + entry.getKey() + " (" + line_map.size() + ")");
             // block body
             String prefix = entry.getKey() != "#todo" ? "- [x] " : "- [ ] ";
             for (Map.Entry<String, String> line_entry : line_map.entrySet()) {
-                writer.write(prefix + line_entry.getKey() + line_entry.getValue() + System.lineSeparator());
+                body.add(prefix + line_entry.getKey() + line_entry.getValue());
             }
         }
 
-        writer.close();
+        { // flush to file
+            FileWriter writer = new FileWriter(getFilePath()); 
+            // header
+            for(String line : getHeader()) {
+                writer.write(line + System.lineSeparator());
+            }
+
+            // statistic 
+            // separated by difficulty (easy/medium/hard); source (leetcode/codefore/hackerrank/interviewbit...)
+            writer.write("Number of problems: " + problem_names.size() + System.lineSeparator());
+
+            // body
+            for(String line : body) {
+                writer.write(line + System.lineSeparator());
+            }
+            writer.close();
+        }
     }
 
     public static void main(String[] args) throws Exception {

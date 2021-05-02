@@ -1,6 +1,6 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
-## Top coding problems
+Number of problems: 297
 ### #01knapsack (3)
 - [x] DividingCoins [(java)](./Java/DividingCoins.java)
 - [x] DivingForGold [(java)](./Java/DivingForGold.java)
