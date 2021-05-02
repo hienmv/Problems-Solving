@@ -800,7 +800,7 @@ pie
 - [x] FlattenBinaryTreeToLinkedList [(java)](./Java/FlattenBinaryTreeToLinkedList.java)
 - [x] InvertBinaryTree [(java)](./Java/InvertBinaryTree.java)
 - [x] KthSmallestElementInABST [(java)](./Java/KthSmallestElementInABST.java)
-- [x] LowestCommonAncestorOfABinary Tree [(java)](./Java/LowestCommonAncestorOfABinary Tree.java)
+- [x] LowestCommonAncestorOfABinaryTree [(java)](./Java/LowestCommonAncestorOfABinaryTree.java)
 - [x] OldBerlandLanguage [(java)](./Java/OldBerlandLanguage.java)
 - [x] SearchInABinarySearchTree [(java)](./Java/SearchInABinarySearchTree.java)
 - [x] SymmetricTree [(java)](./Java/SymmetricTree.java)
