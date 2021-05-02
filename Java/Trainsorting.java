@@ -1,5 +1,5 @@
 /**
- * #lis #dp
+ * #lis #dynamic-programming
  * 
   12 18 0 4 2 1
   6

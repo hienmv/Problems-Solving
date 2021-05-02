@@ -1,5 +1,5 @@
 /* https://codeforces.com/problemset/problem/1107/C
-  tag: #greedy #sortings #two-pointer
+  tag: #greedy #sorting #two-pointer
 */
 import java.util.Scanner;
 import java.util.PriorityQueue;

@@ -1,5 +1,5 @@
 /* https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3252
-*  #priorityqueue #queue
+*  #priority-queue #queue
 */
 
 #include<queue>

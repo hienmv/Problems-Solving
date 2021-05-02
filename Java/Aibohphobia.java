@@ -1,5 +1,5 @@
 /**
-* #dp #lcs 
+* #dynamic-programming #lcs 
 lcs s and reverse of s. 
 
 abccbaazo

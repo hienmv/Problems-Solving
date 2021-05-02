@@ -1,5 +1,5 @@
 /**
- * #dp #LIS
+ * #dynamic-programming #lis
  */
 
 import java.util.Scanner;

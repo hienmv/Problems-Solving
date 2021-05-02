@@ -1,5 +1,5 @@
 /**
- * #dp #lcs
+ * #dynamic-programming #lcs
  * #refactor #simple-way #optimized #todo
  */
 import java.util.Scanner;

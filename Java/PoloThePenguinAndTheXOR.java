@@ -1,5 +1,5 @@
 /**
- * #bit-map #refactor #todo
+ * #bit-manipulation #refactor #todo
  other way:
     a = [1, 2, 3, 4, 13] -> 79
     s = [   1,    3,    0,    4,    9]

@@ -1,5 +1,5 @@
 /** http://codeforces.com/problemset/problem/676/C
-#binary-search #dp #strings #two-pointer
+#binary-search #dynamic-programming #string #two-pointer
     other: 
         // nA + k
         // đổi thành 'a': left -> right lớn nhất mà số kí tự b = k

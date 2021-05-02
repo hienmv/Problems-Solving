@@ -1,5 +1,5 @@
 /** http://codeforces.com/problemset/problem/161/D
- *  #dp on Tree. #divide-and-conquer #dfs
+ *  #dynamic-programming on Tree. #divide-and-conquer #dfs
  */
 /*
 5 2

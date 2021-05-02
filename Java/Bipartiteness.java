@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/862/B
- *  tag: #dfs #graphs #trees
+ *  tag: #dfs #graph #tree
  *  dfs and similar: create sets of graph, 
  *  and check number of vertexes in set 2 that each vertex in set 1 can connect with.
  */

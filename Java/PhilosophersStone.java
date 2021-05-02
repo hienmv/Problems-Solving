@@ -1,5 +1,5 @@
 /**
- * #dp #dijkstra
+ * #dynamic-programming #dijkstra
  * 
 1
 6 5

@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1155/D
- *  tag: #divide-and-conquer #dp #greedy #todo
+ *  tag: #divide-and-conquer #dynamic-programming #greedy #todo
 
 //
         L, R MAX

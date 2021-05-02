@@ -1,9 +1,9 @@
 /**
- * #dp #knapsack
+ * #dynamic-programming #knapsack
  *  => han che goi bai toan nhieu lan.
  *  => cai tien, chap nhan them 1 tham so nua..
  *
- * #dp
+ * #dynamic-programming
   L = 5
   n = 2
   5 5

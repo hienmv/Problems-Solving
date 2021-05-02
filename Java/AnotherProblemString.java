@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/165/C
- * tag: #binary-search #brute-force #dp #two-pointers
+ * tag: #binary-search #brute-force #dynamic-programming #two-pointer
  *  other
  *  
 // prefixsum

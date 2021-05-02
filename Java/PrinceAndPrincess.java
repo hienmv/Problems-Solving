@@ -1,5 +1,5 @@
 /**
-#dp #lis
+#dynamic-programming #lis
 
 tim day chung (rieng biet) cua 2 day hoan vi/ hoac trong cung 1 tap
 -> lis

@@ -1,5 +1,5 @@
 /**
-#dp #lis
+#dynamic-programming #lis
 
 =.. hate
     Si >= Sj && Bi <= Bj

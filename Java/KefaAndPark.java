@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/580/C
- * #dfs-and-similar #bfs
+ * #dfs #bfs
  */
 
 /*

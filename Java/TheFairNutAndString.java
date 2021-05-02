@@ -1,6 +1,6 @@
 /**
  * https://codeforces.com/problemset/problem/1084/C
- * #dp
+ * #dynamic-programming
  * chien thuat:
  *      1. liet ke cac cach 
  *      2. sap xep lai cac cach de tim cthuc (ket thuc tai cung vi tri...)

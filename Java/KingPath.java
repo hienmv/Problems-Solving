@@ -1,12 +1,12 @@
 /** https://codeforces.com/problemset/problem/242/C
- * #dfs-and-similar #hashing #shortest-paths
+ * #dfs #hash-table #shortest-path
  *  
  * use Dijkstra with adjacency matrix
  *  other way: use HashMap, HashSet.
  *          override equals and hashCode of Point class 
  *          (hashCode: x*p1 + y*p2 - max_val), p1, p2 is prime number and p1 # p2.
  *      weak point: take time to hashCode,.. not better than above way.
- *                  (time limited at test case #23)
+ *                  (time limited at test case 23)
  */
 
 import java.util.Scanner;

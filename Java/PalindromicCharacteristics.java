@@ -1,5 +1,5 @@
 /* https://codeforces.com/contest/835/problem/D
-#string #hashing #dp
+#string #hash-table #dynamic-programming
 
 abacaba
 

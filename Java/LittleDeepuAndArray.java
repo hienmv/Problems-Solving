@@ -1,5 +1,5 @@
 /**
- * #implement #segment-tree
+ * #implementation #segment-tree
  */
 import java.util.Scanner;
 class LittleDeepuAndArray {

@@ -2,7 +2,7 @@
 http://www.spoj.com/problems/SAMER08D/
 
 better version at Java/SAMER08DDNASequences.java
-#dp #lcs
+#dynamic-programming #lcs
 
 k = 3       >= k
 abcde

@@ -1,5 +1,5 @@
 /**
- * #hash-table #hashing
+ * #hash-table #hash-table
  */
 import java.util.Scanner;
 import java.util.HashMap;

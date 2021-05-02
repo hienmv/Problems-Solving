@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/264/B
- * #dp
+ * #dynamic-programming
  * refactor => get all dividable prime of a number ->
  * map:[prime:max divided number]
  * 

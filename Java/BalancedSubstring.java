@@ -1,6 +1,6 @@
 /*
 https://codeforces.com/problemset/problem/873/B
-#implement
+#implementation
 max =
   -----------
   1 1 0 1 0 1 1 1

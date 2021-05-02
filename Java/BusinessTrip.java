@@ -1,5 +1,5 @@
 /* https://codeforces.com/contest/149/problem/A
-tag: #greedy #implementation #sortings
+tag: #greedy #implementation #sorting
  * short the array in the descending order
  * sum of any element that greater or equal k
  * */

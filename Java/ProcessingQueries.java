@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/644/B
- * #queue #*special-problem #constructive-algorithms #two-pointers
+ * #queue #special-problem #constructive-algorithms #two-pointer
  *  use queue and calculate the finish time fo current process.
  */
 

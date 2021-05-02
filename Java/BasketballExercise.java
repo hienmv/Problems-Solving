@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1195/C
- * #dp #refactor
+ * #dynamic-programming #refactor
  *
  * 
  * better idea:

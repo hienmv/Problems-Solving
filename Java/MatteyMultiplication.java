@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/mattey-multiplication-6/
-#mathematics #number-theory #bit-manipulation
+#math #number-theory #bit-manipulation
 */
 import java.util.Scanner;
 

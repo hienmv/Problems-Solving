@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/samu-and-her-birthday-party-1/
- * #bit-manipulation #dp #bitmask
+ * #bit-manipulation #dynamic-programming #bit-manipulation
  * 
  * solution: status pattern?
   10010     18

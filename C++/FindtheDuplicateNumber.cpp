@@ -1,5 +1,5 @@
 /*  https://leetcode.com/problems/find-the-duplicate-number/description/
-#arrays #binary-search #two-pointer
+#array #binary-search #two-pointer
 */
 
 #include <iostream>

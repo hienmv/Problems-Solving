@@ -1,6 +1,6 @@
 /**
  * http://codeforces.com/problemset/problem/1307/C
- * #dp #math
+ * #dynamic-programming #math
  
 len(1 cap so cong) > 2: -> 1 day cap so cong khac chua 2 phan tu ban dau.
 abc > nhieu nhat

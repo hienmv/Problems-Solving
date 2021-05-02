@@ -1,5 +1,5 @@
 /**
-#dp #knapsack
+#dynamic-programming #knapsack
  */
 
 import java.util.Scanner;

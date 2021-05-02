@@ -1,6 +1,6 @@
 /**
  * https://codeforces.com/problemset/problem/687/C
- * #dp
+ * #dynamic-programming
 f(n, k, x) = true -> ton tai chon subset trong n phan tu, sum = k va subset con sum = x
     f(n-1, k, x) = true
     

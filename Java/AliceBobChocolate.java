@@ -1,5 +1,5 @@
 /*	https://codeforces.com/problemset/problem/6/C
- *	tag: #greedy  #two-pointers
+ *	tag: #greedy  #two-pointer
  *	count sumLeft, sumRight, 
  *	the smaller sum += nextElement based on its side.
 */

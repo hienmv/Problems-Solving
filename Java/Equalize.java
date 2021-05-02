@@ -1,6 +1,6 @@
 /**
  * http://codeforces.com/problemset/problem/1037/C
- * #dp #greedy
+ * #dynamic-programming #greedy
  * 2 lien ke => nen swap (vi cost flip = 2, cost swap = 1)
  */
 import java.util.Scanner;
