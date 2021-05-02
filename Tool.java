@@ -152,8 +152,9 @@ public class Tool {
             // block header
             writer.write("### " + entry.getKey() + " (" + line_map.size() + ")" + System.lineSeparator());
             // block body
+            String prefix = entry.getKey() != "#todo" ? "- [x] " : "- [ ] ";
             for (Map.Entry<String, String> line_entry : line_map.entrySet()) {
-                writer.write("- [ ] " + line_entry.getKey() + line_entry.getValue() + System.lineSeparator());
+                writer.write(prefix + line_entry.getKey() + line_entry.getValue() + System.lineSeparator());
             }
         }
 
