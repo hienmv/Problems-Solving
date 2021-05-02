@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/insertion-sort-list/
-// #linked-list #sort
+// #linked-list #sorting
 /**
  * Definition for singly-linked list.
  * public class ListNode {

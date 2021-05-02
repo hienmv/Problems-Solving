@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/counting-elements/
-// #Array
+// #array
 class Solution {
     public int countElements(int[] arr) {
         int[] cnt = new int[10001];

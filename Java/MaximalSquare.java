@@ -29,7 +29,7 @@ class Solution {
      => r = 0;
      => r + 1;
     */
-        public int maximalSquare(char[][] matrix) {
+    public int maximalSquare(char[][] matrix) {
             int m = matrix.length;
             if (m == 0) return 0;
             int n = matrix[0].length;
