@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-class MinimizeAbsoluteDifference {
+class MinimizeAbsoluteDifferenceBetter {
 
     public static void rec(int[] index, int size, int[] a, bool mark[], int[] result) {
         if (size == 4) {
