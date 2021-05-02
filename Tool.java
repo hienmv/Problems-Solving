@@ -83,12 +83,27 @@ public class Tool {
         }
         
         ArrayList<String> info = new ArrayList<>();
-        info.add("```java");
-        info.add("Number of problems : " + problems_number);
-        for (Map.Entry<String, Integer> entry : source_count.entrySet()) {
-            info.add("- " + entry.getKey() + " : " + entry.getValue());
+        // list
+        {
+            info.add("```java");
+            info.add("Number of problems : " + problems_number);
+            for (Map.Entry<String, Integer> entry : source_count.entrySet()) {
+                info.add("- " + entry.getKey() + " : " + entry.getValue());
+            }
+            info.add("```");
         }
-        info.add("```");
+
+        // pie-chart
+        {
+            info.add("```mermaid");
+            info.add("pie");
+            info.add("\ttitle Category by sources");
+            for (Map.Entry<String, Integer> entry : source_count.entrySet()) {
+                info.add("\t\"" + entry.getKey() + "\" : " + entry.getValue());
+            }
+            info.add("```");
+        }
+
         return info;
     }
 
