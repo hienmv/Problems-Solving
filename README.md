@@ -1,7 +1,7 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
 ```java
-Number of problems : 357
+Number of problems : 356
 - acm.timus.ru : 1
 - codechef.com : 2
 - codeforces.com : 115
@@ -10,7 +10,6 @@ Number of problems : 357
 - hackerearth.com : 18
 - hackerrank.com : 10
 - icpcarchive.ecs.baylor.edu : 3
-- interviewbit.com : 1
 - interviewsansar.com : 1
 - leetcode.com : 128
 - lightoj.com : 8
@@ -31,7 +30,6 @@ pie
 	"hackerearth.com" : 18
 	"hackerrank.com" : 10
 	"icpcarchive.ecs.baylor.edu" : 3
-	"interviewbit.com" : 1
 	"interviewsansar.com" : 1
 	"leetcode.com" : 128
 	"lightoj.com" : 8
@@ -800,7 +798,7 @@ pie
 - [x] FlattenBinaryTreeToLinkedList [(java)](./Java/FlattenBinaryTreeToLinkedList.java)
 - [x] InvertBinaryTree [(java)](./Java/InvertBinaryTree.java)
 - [x] KthSmallestElementInABST [(java)](./Java/KthSmallestElementInABST.java)
-- [x] LowestCommonAncestorOfABinary Tree [(java)](./Java/LowestCommonAncestorOfABinary Tree.java)
+- [x] LowestCommonAncestorOfABinaryTree [(java)](./Java/LowestCommonAncestorOfABinaryTree.java)
 - [x] OldBerlandLanguage [(java)](./Java/OldBerlandLanguage.java)
 - [x] SearchInABinarySearchTree [(java)](./Java/SearchInABinarySearchTree.java)
 - [x] SymmetricTree [(java)](./Java/SymmetricTree.java)
