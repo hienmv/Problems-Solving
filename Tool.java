@@ -3,6 +3,8 @@ import java.util.*;
 
 public class Tool {
 
+    private static TreeMap<String, ArrayList<Item>> files_group_by_tags_map;
+    private static TreeMap<String, ArrayList<String>> files_group_by_sources_map;
     private static String[] keywords = {
         "#01knapsack",
         "#ad-hoc-1",
@@ -67,15 +69,27 @@ public class Tool {
         return header;
     }
     
-    private static String[] getStatistic(int problem_number) {
-        // TODO
-        // separated by difficulty (easy/medium/hard); source (leetcode/codefore/hackerrank/interviewbit...)
-        String[] statistic = {
-            "```java",
-            "Number of problems: " + problem_number,
-            "```",
-        };
-        return statistic;
+    private static ArrayList<String> getStatistic() {
+        // TODO: separated by difficulty (easy/medium/hard)
+        TreeMap<String, Integer> source_count = new TreeMap<>();
+        int problems_number = 0;
+        for (Map.Entry<String, ArrayList<String>> entry : files_group_by_sources_map.entrySet()) {
+            HashSet<String> urls = new HashSet<>();
+            for(String url : entry.getValue()) {
+                urls.add(url);
+            }
+            source_count.put(entry.getKey(), urls.size());
+            problems_number += urls.size();
+        }
+        
+        ArrayList<String> info = new ArrayList<>();
+        info.add("```java");
+        info.add("Number of problems : " + problems_number);
+        for (Map.Entry<String, Integer> entry : source_count.entrySet()) {
+            info.add("- " + entry.getKey() + " : " + entry.getValue());
+        }
+        info.add("```");
+        return info;
     }
 
     private static String[] getFolderPaths() {
@@ -115,11 +129,14 @@ public class Tool {
         }
     }
 
-    private static TreeMap<String, ArrayList<Item>> getFilesGroupByTags() throws Exception {
-        TreeMap<String, ArrayList<Item>> map = new TreeMap<>();
+    private static void analytics() throws Exception {
+        // init
+        files_group_by_tags_map = new TreeMap<>();
         for( String keyword : keywords) {
-            map.put(keyword, new ArrayList<>());
+            files_group_by_tags_map.put(keyword, new ArrayList<>());
         }
+        files_group_by_sources_map = new TreeMap<>();
+
         String[] folder_paths = getFolderPaths();
         for (String folder_path : folder_paths) {
             final File folder = new File(folder_path);
@@ -129,28 +146,56 @@ public class Tool {
                     String line = scanner.nextLine();
                     String[] words = line.split(" ");
                     for (String word : words) {
-                        if (map.containsKey(word)) {
-                            map.get(word).add(new Item(fileEntry.getPath()));
+                        // by tags
+                        {
+                            if (files_group_by_tags_map.containsKey(word)) {
+                                files_group_by_tags_map.get(word).add(new Item(fileEntry.getPath()));
+                            }
+                        }
+                        
+                        // by sources
+                        {
+                            String source = "";
+                            if (word.contains("http://")) {
+                                String protocol = "http://";
+                                int url_idx = word.indexOf(protocol);
+                                int next_slash_idx = word.indexOf("/", url_idx + protocol.length());
+                                source = word.substring(url_idx + protocol.length(), next_slash_idx);
+                            }
+                            else if (word.contains("https://")) {
+                                String protocol = "https://";
+                                int url_idx = word.indexOf(protocol);
+                                int next_slash_idx = word.indexOf("/", url_idx + protocol.length());
+                                source = word.substring(url_idx + protocol.length(), next_slash_idx);
+                            }
+                            if (!source.isEmpty()) {
+                                if (source.startsWith("www.")) {
+                                    source = source.substring(4);
+                                }
+                                if (files_group_by_sources_map.containsKey(source)) {
+                                    files_group_by_sources_map.get(source).add(word);
+                                } else {
+                                    ArrayList<String> url = new ArrayList<>();
+                                    url.add(word);
+                                    files_group_by_sources_map.put(source, url);
+                                }
+                            }
                         }
                     }
                 }
                 scanner.close();
             }
         }
-
-        return map;
     }
 
-    private static void flushToReadMe(TreeMap<String, ArrayList<Item>> map) throws Exception {
+    private static void flushToReadMe() throws Exception {
         // body
         ArrayList<String> body = new ArrayList<>();
-        HashSet<String> problem_names = new HashSet<>();
-        for (Map.Entry<String, ArrayList<Item>> entry : map.entrySet()) {
+        for (Map.Entry<String, ArrayList<Item>> entry : files_group_by_tags_map.entrySet()) {
             TreeMap<String, String> line_map = new TreeMap<>();
             ArrayList<Item> items = entry.getValue();
             Collections.sort(items);
             for(Item item : items) {
-                problem_names.add(item.getName());
                 if (line_map.containsKey(item.getName())) {
                     line_map.put(item.getName(), line_map.get(item.getName()) + item.getPath());
                 } else {
@@ -174,7 +219,7 @@ public class Tool {
                 writer.write(line + System.lineSeparator());
             }
             // statistic 
-            for(String line : getStatistic(problem_names.size())) {
+            for(String line : getStatistic()) {
                 writer.write(line + System.lineSeparator());
             }
             // body
@@ -186,7 +231,7 @@ public class Tool {
     }
 
     public static void main(String[] args) throws Exception {
-        TreeMap<String, ArrayList<Item>> filesGroupByTags = getFilesGroupByTags();
-        flushToReadMe(filesGroupByTags);
+        analytics();
+        flushToReadMe();
     }
 }

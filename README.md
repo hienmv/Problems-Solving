@@ -1,7 +1,23 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
 ```java
-Number of problems: 297
+Number of problems : 241
+- acm.timus.ru : 1
+- codechef.com : 2
+- codeforces.com : 115
+- codingcompetitions.withgoogle.com : 1
+- developers.google.com : 1
+- hackerearth.com : 18
+- hackerrank.com : 10
+- icpcarchive.ecs.baylor.edu : 3
+- interviewsansar.com : 1
+- leetcode.com : 13
+- lightoj.com : 8
+- oeis.org : 1
+- onlinejudge.org : 4
+- spoj.com : 27
+- urionlinejudge.com.br : 2
+- uva.onlinejudge.org : 34
 ```
 ### #01knapsack (3)
 - [x] DividingCoins [(java)](./Java/DividingCoins.java)
