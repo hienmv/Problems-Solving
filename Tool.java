@@ -59,6 +59,14 @@ public class Tool {
         "#two-pointer",
     };
 
+    private static String[] getHeader() {
+        String[] header = { 
+            "# Problems-Solving",
+            "My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.",
+            "## Top coding problems"
+        };
+        return header;
+    }
     private static class Item implements Comparable {
         String name;
         String path;
@@ -88,7 +96,7 @@ public class Tool {
     }
 
     public static void main(String[] args) throws Exception {
-        HashMap<String, ArrayList<Item>> map = new HashMap<>();
+        TreeMap<String, ArrayList<Item>> map = new TreeMap<>();
         for( String keyword : keywords) {
             map.put(keyword, new ArrayList<>());
         }
@@ -110,9 +118,14 @@ public class Tool {
             }
         }
 
-        FileWriter writer = new FileWriter("output.md"); 
+        FileWriter writer = new FileWriter("README.md"); 
+        // header
+        for(String line : getHeader()) {
+            writer.write(line + System.lineSeparator());
+        }
+        // body
         for (Map.Entry<String, ArrayList<Item>> entry : map.entrySet()) {
-            HashMap<String, String> line_map = new HashMap<>();
+            TreeMap<String, String> line_map = new TreeMap<>();
             ArrayList<Item> items = entry.getValue();
             Collections.sort(items);
             for(Item item : items) {
@@ -122,7 +135,9 @@ public class Tool {
                     line_map.put(item.getName(), item.getPath());
                 }    
             }
+            // block header
             writer.write("### " + entry.getKey() + " (" + line_map.size() + ")" + System.lineSeparator());
+            // block body
             for (Map.Entry<String, String> line_entry : line_map.entrySet()) {
                 writer.write("- [ ] " + line_entry.getKey() + line_entry.getValue() + System.lineSeparator());
             }
