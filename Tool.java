@@ -66,6 +66,17 @@ public class Tool {
         };
         return header;
     }
+    
+    private static String[] getStatistic(int problem_number) {
+        // TODO
+        // separated by difficulty (easy/medium/hard); source (leetcode/codefore/hackerrank/interviewbit...)
+        String[] statistic = {
+            "```java",
+            "Number of problems: " + problem_number,
+            "```",
+        };
+        return statistic;
+    }
 
     private static String[] getFolderPaths() {
        String[] folder_paths = {"Java/", "C/", "C++/", "Python/"};
@@ -75,6 +86,7 @@ public class Tool {
     private static String getFilePath() {
         return "README.md";
     }
+
     private static class Item implements Comparable {
         String name;
         String path;
@@ -154,17 +166,17 @@ public class Tool {
             }
         }
 
-        { // flush to file
-            FileWriter writer = new FileWriter(getFilePath()); 
+        // flush to file
+        {
+            FileWriter writer = new FileWriter(getFilePath());
             // header
             for(String line : getHeader()) {
                 writer.write(line + System.lineSeparator());
             }
-
             // statistic 
-            // separated by difficulty (easy/medium/hard); source (leetcode/codefore/hackerrank/interviewbit...)
-            writer.write("Number of problems: " + problem_names.size() + System.lineSeparator());
-
+            for(String line : getStatistic(problem_names.size())) {
+                writer.write(line + System.lineSeparator());
+            }
             // body
             for(String line : body) {
                 writer.write(line + System.lineSeparator());
