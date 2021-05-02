@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Tool {
+public class ReadMeGenerator {
 
     private static TreeMap<String, ArrayList<Item>> files_group_by_tags_map;
     private static TreeMap<String, ArrayList<String>> files_group_by_sources_map;
