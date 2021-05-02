@@ -92,6 +92,31 @@ public class Tool {
         return info;
     }
 
+    private static ArrayList<String> getBody() {
+        // body
+        ArrayList<String> body = new ArrayList<>();
+        for (Map.Entry<String, ArrayList<Item>> entry : files_group_by_tags_map.entrySet()) {
+            TreeMap<String, String> line_map = new TreeMap<>();
+            ArrayList<Item> items = entry.getValue();
+            Collections.sort(items);
+            for(Item item : items) {
+                if (line_map.containsKey(item.getName())) {
+                    line_map.put(item.getName(), line_map.get(item.getName()) + item.getPath());
+                } else {
+                    line_map.put(item.getName(), item.getPath());
+                }    
+            }
+            // block header
+            body.add("### " + entry.getKey() + " (" + line_map.size() + ")");
+            // block body
+            String prefix = entry.getKey() != "#todo" ? "- [x] " : "- [ ] ";
+            for (Map.Entry<String, String> line_entry : line_map.entrySet()) {
+                body.add(prefix + line_entry.getKey() + line_entry.getValue());
+            }
+        }
+
+        return body;
+    }
     private static String[] getFolderPaths() {
        String[] folder_paths = {"Java/", "C/", "C++/", "Python/"};
        return folder_paths;
@@ -189,45 +214,21 @@ public class Tool {
     }
 
     private static void flushToReadMe() throws Exception {
-        // body
-        ArrayList<String> body = new ArrayList<>();
-        for (Map.Entry<String, ArrayList<Item>> entry : files_group_by_tags_map.entrySet()) {
-            TreeMap<String, String> line_map = new TreeMap<>();
-            ArrayList<Item> items = entry.getValue();
-            Collections.sort(items);
-            for(Item item : items) {
-                if (line_map.containsKey(item.getName())) {
-                    line_map.put(item.getName(), line_map.get(item.getName()) + item.getPath());
-                } else {
-                    line_map.put(item.getName(), item.getPath());
-                }    
-            }
-            // block header
-            body.add("### " + entry.getKey() + " (" + line_map.size() + ")");
-            // block body
-            String prefix = entry.getKey() != "#todo" ? "- [x] " : "- [ ] ";
-            for (Map.Entry<String, String> line_entry : line_map.entrySet()) {
-                body.add(prefix + line_entry.getKey() + line_entry.getValue());
-            }
-        }
-
         // flush to file
-        {
-            FileWriter writer = new FileWriter(getFilePath());
-            // header
-            for(String line : getHeader()) {
-                writer.write(line + System.lineSeparator());
-            }
-            // statistic 
-            for(String line : getStatistic()) {
-                writer.write(line + System.lineSeparator());
-            }
-            // body
-            for(String line : body) {
-                writer.write(line + System.lineSeparator());
-            }
-            writer.close();
+        FileWriter writer = new FileWriter(getFilePath());
+        // header
+        for(String line : getHeader()) {
+            writer.write(line + System.lineSeparator());
         }
+        // statistic 
+        for(String line : getStatistic()) {
+            writer.write(line + System.lineSeparator());
+        }
+        // body
+        for(String line : getBody()) {
+            writer.write(line + System.lineSeparator());
+        }
+        writer.close();
     }
 
     public static void main(String[] args) throws Exception {
