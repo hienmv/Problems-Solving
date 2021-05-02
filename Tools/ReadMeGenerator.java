@@ -35,14 +35,6 @@ public class ReadMeGenerator {
     private static TreeMap<String, ArrayList<String>> files_group_by_sources_map;
     private static ArrayList<String> tags;
 
-    private static String[] getHeader() {
-        String[] header = { 
-            "# Problems-Solving",
-            "My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.",
-        };
-        return header;
-    }
-
     private static String[] getFolderPaths() {
         String[] folder_paths = {"../Java/", "../C/", "../C++/", "../Python/"};
         return folder_paths;
@@ -61,6 +53,14 @@ public class ReadMeGenerator {
         };
         scanner.close();
         return tags;
+    }
+
+    private static String[] getHeader() {
+        String[] header = { 
+            "# Problems-Solving",
+            "My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.",
+        };
+        return header;
     }
 
     private static ArrayList<String> getStatistic() {
@@ -133,6 +133,46 @@ public class ReadMeGenerator {
         return url.substring(url_idx + protocol.length(), next_slash_idx);
     }
 
+    private static void analyticFile(File fileEntry) throws Exception {
+        Scanner scanner = new Scanner(fileEntry);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] words = line.split(" ");
+            for (String word : words) {
+                // by tags
+                {
+                    if (files_group_by_tags_map.containsKey(word)) {
+                        files_group_by_tags_map.get(word).add(new Item(fileEntry.getPath()));
+                    }
+                }
+                
+                // by sources
+                {
+                    String source = "";
+                    if (word.contains("http://")) {
+                        source = getSource("http://", word);
+                    }
+                    else if (word.contains("https://")) {
+                        source = getSource("https://", word);
+                    }
+                    if (!source.isEmpty()) {
+                        if (source.startsWith("www.")) {
+                            source = source.substring(4);
+                        }
+                        if (files_group_by_sources_map.containsKey(source)) {
+                            files_group_by_sources_map.get(source).add(word);
+                        } else {
+                            ArrayList<String> url = new ArrayList<>();
+                            url.add(word);
+                            files_group_by_sources_map.put(source, url);
+                        }
+                    }
+                }
+            }
+        }
+        scanner.close();
+    }
+
     private static void analytics() throws Exception {
         // init
         files_group_by_tags_map = new TreeMap<>();
@@ -143,49 +183,12 @@ public class ReadMeGenerator {
         for (String folder_path : getFolderPaths()) {
             final File folder = new File(folder_path);
             for (final File fileEntry : folder.listFiles()) {
-                Scanner scanner = new Scanner(fileEntry);
-                while (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    String[] words = line.split(" ");
-                    for (String word : words) {
-                        // by tags
-                        {
-                            if (files_group_by_tags_map.containsKey(word)) {
-                                files_group_by_tags_map.get(word).add(new Item(fileEntry.getPath()));
-                            }
-                        }
-                        
-                        // by sources
-                        {
-                            String source = "";
-                            if (word.contains("http://")) {
-                                source = getSource("http://", word);
-                            }
-                            else if (word.contains("https://")) {
-                                source = getSource("https://", word);
-                            }
-                            if (!source.isEmpty()) {
-                                if (source.startsWith("www.")) {
-                                    source = source.substring(4);
-                                }
-                                if (files_group_by_sources_map.containsKey(source)) {
-                                    files_group_by_sources_map.get(source).add(word);
-                                } else {
-                                    ArrayList<String> url = new ArrayList<>();
-                                    url.add(word);
-                                    files_group_by_sources_map.put(source, url);
-                                }
-                            }
-                        }
-                    }
-                }
-                scanner.close();
+                analyticFile(fileEntry);
             }
         }
     }
 
     private static void flushToReadMe() throws Exception {
-        // flush to file
         FileWriter writer = new FileWriter(getFilePath());
         // header
         for(String line : getHeader()) {
@@ -202,8 +205,12 @@ public class ReadMeGenerator {
         writer.close();
     }
 
-    public static void main(String[] args) throws Exception {
+    private static void generateReadMe() throws Exception {
         analytics();
         flushToReadMe();
+    }
+
+    public static void main(String[] args) throws Exception {
+        generateReadMe();
     }
 }
