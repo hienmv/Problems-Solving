@@ -1,5 +1,5 @@
 /** https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/practice-problems/algorithm/roy-and-trending-topics-1/description/
- *  #heap #priorityqueue #sorting
+ *  #heap #priority-queue #sorting
  */
 import java.util.Scanner;
 import java.util.PriorityQueue;

@@ -1,5 +1,5 @@
 /*
-#dp
+#dynamic-programming
 -> 
 base k 
 N digits 

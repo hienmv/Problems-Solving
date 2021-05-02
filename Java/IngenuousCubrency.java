@@ -1,5 +1,5 @@
 /**
- * #dp
+ * #dynamic-programming
  */
 import java.util.Scanner;
 class IngenuousCubrency {

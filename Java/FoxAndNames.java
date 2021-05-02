@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/510/C
- * #topological-sort #graph #dfs-and-similar
+ * #topological-sort #graph #dfs
  */
 
 import java.util.Scanner;

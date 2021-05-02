@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/600/B
- * #sorting #binary-search #two-pointers
+ * #sorting #binary-search #two-pointer
  * sort the first array, use binarySearch each element of second array.
  */
 

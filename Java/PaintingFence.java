@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/448/C
- * #divide-and-conquer #dp #greedy
+ * #divide-and-conquer #dynamic-programming #greedy
  [L, R]
 
  - Stroke vertical (R - L + 1)

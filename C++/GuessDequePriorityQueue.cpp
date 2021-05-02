@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3146
- * #queue #stack #priorityqueue
+ * #queue #stack #priority-queue
  * provided that the data structure is used is queue/stack/priorityQueue(maxHeap). 
  */
 #include<iostream>

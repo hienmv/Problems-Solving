@@ -1,5 +1,5 @@
 /**
- * #string #hashing
+ * #string #hash-table
  */
 /**
     /*

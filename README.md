@@ -1,213 +1,606 @@
-
 # Problems-Solving
-
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
-
-Practice with C++, Java and Python
-
-## Top coding problems (204)
-
- 1. ACMContestBlackout [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ACMContestBlackout.java) #prim
- 2. AGGRCOW [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AGGRCOW.java) #binary-search
- 3. AbcPath [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AbcPath.java) #dfs #recursion
- 4. AddAll [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AddAll.java) #heap #priority-queue
- 5. AishAndXOR [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AishAndXOR.java) #bit-manipulation
- 6. AliceBobChocolate [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AliceBobChocolate.java) #greedy #two-pointers
- 7. AlmostShortestPath [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AlmostShortestPath.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/AlmostShortestPath.cpp) #dijkstra #shortest-path
- 8. AnotherProblemString [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AnotherProblemString.java) #binary-search #brute-force #dp #two-pointers
- 9. AnswerBoss [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/AnswerBoss.java) #topological-sort
- 10. ApproximatingAConstantRange [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ApproximatingAConstantRange.java) #dp #two-pointers
- 11. Array [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Array.java) #bitmasks #two-pointers
- 12. Arrays [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Arrays.java) #sortings
- 13. Audiophobia [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Audiophobia.java) #dijkstra #shortest-path #prim
- 14. BearAndGame [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BearAndGame.java) #implementation
- 15. BeautifulArray [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BeautifulArray.java) #divide-and-conquer #dp #greedy #todo
- 16. BerlandFair [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BerlandFair.java) #binary-search #greedy
- 17. BestGift [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BestGift.java) #constructive-algorithms #implementation
- 18. Beverages [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Beverages.java) #topological-sort
- 19. BigSegment [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BigSegment.java) #implementation #sorting
- 20. Bipartiteness [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Bipartiteness.java) #dfs #graphs #trees
- 21. BishuAndHisGirlFriend [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BishuAndHisGirlFriend.java) #dfs #bfs
- 22. BitMaps [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BitMaps.java) #divide-and-conquer
- 23. BoggleGame [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BoggleGame.java) #backtracking
- 24. Books [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Books.java) #binary-search #implementation #two-pointers
- 25. Boombs [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Boombs.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Boombs.cpp) #dijktra #shortest-path
- 26. Brutality [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Brutality.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Brutality.cpp) #greedy #sortings #two-pointer
- 27. BusinessTrip [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/BusinessTrip.java) #greedy #implementation #sortings
- 28. Buttons [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Buttons.java) #implementation #math
- 29. CalculatingFunction [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CalculatingFunction.java) #implementation #math
- 30. Cam5 [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Cam5.java) #bfs #dfs
- 31. CamelCase [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CamelCase.java) #implementation
- 32. Candies [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Candies.java) #greedy #divide-and-conquer #binary-search
- 33. ChocolateJourney [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ChocolateJourney.java) #dijkstra #shortest-path
- 34. Chores [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Chores.java) #sortings
- 35. CobbledStreets [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CobbledStreets.java) #prim #mst
- 36. CombinationLock [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CombinationLock.java) #implementation
- 37. Commandos [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Commandos.java) #dijktra #shortest-path
- 38. CompilersParsers [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CompilersParsers.java) #stack
- 39. ConnectCampus [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ConnectCampus.java) #prim
- 40. ConsistencyChecker [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ConsistencyChecker.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/ConsistencyChecker.cpp) #trie
- 41. Contact [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Contact.java) #trie
- 42. CountryRoads [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CountryRoads.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/CountryRoads.cpp) #dijkstra #shortest-path
- 43. CreativeSnap [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CreativeSnap.java) #divide-and-conquer #binary-search
- 44. Cthulhu [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Cthulhu.java) #dfs #dsu
- 45. CyclicComponents [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/CyclicComponents.java) #dsu #dfs
- 46. DNAPrefix [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DNAPrefix.java) #trie
- 47. Dhoom [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Dhoom.java) #bfs
- 48. DiccionarioPortunol [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DiccionarioPortunol.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/DiccionarioPortunol.cpp) #trie #todo
- 49. DiggerOctaves [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DiggerOctaves.java) #backtracking #bit-manipulation
- 50. DistanceInTree [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DistanceInTree.java) #dp #divide-and-conquer #dfs
- 51. DistinctCount [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DistinctCount.java) #binary-search-tree
- 52. DressEmInVests [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DressEmInVests.java) #binary-search #greedy #two-pointers
- 53. DuduServiceMaker [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DuduServiceMaker.java) #dfs-recursion
- 54. DuelingPhilosophersProblem [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/DuelingPhilosophersProblem.java) #topological-sort
- 55. EKO [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/EKO.java) #binary-search
- 56. EhabAndSubstraction [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/EhabAndSubstraction.java) #implementation #sortings
- 57. EightPointSets [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/EightPointSets.java) #sorting
- 58. EnergyExchange [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/EnergyExchange.java) #binary-search
- 59. EscapeNight [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/EscapeNight.java) #bit-manipulation
- 60. FashionInBerland [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/FashionInBerland.java) #implementation
- 61. FerryLoadingIII [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/FerryLoadingIII.java) #queue #todo
- 62. FibsieveFantabulous [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/FibsieveFantabulous.java) #implementation
- 63. FoePairs [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/FoePairs.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/FoePairs.cpp) #two-pointer
- 64. Forest [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Forest.java) #dsu #todo
- 65. FoxAndNames [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/FoxAndNames.java) #topological-sort #graph #dfs-and-similar
- 66. Freckles [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Freckles.java) #dsu #mst
- 67. Friends [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Friends.java) #dsu
- 68. GeorgeAndRound [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/GeorgeAndRound.java) #greedy #two-pointer
- 69. GraphConnectivity [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/GraphConnectivity.java) #dsu
- 70. GuessDequePriorityQueue [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/GuessDequePriorityQueue.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/GuessDequePriorityQueue.cpp) #queue #stack #priorityqueue
- 71. GuiltyPrince [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/GuiltyPrince.java) #bfs
- 72. GukiZAndContest [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/GukiZAndContest.java) #implementation #sorting #binary-search
- 73. HACKRNDM [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/HACKRNDM.java) #binary-search #two-pointer
- 74. HammingDistanceProblem [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/HammingDistanceProblem.java) #backtracking
- 75. HanSoloLazerGun [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/HanSoloLazerGun.java) #brute-force #geometry #math #binary-search
- 76. HardwoodSpecies [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/HardwoodSpecies.java) #greedy #implementation
- 77. Hierarchy [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Hierarchy.java) #topological-sort
- 78. IceCave [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/IceCave.java) #dfs-and-similar #bfs-customized
- 79. IceSkating [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/IceSkating.java) #dfs-and-similar #dsu #bfs
- 80. IsenbaevsNumber [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/IsenbaevsNumber.java) #bfs
- 81. KDominantCharacter [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/KDominantCharacter.java) #two-pointer #binary-search
- 82. KefaAndFirstSteps [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/KefaAndFirstSteps.java) #brute-force #dp #implementation
- 83. KefaAndPark [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/KefaAndPark.java) #dfs-and-similar #bfs
- 84. KingPath [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/KingPath.java) #dfs-and-similar #hashing #shortest-paths
- 85. KozeSheep [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/KozeSheep.java) #bfs
- 86. LakesInBerland [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/LakesInBerland.java) #dfs #dsu #greedy
- 87. LastShot [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/LastShot.java) #dfs
- 88. LearnLanguages [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/LearnLanguages.java) #dsu #dfs-and-similar
- 89. LonelyIsland [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/LonelyIsland.java) #topological-sort
- 90. Lotto [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Lotto.java) #backtracking
- 91. LunarNewYearWander [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/LunarNewYearWander.java) #dfs #greedy #shortest-path
- 92. MMass [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MMass.java) #ad-hoc-1 #stack
- 93. MST [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MST.java) #mst #prim
- 94. MUHImportantThings [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MUHImportantThings.java) #sorting
- 95. MakeItConnected [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MakeItConnected.java) #dsu #mst #greedy
- 96. MakeMaze [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MakeMaze.java) #bfs
- 97. Marble [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Marble.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Marble.cpp) #binary-search
- 98. MatteyMultiplication [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MatteyMultiplication.java) #mathematics #number-theory #bit-manipulation
- 99. Megacity [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Megacity.java) #binary-search #greedy
- 100. MiceMaze [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MiceMaze.java) #shortest-path #bfs #dijkstra-s-algorithm
- 101. MinimizeAbsoluteDifference [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MinimizeAbsoluteDifference.java) #backtracking
- 102. MinimizeAbsoluteDifference_better [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MinimizeAbsoluteDifference_better.java) #backtracking #todo
- 103. MinimumLoss [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MinimumLoss.java) #binary-search-tree
- 104. ModifiedGCD [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ModifiedGCD.java) #binary-search #number-theory
- 105. MonkAndFriends [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MonkAndFriends.java) #binary-search-tree #map
- 106. MonkAndMultiplication [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MonkAndMultiplication.java) #heap #priorityqueue
- 107. MonkBinaryArray [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MonkBinaryArray.java) #bit-manipulation
- 108. MonkeyAndBamboo [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MonkeyAndBamboo.java) #binary-search
- 109. MyScanner [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/MyScanner.java) #fast-input
- 110. NewYearPermutation [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/NewYearPermutation.java) #dfs #dsu #greedy #math #sortings
- 111. NicholasAndPermutation [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/NicholasAndPermutation.java) #constructive-algorithms #implementation
- 112. NoPrefixSet [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/NoPrefixSet.java) #trie
- 113. NormalBFS [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/NormalBFS.java) #bfs #shortest-path
- 114. NumberDivision [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/NumberDivision.java) #greedy #implementation #math #sorting
- 115. OldBerlandLanguage [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/OldBerlandLanguage.java) #greedy #tree #trie
- 116. PaintingFence [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/PaintingFence.java) #divide-and-conquer #dp #greedy
- 117. ParenthesesBalance [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ParenthesesBalance.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/ParenthesesBalance.cpp) #stack
- 118. PhoneList [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/PhoneList.java) #trie
- 119. Pizzamania [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Pizzamania.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Pizzamania.cpp) #binary-search
- 120. PlayboyChimp [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/PlayboyChimp.java) #binary-search
- 121. Plugin [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Plugin.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Plugin.cpp) #deque #implementation
- 122. PowerOfTwo [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/PowerOfTwo.java) #bit-manipulation
- 123. PrimSpecialSubtree [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/PrimSpecialSubtree.java) #prim
- 124. ProcessingQueries [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ProcessingQueries.java) #queue #special-problem #constructive-algorithms #two-pointers
- 125. QHeap1 [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/QHeap1.java) #heap #priorityqueue
- 126. Queen [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Queen.java) #dfs-and-similar
- 127. QueriesLessEqualElement [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/QueriesLessEqualElement.java) #sorting #binary-search #two-pointers
- 128. RareOrder [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/RareOrder.java) #topological-sort
- 129. RegularBracketSequence [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/RegularBracketSequence.java) #greedy #stack
- 130. RoadConstruction [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/RoadConstruction.java) #prim
- 131. RoyTrendingTopic [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/RoyTrendingTopic.java) #heap #priorityqueue #sorting
- 132. SamuBirthdayParty [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SamuBirthdayParty.java) #bit-manipulation #dp #bitmask
- 133. SansaAndXOR [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SansaAndXOR.java) #bit-manipulation #dp
- 134. SearchEngine [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SearchEngine.java) #string #trie
- 135. Seeds9Of611 [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Seeds9Of611.java) #map
- 136. Semifinals [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Semifinals.java) #sorting #implementation
- 137. SerejaAndDima [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SerejaAndDima.java) #greedy #implementation #two-pointer
- 138. SherlockAndXOR [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SherlockAndXOR.java) #bit-manipulation #math
- 139. ShortedBFS [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ShortedBFS.java) #bfs
- 140. ShortestPath [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ShortestPath.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/ShortestPath.cpp) #shortest-path #dijkstra-s-algorithm
- 141. SimulateNetwork [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SimulateNetwork.java) #prim
- 142. Slick [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Slick.java) #bfs
- 143. SocialnePossibleFriends [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SocialnePossibleFriends.java) #floyd-warshall
- 144. SortTheArray [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/SortTheArray.java) #sorting #implementation
- 145. Stages [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Stages.java) #greedy #sorting #implementation
- 146. StreetParade [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/StreetParade.java) #queue #stack #ad-hoc-1
- 147. TanyaAndPostcard [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/TanyaAndPostcard.java) #greedy #strings
- 148. Taxi [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Taxi.java) #special-problem #greedy #implementation
- 149. Test [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Test.java) #queue #stack #ad-hoc-1 #todo
- 150. TheClosestPairProblem [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/TheClosestPairProblem.java) #divde-and-conquer
- 151. Thor [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Thor.java) #brute-force #implementation #queue
- 152. ThrowingCard [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/ThrowingCard.java) #queue
- 153. TopologicalSorting [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/TopologicalSorting.java) #topological-sort
- 154. Towers [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/Towers.java) #sortings #map
- 155. TransformExpression [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/TransformExpression.java) #stack
- 156. TravellingCost [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/TravellingCost.java) #graph-theory #dijkstra-s-algorithm
- 157. TrickyFunction [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/TrickyFunction.java) #geometry #divide-and-conquer
- 158. UbiquitousReligions [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/UbiquitousReligions.java) #dsu
- 159. UsbAndPS [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/UsbAndPS.java) [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/UsbAndPS.cpp) #greedy #two-pointer #sorting
- 160. VanyaAndFence [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/VanyaAndFence.java) #implementation
- 161. VasyaBasketball [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/VasyaBasketball.java) #binary-search #brute-force #sorting #two-pointer
- 162. VirtualFriends [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/VirtualFriends.java) #dsu
- 163. War [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/War.java) #dsu
- 164. XorAndProject [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/XorAndProject.java) #bit-manipulation
- 165. YourQueue [(java)](https://github.com/hienmv/Problems-Solving/blob/develop/Java/YourQueue.java) #heap #queue
- 166. AddTwoNumbers [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/AddTwoNumbers.cpp) [(python)](https://github.com/hienmv/Problems-Solving/blob/develop/Python/AddTwoNumbers.py) #implementation #linked-list #math
- 167. Arbitrage [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Arbitrage.cpp) #floyd-warshall #shortest-path
- 168. AsterixAndObelix [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/AsterixAndObelix.cpp) #dijkstra #shortest-path
- 169. BalanceBrackets [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/BalanceBrackets.cpp) #stack #implementation
- 170. BestTimeToBuyandSellStockII [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/BestTimeToBuyandSellStockII.cpp) [(python)](https://github.com/hienmv/Problems-Solving/blob/develop/Python/BestTimeToBuyandSellStockII.py) #implementation #greedy
- 171. CommonElementInTwoArray [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/CommonElementInTwoArray.cpp) #hash-table #sorting #binary-search #two-pointer
- 172. CoverIt [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/CoverIt.cpp) #dfs-and-similar #dsu #shortest-path
- 173. DevuDumbGuy [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/DevuDumbGuy.cpp) #sortings
- 174. EventOrganizer [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/EventOrganizer.cpp) #bellman-ford #shortest-path
- 175. ExtendedTraffic [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/ExtendedTraffic.cpp) #bellman-ford #shortest-path
- 176. FindNumbersContainingOne [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/FindNumbersContainingOne.cpp) [(python)](https://github.com/hienmv/Problems-Solving/blob/develop/Python/FindNumbersContainingOne.py) #math
- 177. FindTwoNumbersWithPredictedSum [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/FindTwoNumbersWithPredictedSum.cpp) #map #hash-table
- 178. FindtheDuplicateNumber [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/FindtheDuplicateNumber.cpp) #arrays #binary-search #two-pointer
- 179. LengthOfLongestSubString [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/LengthOfLongestSubString.cpp) [(python)](https://github.com/hienmv/Problems-Solving/blob/develop/Python/LengthOfLongestSubString.py) #hash-table #string #slicing-window #two-pointer
- 180. Letters [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Letters.cpp) #binary-search #two-pointer
- 181. MathExpression [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/MathExpression.cpp) #recursion #implementation
- 182. Median [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Median.cpp) #priorityqueue #heap
- 183. MeetingProf [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/MeetingProf.cpp) #floyd-warshall #shortest-path
- 184. MilesToChicago [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/MilesToChicago.cpp) #bellman-ford #shortest-path
- 185. MonkBusinessDay [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/MonkBusinessDay.cpp) #bellman-ford #shortest-path
- 186. Pangram [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Pangram.cpp) #strings #implementation
- 187. PrinterQueue [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/PrinterQueue.cpp) #priorityqueue #queue
- 188. RectangleOverlap [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/RectangleOverlap.cpp) #math #implementation
- 189. RemoveDuplicatesFromSortedArray [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/RemoveDuplicatesFromSortedArray.cpp) #arrays #hash-table #map
- 190. Risk [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Risk.cpp) #bfs
- 191. Run-lengthEncoding [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Run-lengthEncoding.cpp) #implementation
- 192. SendingEmail [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/SendingEmail.cpp) #dijkstra #shortest-path
- 193. SoldierBananas [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/SoldierBananas.cpp) #math #implementation
- 194. ThreePartsOfArray [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/ThreePartsOfArray.cpp) #two-pointer #binary-search
- 195. ThunderMountain [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/ThunderMountain.cpp) #floyd-warshall #shortest-path
- 196. VasyaAndString [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/VasyaAndString.cpp) #binary-search #dp #strings #two-pointer
- 197. Wonderland [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Wonderland.cpp) #shortest-path #bellman-ford
- 198. WordTransformation [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/WordTransformation.cpp) #dijkstra #shortest-path
- 199. Wormholes [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/Wormholes.cpp) #bellman-ford #shortest-path
- 200. XYZZY [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/XYZZY.cpp) #bellman-ford #bfs #shortest-path
- 201. easyExamInBerSU [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/easyExamInBerSU.cpp) #greedy #sorting #priorityqueue
- 202. hardExamInBerSU [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/hardExamInBerSU.cpp) #greedy #priorityqueue #greedy #math
- 203. myPow [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/myPow.cpp) [(python)](https://github.com/hienmv/Problems-Solving/blob/develop/Python/myPow.py) #recursion #implementation
- 204. unknow_test [(c++)](https://github.com/hienmv/Problems-Solving/blob/develop/C%2B%2B/unknow_test.cpp) #pointer
+## Top coding problems
+### #01knapsack (3)
+- [ ] DividingCoins [(java)](./Java/DividingCoins.java)
+- [ ] DivingForGold [(java)](./Java/DivingForGold.java)
+- [ ] PoloPenguinAndTest [(java)](./Java/PoloPenguinAndTest.java)
+### #ad-hoc-1 (3)
+- [ ] MMass [(java)](./Java/MMass.java)
+- [ ] StreetParade [(java)](./Java/StreetParade.java)
+- [ ] Test [(java)](./Java/Test.java)
+### #array (2)
+- [ ] FindtheDuplicateNumber [(cpp)](./C++/FindtheDuplicateNumber.cpp)
+- [ ] RemoveDuplicatesFromSortedArray [(cpp)](./C++/RemoveDuplicatesFromSortedArray.cpp)
+### #backtracking (7)
+- [ ] BoggleGame [(java)](./Java/BoggleGame.java)
+- [ ] DiggerOctaves [(java)](./Java/DiggerOctaves.java)
+- [ ] HammingDistanceProblem [(java)](./Java/HammingDistanceProblem.java)
+- [ ] Lotto [(java)](./Java/Lotto.java)
+- [ ] MinimizeAbsoluteDifference [(java)](./Java/MinimizeAbsoluteDifference.java)
+- [ ] MinimizeAbsoluteDifference_better [(java)](./Java/MinimizeAbsoluteDifference_better.java)
+- [ ] TheSultanSuccessors [(java)](./Java/TheSultanSuccessors.java)
+### #bellman-ford (7)
+- [ ] EventOrganizer [(cpp)](./C++/EventOrganizer.cpp)
+- [ ] ExtendedTraffic [(cpp)](./C++/ExtendedTraffic.cpp)
+- [ ] MilesToChicago [(cpp)](./C++/MilesToChicago.cpp)
+- [ ] MonkBusinessDay [(cpp)](./C++/MonkBusinessDay.cpp)
+- [ ] Wonderland [(cpp)](./C++/Wonderland.cpp)
+- [ ] Wormholes [(cpp)](./C++/Wormholes.cpp)
+- [ ] XYZZY [(cpp)](./C++/XYZZY.cpp)
+### #bfs (18)
+- [ ] BishuAndHisGirlFriend [(java)](./Java/BishuAndHisGirlFriend.java)
+- [ ] Cam5 [(java)](./Java/Cam5.java)
+- [ ] ChristmasTrees [(java)](./Java/ChristmasTrees.java)
+- [ ] Dhoom [(java)](./Java/Dhoom.java)
+- [ ] GuiltyPrince [(java)](./Java/GuiltyPrince.java)
+- [ ] IceCave [(java)](./Java/IceCave.java)
+- [ ] IceSkating [(java)](./Java/IceSkating.java)
+- [ ] IsenbaevsNumber [(java)](./Java/IsenbaevsNumber.java)
+- [ ] KefaAndPark [(java)](./Java/KefaAndPark.java)
+- [ ] KozeSheep [(java)](./Java/KozeSheep.java)
+- [ ] MakeMaze [(java)](./Java/MakeMaze.java)
+- [ ] MiceMaze [(java)](./Java/MiceMaze.java)
+- [ ] NormalBFS [(java)](./Java/NormalBFS.java)
+- [ ] Risk [(cpp)](./C++/Risk.cpp)
+- [ ] ShortedBFS [(java)](./Java/ShortedBFS.java)
+- [ ] Slick [(java)](./Java/Slick.java)
+- [ ] TreasureHunter [(java)](./Java/TreasureHunter.java)
+- [ ] XYZZY [(cpp)](./C++/XYZZY.cpp)
+### #binary-search (31)
+- [ ] AGGRCOW [(java)](./Java/AGGRCOW.java)
+- [ ] AnotherProblemString [(java)](./Java/AnotherProblemString.java)
+- [ ] BearAndPrimeNumbers [(java)](./Java/BearAndPrimeNumbers.java)
+- [ ] BerlandFair [(java)](./Java/BerlandFair.java)
+- [ ] BerryJam [(java)](./Java/BerryJam.java)
+- [ ] Books [(java)](./Java/Books.java)
+- [ ] Candies [(java)](./Java/Candies.java)
+- [ ] CommonElementInTwoArray [(cpp)](./C++/CommonElementInTwoArray.cpp)
+- [ ] CreativeSnap [(java)](./Java/CreativeSnap.java)
+- [ ] DressEmInVests [(java)](./Java/DressEmInVests.java)
+- [ ] EKO [(java)](./Java/EKO.java)
+- [ ] EnergyExchange [(java)](./Java/EnergyExchange.java)
+- [ ] FindtheDuplicateNumber [(cpp)](./C++/FindtheDuplicateNumber.cpp)
+- [ ] GukiZAndContest [(java)](./Java/GukiZAndContest.java)
+- [ ] HACKRNDM [(java)](./Java/HACKRNDM.java)
+- [ ] HanSoloLazerGun [(java)](./Java/HanSoloLazerGun.java)
+- [ ] KDominantCharacter [(java)](./Java/KDominantCharacter.java)
+- [ ] Letters [(cpp)](./C++/Letters.cpp)
+- [ ] Marble [(cpp)](./C++/Marble.cpp) [(java)](./Java/Marble.java)
+- [ ] Megacity [(java)](./Java/Megacity.java)
+- [ ] ModifiedGCD [(java)](./Java/ModifiedGCD.java)
+- [ ] MonkeyAndBamboo [(java)](./Java/MonkeyAndBamboo.java)
+- [ ] NewYearAndAscentSequence [(java)](./Java/NewYearAndAscentSequence.java)
+- [ ] Pizzamania [(cpp)](./C++/Pizzamania.cpp) [(java)](./Java/Pizzamania.java)
+- [ ] PlayboyChimp [(java)](./Java/PlayboyChimp.java)
+- [ ] QueriesLessEqualElement [(java)](./Java/QueriesLessEqualElement.java)
+- [ ] ReallyBigNumbers [(java)](./Java/ReallyBigNumbers.java)
+- [ ] TextEditor [(java)](./Java/TextEditor.java)
+- [ ] ThreePartsOfArray [(cpp)](./C++/ThreePartsOfArray.cpp)
+- [ ] VasyaAndString [(cpp)](./C++/VasyaAndString.cpp)
+- [ ] VasyaBasketball [(java)](./Java/VasyaBasketball.java)
+### #binary-search-tree (3)
+- [ ] DistinctCount [(java)](./Java/DistinctCount.java)
+- [ ] MinimumLoss [(java)](./Java/MinimumLoss.java)
+- [ ] MonkAndFriends [(java)](./Java/MonkAndFriends.java)
+### #bit-manipulation (13)
+- [ ] AishAndXOR [(java)](./Java/AishAndXOR.java)
+- [ ] Array [(java)](./Java/Array.java)
+- [ ] DiggerOctaves [(java)](./Java/DiggerOctaves.java)
+- [ ] EscapeNight [(java)](./Java/EscapeNight.java)
+- [ ] MatteyMultiplication [(java)](./Java/MatteyMultiplication.java)
+- [ ] MonkBinaryArray [(java)](./Java/MonkBinaryArray.java)
+- [ ] PoloThePenguinAndTheXOR [(java)](./Java/PoloThePenguinAndTheXOR.java)
+- [ ] PowerOfTwo [(java)](./Java/PowerOfTwo.java)
+- [ ] QualificationRounds [(java)](./Java/QualificationRounds.java)
+- [ ] SamuBirthdayParty [(java)](./Java/SamuBirthdayParty.java) [(java)](./Java/SamuBirthdayParty.java)
+- [ ] SansaAndXOR [(java)](./Java/SansaAndXOR.java)
+- [ ] SherlockAndXOR [(java)](./Java/SherlockAndXOR.java)
+- [ ] XorAndProject [(java)](./Java/XorAndProject.java)
+### #brute-force (6)
+- [ ] AnotherProblemString [(java)](./Java/AnotherProblemString.java)
+- [ ] HanSoloLazerGun [(java)](./Java/HanSoloLazerGun.java)
+- [ ] KefaAndFirstSteps [(java)](./Java/KefaAndFirstSteps.java)
+- [ ] TheSultanSuccessors [(java)](./Java/TheSultanSuccessors.java)
+- [ ] Thor [(java)](./Java/Thor.java)
+- [ ] VasyaBasketball [(java)](./Java/VasyaBasketball.java)
+### #constructive-algorithms (3)
+- [ ] BestGift [(java)](./Java/BestGift.java)
+- [ ] NicholasAndPermutation [(java)](./Java/NicholasAndPermutation.java)
+- [ ] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
+### #deque (1)
+- [ ] Plugin [(cpp)](./C++/Plugin.cpp) [(java)](./Java/Plugin.java)
+### #dfs (22)
+- [ ] AbcPath [(java)](./Java/AbcPath.java)
+- [ ] Bipartiteness [(java)](./Java/Bipartiteness.java)
+- [ ] BishuAndHisGirlFriend [(java)](./Java/BishuAndHisGirlFriend.java)
+- [ ] Cam5 [(java)](./Java/Cam5.java)
+- [ ] ColorfulGraph [(java)](./Java/ColorfulGraph.java)
+- [ ] CoverIt [(cpp)](./C++/CoverIt.cpp)
+- [ ] Cthulhu [(java)](./Java/Cthulhu.java)
+- [ ] CyclicComponents [(java)](./Java/CyclicComponents.java)
+- [ ] DistanceInTree [(java)](./Java/DistanceInTree.java)
+- [ ] DuduServiceMaker [(java)](./Java/DuduServiceMaker.java)
+- [ ] FoxAndNames [(java)](./Java/FoxAndNames.java)
+- [ ] IceCave [(java)](./Java/IceCave.java)
+- [ ] IceSkating [(java)](./Java/IceSkating.java)
+- [ ] KefaAndPark [(java)](./Java/KefaAndPark.java)
+- [ ] KingPath [(java)](./Java/KingPath.java)
+- [ ] LakesInBerland [(java)](./Java/LakesInBerland.java)
+- [ ] LastShot [(java)](./Java/LastShot.java)
+- [ ] LearnLanguages [(java)](./Java/LearnLanguages.java)
+- [ ] LunarNewYearWander [(java)](./Java/LunarNewYearWander.java)
+- [ ] NewYearPermutation [(java)](./Java/NewYearPermutation.java)
+- [ ] OliverAndTheGame [(java)](./Java/OliverAndTheGame.java)
+- [ ] Queen [(java)](./Java/Queen.java)
+### #dijkstra (13)
+- [ ] AlmostShortestPath [(cpp)](./C++/AlmostShortestPath.cpp) [(java)](./Java/AlmostShortestPath.java)
+- [ ] AsterixAndObelix [(cpp)](./C++/AsterixAndObelix.cpp)
+- [ ] Audiophobia [(java)](./Java/Audiophobia.java)
+- [ ] Boombs [(cpp)](./C++/Boombs.cpp) [(java)](./Java/Boombs.java)
+- [ ] ChocolateJourney [(java)](./Java/ChocolateJourney.java)
+- [ ] Commandos [(java)](./Java/Commandos.java)
+- [ ] CountryRoads [(cpp)](./C++/CountryRoads.cpp) [(java)](./Java/CountryRoads.java)
+- [ ] MiceMaze [(java)](./Java/MiceMaze.java)
+- [ ] PhilosophersStone [(java)](./Java/PhilosophersStone.java)
+- [ ] SendingEmail [(cpp)](./C++/SendingEmail.cpp)
+- [ ] ShortestPath [(java)](./Java/ShortestPath.java)
+- [ ] TravellingCost [(java)](./Java/TravellingCost.java)
+- [ ] WordTransformation [(cpp)](./C++/WordTransformation.cpp)
+### #divide-and-conquer (9)
+- [ ] BeautifulArray [(java)](./Java/BeautifulArray.java)
+- [ ] BitMaps [(java)](./Java/BitMaps.java)
+- [ ] Candies [(java)](./Java/Candies.java)
+- [ ] CreativeSnap [(java)](./Java/CreativeSnap.java)
+- [ ] DistanceInTree [(java)](./Java/DistanceInTree.java)
+- [ ] ExaminationPapers [(java)](./Java/ExaminationPapers.java)
+- [ ] PaintingFence [(java)](./Java/PaintingFence.java)
+- [ ] TheClosestPairProblem [(java)](./Java/TheClosestPairProblem.java)
+- [ ] TrickyFunction [(java)](./Java/TrickyFunction.java)
+### #dsu (16)
+- [ ] ColorfulGraph [(java)](./Java/ColorfulGraph.java)
+- [ ] CoverIt [(cpp)](./C++/CoverIt.cpp)
+- [ ] Cthulhu [(java)](./Java/Cthulhu.java)
+- [ ] CyclicComponents [(java)](./Java/CyclicComponents.java)
+- [ ] Forest [(java)](./Java/Forest.java)
+- [ ] Freckles [(java)](./Java/Freckles.java)
+- [ ] Friends [(java)](./Java/Friends.java)
+- [ ] GraphConnectivity [(java)](./Java/GraphConnectivity.java)
+- [ ] IceSkating [(java)](./Java/IceSkating.java)
+- [ ] LakesInBerland [(java)](./Java/LakesInBerland.java)
+- [ ] LearnLanguages [(java)](./Java/LearnLanguages.java)
+- [ ] MakeItConnected [(java)](./Java/MakeItConnected.java)
+- [ ] NewYearPermutation [(java)](./Java/NewYearPermutation.java)
+- [ ] UbiquitousReligions [(java)](./Java/UbiquitousReligions.java)
+- [ ] VirtualFriends [(java)](./Java/VirtualFriends.java)
+- [ ] War [(java)](./Java/War.java)
+### #dynamic-programming (48)
+- [ ] AdvancedFruits [(java)](./Java/AdvancedFruits.java)
+- [ ] Aibohphobia [(java)](./Java/Aibohphobia.java)
+- [ ] Alphacode [(java)](./Java/Alphacode.java)
+- [ ] AnotherProblemString [(java)](./Java/AnotherProblemString.java)
+- [ ] ApproximatingAConstantRange [(java)](./Java/ApproximatingAConstantRange.java)
+- [ ] BasketballExercise [(java)](./Java/BasketballExercise.java)
+- [ ] BeautifulArray [(java)](./Java/BeautifulArray.java)
+- [ ] BeautifulPeople [(java)](./Java/BeautifulPeople.java)
+- [ ] BytelandianGoldCoins [(java)](./Java/BytelandianGoldCoins.java)
+- [ ] Compromise [(java)](./Java/Compromise.java)
+- [ ] CowAndMessage [(java)](./Java/CowAndMessage.java)
+- [ ] CrossCountry [(java)](./Java/CrossCountry.java)
+- [ ] DNASequences [(java)](./Java/DNASequences.java)
+- [ ] DistanceInTree [(java)](./Java/DistanceInTree.java)
+- [ ] DividingCoins [(java)](./Java/DividingCoins.java)
+- [ ] DivingForGold [(java)](./Java/DivingForGold.java)
+- [ ] Equalize [(java)](./Java/Equalize.java)
+- [ ] EvilUnderscores [(java)](./Java/EvilUnderscores.java)
+- [ ] Garland [(java)](./Java/Garland.java)
+- [ ] GoodSequences [(java)](./Java/GoodSequences.java)
+- [ ] HardProblem [(java)](./Java/HardProblem.java) [(java)](./Java/HardProblem.java)
+- [ ] IngenuousCubrency [(java)](./Java/IngenuousCubrency.java)
+- [ ] KbasedNumbers [(java)](./Java/KbasedNumbers.java)
+- [ ] KefaAndFirstSteps [(java)](./Java/KefaAndFirstSteps.java)
+- [ ] Letter [(java)](./Java/Letter.java)
+- [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+- [ ] MancunianKOrderedLCS [(java)](./Java/MancunianKOrderedLCS.java)
+- [ ] PaintingFence [(java)](./Java/PaintingFence.java)
+- [ ] PalindromicCharacteristics [(java)](./Java/PalindromicCharacteristics.java)
+- [ ] PhilosophersStone [(java)](./Java/PhilosophersStone.java)
+- [ ] PickTheSticks [(java)](./Java/PickTheSticks.java) [(java)](./Java/PickTheSticks.java)
+- [ ] PoloPenguinAndTest [(java)](./Java/PoloPenguinAndTest.java)
+- [ ] PrinceAndPrincess [(java)](./Java/PrinceAndPrincess.java)
+- [ ] RecyclingBottles [(java)](./Java/RecyclingBottles.java)
+- [ ] SAMER08DDNASequences [(java)](./Java/SAMER08DDNASequences.java)
+- [ ] SamuBirthdayParty [(java)](./Java/SamuBirthdayParty.java)
+- [ ] SansaAndXOR [(java)](./Java/SansaAndXOR.java)
+- [ ] ScubaDiver [(java)](./Java/ScubaDiver.java)
+- [ ] TestingTheCATCHER [(java)](./Java/TestingTheCATCHER.java)
+- [ ] TheFairNutAndString [(java)](./Java/TheFairNutAndString.java)
+- [ ] TheTowerOfBabylon [(java)](./Java/TheTowerOfBabylon.java)
+- [ ] TheValuesYouCanMake [(java)](./Java/TheValuesYouCanMake.java)
+- [ ] Trainsorting [(java)](./Java/Trainsorting.java)
+- [ ] TreasureHunter [(java)](./Java/TreasureHunter.java)
+- [ ] TreasureIsland [(java)](./Java/TreasureIsland.java)
+- [ ] TwoArrays [(java)](./Java/TwoArrays.java)
+- [ ] VasyaAndString [(cpp)](./C++/VasyaAndString.cpp)
+- [ ] WavioSequence [(java)](./Java/WavioSequence.java)
+### #floyd-warshall (4)
+- [ ] Arbitrage [(cpp)](./C++/Arbitrage.cpp)
+- [ ] MeetingProf [(cpp)](./C++/MeetingProf.cpp)
+- [ ] SocialnePossibleFriends [(java)](./Java/SocialnePossibleFriends.java)
+- [ ] ThunderMountain [(cpp)](./C++/ThunderMountain.cpp)
+### #geometry (2)
+- [ ] HanSoloLazerGun [(java)](./Java/HanSoloLazerGun.java)
+- [ ] TrickyFunction [(java)](./Java/TrickyFunction.java)
+### #graph (6)
+- [ ] Bipartiteness [(java)](./Java/Bipartiteness.java)
+- [ ] ChristmasTrees [(java)](./Java/ChristmasTrees.java)
+- [ ] ColorfulGraph [(java)](./Java/ColorfulGraph.java)
+- [ ] FoxAndNames [(java)](./Java/FoxAndNames.java)
+- [ ] OliverAndTheGame [(java)](./Java/OliverAndTheGame.java)
+- [ ] TravellingCost [(java)](./Java/TravellingCost.java)
+### #greedy (36)
+- [ ] AliceBobChocolate [(java)](./Java/AliceBobChocolate.java)
+- [ ] BeautifulArray [(java)](./Java/BeautifulArray.java)
+- [ ] BerlandFair [(java)](./Java/BerlandFair.java)
+- [ ] BestTimeToBuyandSellStockII [(cpp)](./C++/BestTimeToBuyandSellStockII.cpp) [(py)](./Python/BestTimeToBuyandSellStockII.py)
+- [ ] Brutality [(cpp)](./C++/Brutality.cpp) [(java)](./Java/Brutality.java)
+- [ ] BuildingPermutation [(java)](./Java/BuildingPermutation.java)
+- [ ] BusinessTrip [(java)](./Java/BusinessTrip.java)
+- [ ] Candies [(java)](./Java/Candies.java)
+- [ ] ChristmasTrees [(java)](./Java/ChristmasTrees.java)
+- [ ] DiverseGarland [(java)](./Java/DiverseGarland.java)
+- [ ] DressEmInVests [(java)](./Java/DressEmInVests.java)
+- [ ] Equalize [(java)](./Java/Equalize.java)
+- [ ] Garland [(java)](./Java/Garland.java)
+- [ ] GeorgeAndRound [(java)](./Java/GeorgeAndRound.java)
+- [ ] LakesInBerland [(java)](./Java/LakesInBerland.java)
+- [ ] LunarNewYearWander [(java)](./Java/LunarNewYearWander.java)
+- [ ] MakeItConnected [(java)](./Java/MakeItConnected.java)
+- [ ] Megacity [(java)](./Java/Megacity.java)
+- [ ] NewYearParties [(java)](./Java/NewYearParties.java)
+- [ ] NewYearPermutation [(java)](./Java/NewYearPermutation.java)
+- [ ] NumberDivision [(java)](./Java/NumberDivision.java)
+- [ ] ORMatrix [(java)](./Java/ORMatrix.java)
+- [ ] OldBerlandLanguage [(java)](./Java/OldBerlandLanguage.java)
+- [ ] PaintingFence [(java)](./Java/PaintingFence.java)
+- [ ] PetyaAndCatacombs [(java)](./Java/PetyaAndCatacombs.java)
+- [ ] RegularBracketSequence [(java)](./Java/RegularBracketSequence.java)
+- [ ] RomaAndChangingSigns [(java)](./Java/RomaAndChangingSigns.java)
+- [ ] SerejaAndDima [(java)](./Java/SerejaAndDima.java)
+- [ ] Stages [(java)](./Java/Stages.java)
+- [ ] TanyaAndPostcard [(java)](./Java/TanyaAndPostcard.java)
+- [ ] Taxi [(java)](./Java/Taxi.java)
+- [ ] TheNumberOnBoard [(java)](./Java/TheNumberOnBoard.java)
+- [ ] UsbAndPS [(cpp)](./C++/UsbAndPS.cpp) [(java)](./Java/UsbAndPS.java)
+- [ ] WineTradingInGergovia [(java)](./Java/WineTradingInGergovia.java)
+- [ ] easyExamInBerSU [(cpp)](./C++/easyExamInBerSU.cpp)
+- [ ] hardExamInBerSU [(cpp)](./C++/hardExamInBerSU.cpp) [(cpp)](./C++/hardExamInBerSU.cpp)
+### #hash-table (13)
+- [ ] CampSchedule [(java)](./Java/CampSchedule.java)
+- [ ] CheckTranscription [(java)](./Java/CheckTranscription.java)
+- [ ] CommonElementInTwoArray [(cpp)](./C++/CommonElementInTwoArray.cpp)
+- [ ] FindTwoNumbersWithPredictedSum [(cpp)](./C++/FindTwoNumbersWithPredictedSum.cpp)
+- [ ] GoodSubstrings [(java)](./Java/GoodSubstrings.java)
+- [ ] KingPath [(java)](./Java/KingPath.java)
+- [ ] LengthOfLongestSubString [(cpp)](./C++/LengthOfLongestSubString.cpp) [(py)](./Python/LengthOfLongestSubString.py)
+- [ ] PalindromicCharacteristics [(java)](./Java/PalindromicCharacteristics.java)
+- [ ] PetyaAndCatacombs [(java)](./Java/PetyaAndCatacombs.java)
+- [ ] RemoveDuplicatesFromSortedArray [(cpp)](./C++/RemoveDuplicatesFromSortedArray.cpp)
+- [ ] SuffixEqualPrefix [(java)](./Java/SuffixEqualPrefix.java)
+- [ ] TheMonkAndPrateek [(java)](./Java/TheMonkAndPrateek.java) [(java)](./Java/TheMonkAndPrateek.java)
+- [ ] WattoAndMechanism [(java)](./Java/WattoAndMechanism.java)
+### #heap (6)
+- [ ] AddAll [(java)](./Java/AddAll.java)
+- [ ] Median [(cpp)](./C++/Median.cpp)
+- [ ] MonkAndMultiplication [(java)](./Java/MonkAndMultiplication.java)
+- [ ] QHeap1 [(java)](./Java/QHeap1.java)
+- [ ] RoyTrendingTopic [(java)](./Java/RoyTrendingTopic.java)
+- [ ] YourQueue [(java)](./Java/YourQueue.java)
+### #implementation (44)
+- [ ] AddTwoNumbers [(cpp)](./C++/AddTwoNumbers.cpp) [(py)](./Python/AddTwoNumbers.py)
+- [ ] AirConditioner [(java)](./Java/AirConditioner.java)
+- [ ] BalanceBrackets [(cpp)](./C++/BalanceBrackets.cpp)
+- [ ] BalancedSubstring [(java)](./Java/BalancedSubstring.java)
+- [ ] BearAndGame [(java)](./Java/BearAndGame.java)
+- [ ] BearAndPrimeNumbers [(java)](./Java/BearAndPrimeNumbers.java)
+- [ ] BerryJam [(java)](./Java/BerryJam.java)
+- [ ] BestGift [(java)](./Java/BestGift.java)
+- [ ] BestTimeToBuyandSellStockII [(cpp)](./C++/BestTimeToBuyandSellStockII.cpp) [(py)](./Python/BestTimeToBuyandSellStockII.py)
+- [ ] BigSegment [(java)](./Java/BigSegment.java)
+- [ ] Books [(java)](./Java/Books.java)
+- [ ] BusinessTrip [(java)](./Java/BusinessTrip.java)
+- [ ] Buttons [(java)](./Java/Buttons.java)
+- [ ] CalculatingFunction [(java)](./Java/CalculatingFunction.java)
+- [ ] CamelCase [(java)](./Java/CamelCase.java)
+- [ ] CombinationLock [(java)](./Java/CombinationLock.java)
+- [ ] EhabAndSubstraction [(java)](./Java/EhabAndSubstraction.java)
+- [ ] FashionInBerland [(java)](./Java/FashionInBerland.java)
+- [ ] FibsieveFantabulous [(java)](./Java/FibsieveFantabulous.java)
+- [ ] GukiZAndContest [(java)](./Java/GukiZAndContest.java)
+- [ ] HardwoodSpecies [(java)](./Java/HardwoodSpecies.java)
+- [ ] KefaAndFirstSteps [(java)](./Java/KefaAndFirstSteps.java)
+- [ ] LittleDeepuAndArray [(java)](./Java/LittleDeepuAndArray.java)
+- [ ] MathExpression [(cpp)](./C++/MathExpression.cpp)
+- [ ] MessageSpreading [(java)](./Java/MessageSpreading.java)
+- [ ] NicholasAndPermutation [(java)](./Java/NicholasAndPermutation.java)
+- [ ] NumberDivision [(java)](./Java/NumberDivision.java)
+- [ ] Pangram [(cpp)](./C++/Pangram.cpp)
+- [ ] Pipes [(java)](./Java/Pipes.java)
+- [ ] Plugin [(cpp)](./C++/Plugin.cpp) [(java)](./Java/Plugin.java)
+- [ ] QualificationRounds [(java)](./Java/QualificationRounds.java)
+- [ ] RectangleOverlap [(cpp)](./C++/RectangleOverlap.cpp)
+- [ ] RoundTableKnights [(java)](./Java/RoundTableKnights.java)
+- [ ] Run-lengthEncoding [(cpp)](./C++/Run-lengthEncoding.cpp)
+- [ ] Semifinals [(java)](./Java/Semifinals.java)
+- [ ] SerejaAndDima [(java)](./Java/SerejaAndDima.java)
+- [ ] SortTheArray [(java)](./Java/SortTheArray.java)
+- [ ] Stages [(java)](./Java/Stages.java)
+- [ ] Taxi [(java)](./Java/Taxi.java)
+- [ ] TernaryXOR [(java)](./Java/TernaryXOR.java)
+- [ ] Thor [(java)](./Java/Thor.java)
+- [ ] VanyaAndFence [(java)](./Java/VanyaAndFence.java)
+- [ ] VasyaAndMultisets [(java)](./Java/VasyaAndMultisets.java)
+- [ ] myPow [(cpp)](./C++/myPow.cpp) [(py)](./Python/myPow.py)
+### #kmp (6)
+- [ ] FileRecoverTesting [(java)](./Java/FileRecoverTesting.java)
+- [ ] FindStringRoots [(java)](./Java/FindStringRoots.java)
+- [ ] GaintAndSifat [(java)](./Java/GaintAndSifat.java)
+- [ ] MUHAndCubeWalls [(java)](./Java/MUHAndCubeWalls.java)
+- [ ] Password [(java)](./Java/Password.java)
+- [ ] TextEditor [(java)](./Java/TextEditor.java)
+### #knapsack (2)
+- [ ] PickTheSticks [(java)](./Java/PickTheSticks.java)
+- [ ] ScubaDiver [(java)](./Java/ScubaDiver.java)
+### #lcs (8)
+- [ ] AdvancedFruits [(java)](./Java/AdvancedFruits.java)
+- [ ] Aibohphobia [(java)](./Java/Aibohphobia.java)
+- [ ] Compromise [(java)](./Java/Compromise.java)
+- [ ] CrossCountry [(java)](./Java/CrossCountry.java)
+- [ ] DNASequences [(java)](./Java/DNASequences.java)
+- [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+- [ ] MancunianKOrderedLCS [(java)](./Java/MancunianKOrderedLCS.java)
+- [ ] SAMER08DDNASequences [(java)](./Java/SAMER08DDNASequences.java)
+### #linked-list (1)
+- [ ] AddTwoNumbers [(cpp)](./C++/AddTwoNumbers.cpp) [(py)](./Python/AddTwoNumbers.py)
+### #lis (6)
+- [ ] BeautifulPeople [(java)](./Java/BeautifulPeople.java)
+- [ ] PrinceAndPrincess [(java)](./Java/PrinceAndPrincess.java)
+- [ ] TestingTheCATCHER [(java)](./Java/TestingTheCATCHER.java)
+- [ ] TheTowerOfBabylon [(java)](./Java/TheTowerOfBabylon.java)
+- [ ] Trainsorting [(java)](./Java/Trainsorting.java)
+- [ ] WavioSequence [(java)](./Java/WavioSequence.java)
+### #map (4)
+- [ ] FindTwoNumbersWithPredictedSum [(cpp)](./C++/FindTwoNumbersWithPredictedSum.cpp)
+- [ ] MonkAndFriends [(java)](./Java/MonkAndFriends.java)
+- [ ] RemoveDuplicatesFromSortedArray [(cpp)](./C++/RemoveDuplicatesFromSortedArray.cpp)
+- [ ] Towers [(java)](./Java/Towers.java)
+### #math (15)
+- [ ] AddTwoNumbers [(cpp)](./C++/AddTwoNumbers.cpp) [(py)](./Python/AddTwoNumbers.py)
+- [ ] Buttons [(java)](./Java/Buttons.java)
+- [ ] CalculatingFunction [(java)](./Java/CalculatingFunction.java)
+- [ ] CowAndMessage [(java)](./Java/CowAndMessage.java)
+- [ ] FindNumbersContainingOne [(cpp)](./C++/FindNumbersContainingOne.cpp) [(py)](./Python/FindNumbersContainingOne.py)
+- [ ] HanSoloLazerGun [(java)](./Java/HanSoloLazerGun.java)
+- [ ] MatteyMultiplication [(java)](./Java/MatteyMultiplication.java)
+- [ ] NewYearPermutation [(java)](./Java/NewYearPermutation.java)
+- [ ] NumberDivision [(java)](./Java/NumberDivision.java)
+- [ ] RectangleOverlap [(cpp)](./C++/RectangleOverlap.cpp)
+- [ ] SendATable [(java)](./Java/SendATable.java)
+- [ ] SherlockAndXOR [(java)](./Java/SherlockAndXOR.java)
+- [ ] SoldierBananas [(cpp)](./C++/SoldierBananas.cpp)
+- [ ] TwoArrays [(java)](./Java/TwoArrays.java)
+- [ ] hardExamInBerSU [(cpp)](./C++/hardExamInBerSU.cpp)
+### #mst (4)
+- [ ] CobbledStreets [(java)](./Java/CobbledStreets.java)
+- [ ] Freckles [(java)](./Java/Freckles.java)
+- [ ] MST [(java)](./Java/MST.java)
+- [ ] MakeItConnected [(java)](./Java/MakeItConnected.java)
+### #number-theory (13)
+- [ ] AnagrammaticPrimes [(java)](./Java/AnagrammaticPrimes.java)
+- [ ] BoxesOfChocolates [(java)](./Java/BoxesOfChocolates.java)
+- [ ] DrazilAndHisHappyFriends [(java)](./Java/DrazilAndHisHappyFriends.java)
+- [ ] FloorAndCeil [(java)](./Java/FloorAndCeil.java)
+- [ ] IrreducibleBasicFractions [(java)](./Java/IrreducibleBasicFractions.java)
+- [ ] LargestPrimeDivisor [(java)](./Java/LargestPrimeDivisor.java)
+- [ ] MatteyMultiplication [(java)](./Java/MatteyMultiplication.java)
+- [ ] ModifiedGCD [(java)](./Java/ModifiedGCD.java)
+- [ ] Ones [(java)](./Java/Ones.java)
+- [ ] PalindromicSeries [(java)](./Java/PalindromicSeries.java)
+- [ ] PrimeCuts [(java)](./Java/PrimeCuts.java)
+- [ ] ProblemMakesProblem [(java)](./Java/ProblemMakesProblem.java)
+- [ ] SendATable [(java)](./Java/SendATable.java)
+### #optimized (1)
+- [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+### #pointer (1)
+- [ ] unknow_test [(cpp)](./C++/unknow_test.cpp)
+### #prim (8)
+- [ ] ACMContestBlackout [(java)](./Java/ACMContestBlackout.java)
+- [ ] Audiophobia [(java)](./Java/Audiophobia.java)
+- [ ] CobbledStreets [(java)](./Java/CobbledStreets.java)
+- [ ] ConnectCampus [(java)](./Java/ConnectCampus.java)
+- [ ] MST [(java)](./Java/MST.java)
+- [ ] PrimSpecialSubtree [(java)](./Java/PrimSpecialSubtree.java)
+- [ ] RoadConstruction [(java)](./Java/RoadConstruction.java)
+- [ ] SimulateNetwork [(java)](./Java/SimulateNetwork.java)
+### #priority-queue (9)
+- [ ] AddAll [(java)](./Java/AddAll.java)
+- [ ] GuessDequePriorityQueue [(cpp)](./C++/GuessDequePriorityQueue.cpp) [(java)](./Java/GuessDequePriorityQueue.java)
+- [ ] Median [(cpp)](./C++/Median.cpp)
+- [ ] MonkAndMultiplication [(java)](./Java/MonkAndMultiplication.java)
+- [ ] PrinterQueue [(cpp)](./C++/PrinterQueue.cpp)
+- [ ] QHeap1 [(java)](./Java/QHeap1.java)
+- [ ] RoyTrendingTopic [(java)](./Java/RoyTrendingTopic.java)
+- [ ] easyExamInBerSU [(cpp)](./C++/easyExamInBerSU.cpp)
+- [ ] hardExamInBerSU [(cpp)](./C++/hardExamInBerSU.cpp)
+### #queue (9)
+- [ ] FerryLoadingIII [(java)](./Java/FerryLoadingIII.java)
+- [ ] GuessDequePriorityQueue [(cpp)](./C++/GuessDequePriorityQueue.cpp) [(java)](./Java/GuessDequePriorityQueue.java)
+- [ ] PrinterQueue [(cpp)](./C++/PrinterQueue.cpp)
+- [ ] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
+- [ ] StreetParade [(java)](./Java/StreetParade.java)
+- [ ] Test [(java)](./Java/Test.java)
+- [ ] Thor [(java)](./Java/Thor.java)
+- [ ] ThrowingCard [(java)](./Java/ThrowingCard.java)
+- [ ] YourQueue [(java)](./Java/YourQueue.java)
+### #recursion (3)
+- [ ] AbcPath [(java)](./Java/AbcPath.java)
+- [ ] MathExpression [(cpp)](./C++/MathExpression.cpp)
+- [ ] myPow [(cpp)](./C++/myPow.cpp) [(py)](./Python/myPow.py)
+### #refactor (4)
+- [ ] BasketballExercise [(java)](./Java/BasketballExercise.java)
+- [ ] DrazilAndHisHappyFriends [(java)](./Java/DrazilAndHisHappyFriends.java)
+- [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+- [ ] PoloThePenguinAndTheXOR [(java)](./Java/PoloThePenguinAndTheXOR.java)
+### #segment-tree (6)
+- [ ] Brackets [(java)](./Java/Brackets.java)
+- [ ] CircularRMQ [(java)](./Java/CircularRMQ.java)
+- [ ] CuriousRobinHood [(java)](./Java/CuriousRobinHood.java)
+- [ ] IntervalProduct [(java)](./Java/IntervalProduct.java)
+- [ ] LittleDeepuAndArray [(java)](./Java/LittleDeepuAndArray.java)
+- [ ] XeniaAndBitOperations [(java)](./Java/XeniaAndBitOperations.java)
+### #shortest-path (24)
+- [ ] AlmostShortestPath [(cpp)](./C++/AlmostShortestPath.cpp) [(java)](./Java/AlmostShortestPath.java)
+- [ ] Arbitrage [(cpp)](./C++/Arbitrage.cpp)
+- [ ] AsterixAndObelix [(cpp)](./C++/AsterixAndObelix.cpp)
+- [ ] Audiophobia [(java)](./Java/Audiophobia.java)
+- [ ] Boombs [(cpp)](./C++/Boombs.cpp) [(java)](./Java/Boombs.java)
+- [ ] ChocolateJourney [(java)](./Java/ChocolateJourney.java)
+- [ ] Commandos [(java)](./Java/Commandos.java)
+- [ ] CountryRoads [(cpp)](./C++/CountryRoads.cpp) [(java)](./Java/CountryRoads.java)
+- [ ] CoverIt [(cpp)](./C++/CoverIt.cpp)
+- [ ] EventOrganizer [(cpp)](./C++/EventOrganizer.cpp)
+- [ ] KingPath [(java)](./Java/KingPath.java)
+- [ ] LunarNewYearWander [(java)](./Java/LunarNewYearWander.java)
+- [ ] MeetingProf [(cpp)](./C++/MeetingProf.cpp)
+- [ ] MiceMaze [(java)](./Java/MiceMaze.java)
+- [ ] MilesToChicago [(cpp)](./C++/MilesToChicago.cpp)
+- [ ] MonkBusinessDay [(cpp)](./C++/MonkBusinessDay.cpp)
+- [ ] NormalBFS [(java)](./Java/NormalBFS.java)
+- [ ] SendingEmail [(cpp)](./C++/SendingEmail.cpp)
+- [ ] ShortestPath [(java)](./Java/ShortestPath.java)
+- [ ] ThunderMountain [(cpp)](./C++/ThunderMountain.cpp)
+- [ ] Wonderland [(cpp)](./C++/Wonderland.cpp)
+- [ ] WordTransformation [(cpp)](./C++/WordTransformation.cpp)
+- [ ] Wormholes [(cpp)](./C++/Wormholes.cpp)
+- [ ] XYZZY [(cpp)](./C++/XYZZY.cpp)
+### #simple-way (2)
+- [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+- [ ] Ones [(java)](./Java/Ones.java)
+### #slicing-window (1)
+- [ ] LengthOfLongestSubString [(cpp)](./C++/LengthOfLongestSubString.cpp) [(py)](./Python/LengthOfLongestSubString.py)
+### #sorting (25)
+- [ ] Arrays [(java)](./Java/Arrays.java)
+- [ ] BigSegment [(java)](./Java/BigSegment.java)
+- [ ] Brutality [(cpp)](./C++/Brutality.cpp) [(java)](./Java/Brutality.java)
+- [ ] BuildingPermutation [(java)](./Java/BuildingPermutation.java)
+- [ ] BusinessTrip [(java)](./Java/BusinessTrip.java)
+- [ ] Chores [(java)](./Java/Chores.java)
+- [ ] CommonElementInTwoArray [(cpp)](./C++/CommonElementInTwoArray.cpp)
+- [ ] DevuDumbGuy [(cpp)](./C++/DevuDumbGuy.cpp)
+- [ ] EhabAndSubstraction [(java)](./Java/EhabAndSubstraction.java)
+- [ ] EightPointSets [(java)](./Java/EightPointSets.java)
+- [ ] GukiZAndContest [(java)](./Java/GukiZAndContest.java)
+- [ ] MUHImportantThings [(java)](./Java/MUHImportantThings.java)
+- [ ] NewYearAndAscentSequence [(java)](./Java/NewYearAndAscentSequence.java)
+- [ ] NewYearPermutation [(java)](./Java/NewYearPermutation.java)
+- [ ] NumberDivision [(java)](./Java/NumberDivision.java)
+- [ ] QueriesLessEqualElement [(java)](./Java/QueriesLessEqualElement.java)
+- [ ] RomaAndChangingSigns [(java)](./Java/RomaAndChangingSigns.java)
+- [ ] RoyTrendingTopic [(java)](./Java/RoyTrendingTopic.java)
+- [ ] Semifinals [(java)](./Java/Semifinals.java)
+- [ ] SortTheArray [(java)](./Java/SortTheArray.java)
+- [ ] Stages [(java)](./Java/Stages.java)
+- [ ] Towers [(java)](./Java/Towers.java)
+- [ ] UsbAndPS [(cpp)](./C++/UsbAndPS.cpp) [(java)](./Java/UsbAndPS.java)
+- [ ] VasyaBasketball [(java)](./Java/VasyaBasketball.java)
+- [ ] easyExamInBerSU [(cpp)](./C++/easyExamInBerSU.cpp)
+### #special-problem (2)
+- [ ] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
+- [ ] Taxi [(java)](./Java/Taxi.java)
+### #stack (9)
+- [ ] BalanceBrackets [(cpp)](./C++/BalanceBrackets.cpp)
+- [ ] CompilersParsers [(java)](./Java/CompilersParsers.java)
+- [ ] GuessDequePriorityQueue [(cpp)](./C++/GuessDequePriorityQueue.cpp) [(java)](./Java/GuessDequePriorityQueue.java)
+- [ ] MMass [(java)](./Java/MMass.java)
+- [ ] ParenthesesBalance [(cpp)](./C++/ParenthesesBalance.cpp) [(java)](./Java/ParenthesesBalance.java)
+- [ ] RegularBracketSequence [(java)](./Java/RegularBracketSequence.java)
+- [ ] StreetParade [(java)](./Java/StreetParade.java)
+- [ ] Test [(java)](./Java/Test.java)
+- [ ] TransformExpression [(java)](./Java/TransformExpression.java)
+### #string (11)
+- [ ] CampSchedule [(java)](./Java/CampSchedule.java)
+- [ ] CheckTranscription [(java)](./Java/CheckTranscription.java)
+- [ ] HardProblem [(java)](./Java/HardProblem.java)
+- [ ] LengthOfLongestSubString [(cpp)](./C++/LengthOfLongestSubString.cpp) [(py)](./Python/LengthOfLongestSubString.py)
+- [ ] PalindromicCharacteristics [(java)](./Java/PalindromicCharacteristics.java)
+- [ ] Pangram [(cpp)](./C++/Pangram.cpp)
+- [ ] SearchEngine [(java)](./Java/SearchEngine.java)
+- [ ] SuffixEqualPrefix [(java)](./Java/SuffixEqualPrefix.java)
+- [ ] TanyaAndPostcard [(java)](./Java/TanyaAndPostcard.java)
+- [ ] VasyaAndString [(cpp)](./C++/VasyaAndString.cpp)
+- [ ] WattoAndMechanism [(java)](./Java/WattoAndMechanism.java)
+### #todo (19)
+- [ ] BeautifulArray [(java)](./Java/BeautifulArray.java)
+- [ ] ColorfulGraph [(java)](./Java/ColorfulGraph.java)
+- [ ] DNASequences [(java)](./Java/DNASequences.java)
+- [ ] DiccionarioPortunol [(cpp)](./C++/DiccionarioPortunol.cpp) [(java)](./Java/DiccionarioPortunol.java)
+- [ ] DiverseGarland [(java)](./Java/DiverseGarland.java)
+- [ ] DrazilAndHisHappyFriends [(java)](./Java/DrazilAndHisHappyFriends.java)
+- [ ] EvilUnderscores [(java)](./Java/EvilUnderscores.java)
+- [ ] FerryLoadingIII [(java)](./Java/FerryLoadingIII.java)
+- [ ] Forest [(java)](./Java/Forest.java)
+- [ ] Garland [(java)](./Java/Garland.java)
+- [ ] HardProblem [(java)](./Java/HardProblem.java)
+- [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+- [ ] MinimizeAbsoluteDifference_better [(java)](./Java/MinimizeAbsoluteDifference_better.java)
+- [ ] PoloThePenguinAndTheXOR [(java)](./Java/PoloThePenguinAndTheXOR.java)
+- [ ] Test [(java)](./Java/Test.java)
+- [ ] ThreePathsOnTree [(java)](./Java/ThreePathsOnTree.java)
+- [ ] TreasureIsland [(java)](./Java/TreasureIsland.java)
+- [ ] TwoArrays [(java)](./Java/TwoArrays.java)
+- [ ] VasyaAndMultisets [(java)](./Java/VasyaAndMultisets.java)
+### #topological-sort (8)
+- [ ] AnswerBoss [(java)](./Java/AnswerBoss.java)
+- [ ] Beverages [(java)](./Java/Beverages.java)
+- [ ] DuelingPhilosophersProblem [(java)](./Java/DuelingPhilosophersProblem.java)
+- [ ] FoxAndNames [(java)](./Java/FoxAndNames.java)
+- [ ] Hierarchy [(java)](./Java/Hierarchy.java)
+- [ ] LonelyIsland [(java)](./Java/LonelyIsland.java)
+- [ ] RareOrder [(java)](./Java/RareOrder.java)
+- [ ] TopologicalSortingKahn [(java)](./Java/TopologicalSortingKahn.java)
+### #tree (2)
+- [ ] Bipartiteness [(java)](./Java/Bipartiteness.java)
+- [ ] OldBerlandLanguage [(java)](./Java/OldBerlandLanguage.java)
+### #trie (8)
+- [ ] ConsistencyChecker [(cpp)](./C++/ConsistencyChecker.cpp) [(java)](./Java/ConsistencyChecker.java)
+- [ ] Contact [(java)](./Java/Contact.java)
+- [ ] DNAPrefix [(java)](./Java/DNAPrefix.java)
+- [ ] DiccionarioPortunol [(cpp)](./C++/DiccionarioPortunol.cpp) [(java)](./Java/DiccionarioPortunol.java)
+- [ ] NoPrefixSet [(java)](./Java/NoPrefixSet.java)
+- [ ] OldBerlandLanguage [(java)](./Java/OldBerlandLanguage.java)
+- [ ] PhoneList [(java)](./Java/PhoneList.java)
+- [ ] SearchEngine [(java)](./Java/SearchEngine.java)
+### #two-pointer (23)
+- [ ] AirConditioner [(java)](./Java/AirConditioner.java)
+- [ ] AliceBobChocolate [(java)](./Java/AliceBobChocolate.java)
+- [ ] AnotherProblemString [(java)](./Java/AnotherProblemString.java)
+- [ ] ApproximatingAConstantRange [(java)](./Java/ApproximatingAConstantRange.java)
+- [ ] Array [(java)](./Java/Array.java)
+- [ ] Books [(java)](./Java/Books.java)
+- [ ] Brutality [(cpp)](./C++/Brutality.cpp) [(java)](./Java/Brutality.java)
+- [ ] CommonElementInTwoArray [(cpp)](./C++/CommonElementInTwoArray.cpp)
+- [ ] DressEmInVests [(java)](./Java/DressEmInVests.java)
+- [ ] FindtheDuplicateNumber [(cpp)](./C++/FindtheDuplicateNumber.cpp)
+- [ ] FoePairs [(cpp)](./C++/FoePairs.cpp) [(java)](./Java/FoePairs.java)
+- [ ] GeorgeAndRound [(java)](./Java/GeorgeAndRound.java)
+- [ ] HACKRNDM [(java)](./Java/HACKRNDM.java)
+- [ ] KDominantCharacter [(java)](./Java/KDominantCharacter.java)
+- [ ] LengthOfLongestSubString [(cpp)](./C++/LengthOfLongestSubString.cpp) [(py)](./Python/LengthOfLongestSubString.py)
+- [ ] Letters [(cpp)](./C++/Letters.cpp)
+- [ ] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
+- [ ] QueriesLessEqualElement [(java)](./Java/QueriesLessEqualElement.java)
+- [ ] SerejaAndDima [(java)](./Java/SerejaAndDima.java)
+- [ ] ThreePartsOfArray [(cpp)](./C++/ThreePartsOfArray.cpp)
+- [ ] UsbAndPS [(cpp)](./C++/UsbAndPS.cpp) [(java)](./Java/UsbAndPS.java)
+- [ ] VasyaAndString [(cpp)](./C++/VasyaAndString.cpp)
+- [ ] VasyaBasketball [(java)](./Java/VasyaBasketball.java)

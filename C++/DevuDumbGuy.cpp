@@ -1,5 +1,5 @@
 /** https://codeforces.com/contest/439/problem/B
-#sortings
+#sorting
  */
 
 #include<iostream>

@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/TRVCOST/
- *  #graph-theory #dijkstra-s-algorithm
+ *  #graph #dijkstra
  */
 import java.util.Scanner;
 import java.util.HashMap;

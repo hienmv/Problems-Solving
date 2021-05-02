@@ -1,6 +1,6 @@
 /**
  * https://codeforces.com/problemset/problem/1304/C
- * #implement
+ * #implementation
  * #two-pointer
  * find the range can change: 
     ownRange.l -= gap;

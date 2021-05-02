@@ -1,5 +1,5 @@
 /* https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
-#arrays #hash-table #map
+#array #hash-table #map
 */
 
 #include<iostream>

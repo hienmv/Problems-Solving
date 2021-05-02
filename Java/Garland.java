@@ -1,5 +1,5 @@
 /** https://codeforces.com/contest/1287/problem/C
- * #dp #greedy #top-down #bottom-up #todo
+ * #dynamic-programming #greedy #top-down #bottom-up #todo
  */
 import java.util.Scanner;
 class Garland {

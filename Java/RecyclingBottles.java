@@ -1,5 +1,5 @@
 /** http://codeforces.com/problemset/problem/671/A
- * #dp
+ * #dynamic-programming
 Step 1 :
 A/B -> X (unvisited)-> T
 

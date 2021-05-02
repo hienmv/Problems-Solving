@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1056/E
- * #string #hashing
+ * #string #hash-table
  
 001 -> number of  '0', '1' is fixed.
 kokokokolin -> number of characters is fixed.

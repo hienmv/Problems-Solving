@@ -1,5 +1,5 @@
 /*	https://codeforces.com/problemset/problem/602/B
- *	tag: #dp #two-pointers
+ *	tag: #dynamic-programming #two-pointer
 	check i-th element to update the max, min of [first index, i]
 	if (max - min > 1), update first index, max, min
 */

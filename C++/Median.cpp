@@ -12,7 +12,7 @@ Input
 Output
     Output one integer, the median.
 
-#priorityqueue #heap
+#priority-queue #heap
 */
 
 #include<iostream>

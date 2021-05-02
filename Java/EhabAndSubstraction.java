@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1088/B
- * #implementation #sortings
+ * #implementation #sorting
  * each loop (k times) update the minimum value and print it out.
  */
 

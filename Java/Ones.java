@@ -2,7 +2,7 @@
  * #number-theory
  * 
  * 
- #simple way
+ #simple-way
     x = 111111 = 1111110 + 1
     gcd(n, x) = 1
     

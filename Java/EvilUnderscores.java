@@ -1,6 +1,6 @@
 /* https://codeforces.com/contest/1285/problem/D
 D. Dr. Evil Underscores #todo
-#dp 
+#dynamic-programming 
 
 XOR khong phu thuoc vao thu tu.
 - xet bit cao nhat...

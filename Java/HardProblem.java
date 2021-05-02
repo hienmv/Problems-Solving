@@ -1,9 +1,9 @@
 /*
 * http://codeforces.com/problemset/problem/706/C
-* #dp #string #todo
+* #dynamic-programming #string #todo
 i phu thuoc i - 1
 i + 1 phu thuoc i
-#dp => nhin bai toan 1 chieu.
+#dynamic-programming => nhin bai toan 1 chieu.
     => co dinh 1 chieu.
     => dp (xay dung dc bai toan 1 chieu. 
         i - 1 k phu thuoc vao i, i khong phu thuoc vao i + 1)

@@ -1,5 +1,5 @@
 /*	https://codeforces.com/contest/37/problem/A
-#sortings #map
+#sorting #map
 	two way (use map / plain array)
 */
 import java.util.Scanner;

@@ -2,7 +2,7 @@
 http://www.spoj.com/problems/SAMER08D/
 https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3299
 (12147 - DNA Sequences)
-#dp #lcs
+#dynamic-programming #lcs
 
 k = 3       >= k
 abcde

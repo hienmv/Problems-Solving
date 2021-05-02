@@ -1,5 +1,5 @@
 /** https://codeforces.com/contest/1214/problem/D
- * #dp #todo
+ * #dynamic-programming #todo
  /*
     suggest: toi da can block 2 o.
 

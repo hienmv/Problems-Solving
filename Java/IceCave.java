@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/540/C
- * #dfs-and-similar #bfs-customized
+ * #dfs #bfs
  */
 
 import java.util.Scanner;

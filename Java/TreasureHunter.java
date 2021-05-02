@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/505/C
- * #bfs #dp
+ * #bfs #dynamic-programming
  */
 import java.util.Scanner;
 import java.util.Queue;

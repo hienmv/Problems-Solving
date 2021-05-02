@@ -1,5 +1,5 @@
 /** http://codeforces.com/problemset/problem/180/C
- * #dp
+ * #dynamic-programming
  for i in (1, n):
     calculate cost if: 1 -> i : A, i+1 -> n: a
  */

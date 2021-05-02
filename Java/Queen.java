@@ -1,5 +1,5 @@
 /** https://codeforces.com/problemset/problem/1143/C
- * #dfs-and-similar
+ * #dfs
  * only check vertices that can be deleted.
  */
 

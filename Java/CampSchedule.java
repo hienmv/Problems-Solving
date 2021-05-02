@@ -1,5 +1,4 @@
-  /* 
-  #idea
+  /* idea
   s 1110101001
     -> s1, s0 
   t 10101
@@ -42,7 +41,7 @@ c1 = 1
 
 */
 /**
- * #string #hashing
+ * #string #hash-table
  */
 import java.util.Scanner;
 

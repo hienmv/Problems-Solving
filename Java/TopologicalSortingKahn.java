@@ -1,5 +1,5 @@
 /** https://www.spoj.com/problems/TOPOSORT/
- * #topological-sort(Kahn)
+ * #topological-sort
  */
 
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
-class TopologicalSorting {
+class TopologicalSortingKahn {
     public static boolean toposorting(ArrayList<ArrayList<Integer>> graph, int[] inDegree, ArrayList<Integer> resultArr) {
 
         PriorityQueue<Integer> zeroInDegree = new PriorityQueue<>();

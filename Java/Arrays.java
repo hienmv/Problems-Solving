@@ -1,5 +1,5 @@
 /*  https://codeforces.com/contest/572/problem/A
-    tag: #sortings
+    tag: #sorting
     find the first element (called j-th) in arrays B that 
     greater than the k-th element of arrays A and, 
     check if nB - j >= m

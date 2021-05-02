@@ -1,5 +1,5 @@
 /** https://www.hackerrank.com/challenges/sansa-and-xor/problem
- * #bit-manipulation #dp
+ * #bit-manipulation #dynamic-programming
  * XOR
  * mindset / method DP, .. 
 

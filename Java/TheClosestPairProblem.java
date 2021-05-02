@@ -1,5 +1,5 @@
 /** https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1186
- * #divde-and-conquer
+ * #divide-and-conquer
  */
 
 import java.util.Scanner;

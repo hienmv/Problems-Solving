@@ -1,5 +1,5 @@
 /*	https://codeforces.com/contest/169/problem/A
-tag: #sortings
+tag: #sorting
 	sort the array and find b-th element.
 	result arr[b-th] -  arr[b-1]
 */

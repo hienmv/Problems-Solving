@@ -1,7 +1,7 @@
 /*
 https://codeforces.com/problemset/problem/868/C
 #implementation
-#bitmask
+#bit-manipulation
 /*
 => xay dung trang thai truoc
   => tim .....
