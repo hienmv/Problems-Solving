@@ -1,7 +1,7 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
 ```java
-Number of problems : 374
+Number of problems : 377
 - acm.timus.ru : 1
 - codechef.com : 2
 - codeforces.com : 115
@@ -12,7 +12,7 @@ Number of problems : 374
 - icpcarchive.ecs.baylor.edu : 3
 - interviewbit.com : 18
 - interviewsansar.com : 1
-- leetcode.com : 128
+- leetcode.com : 131
 - lightoj.com : 8
 - oeis.org : 1
 - onlinejudge.org : 4
@@ -33,7 +33,7 @@ pie
 	"icpcarchive.ecs.baylor.edu" : 3
 	"interviewbit.com" : 18
 	"interviewsansar.com" : 1
-	"leetcode.com" : 128
+	"leetcode.com" : 131
 	"lightoj.com" : 8
 	"oeis.org" : 1
 	"onlinejudge.org" : 4
@@ -49,7 +49,7 @@ pie
 - [x] MMass [(java)](./Java/MMass.java)
 - [x] StreetParade [(java)](./Java/StreetParade.java)
 - [x] Test [(java)](./Java/Test.java)
-### #array (38)
+### #array (39)
 - [x] CheckIfItIsAStraightLine [(java)](./Java/CheckIfItIsAStraightLine.java)
 - [x] CombinationSumII [(java)](./Java/CombinationSumII.java)
 - [x] ConstructBinaryTreeFromInorderAndPostorderTraversal [(java)](./Java/ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
@@ -75,6 +75,7 @@ pie
 - [x] MinStepsInInfiniteGrid [(java)](./Java/MinStepsInInfiniteGrid.java)
 - [x] MinimumPathSum [(java)](./Java/MinimumPathSum.java)
 - [x] NextPermutation [(java)](./Java/NextPermutation.java)
+- [x] NumberOfSubmatricesThatSumToTarget [(java)](./Java/NumberOfSubmatricesThatSumToTarget.java)
 - [x] Pascal'sTriangleII [(py)](./Python/Pascal'sTriangleII.py)
 - [x] PerformStringShifts [(java)](./Java/PerformStringShifts.java)
 - [x] ProductOfArrayExceptSelf [(java)](./Java/ProductOfArrayExceptSelf.java)
@@ -308,7 +309,7 @@ pie
 - [x] UbiquitousReligions [(java)](./Java/UbiquitousReligions.java)
 - [x] VirtualFriends [(java)](./Java/VirtualFriends.java)
 - [x] War [(java)](./Java/War.java)
-### #dynamic-programming (62)
+### #dynamic-programming (65)
 - [x] AdvancedFruits [(java)](./Java/AdvancedFruits.java)
 - [x] Aibohphobia [(java)](./Java/Aibohphobia.java)
 - [x] Alphacode [(java)](./Java/Alphacode.java)
@@ -339,6 +340,7 @@ pie
 - [x] KbasedNumbers [(java)](./Java/KbasedNumbers.java)
 - [x] KefaAndFirstSteps [(java)](./Java/KefaAndFirstSteps.java)
 - [x] Letter [(java)](./Java/Letter.java)
+- [x] LongestPalindromicSubsequence [(java)](./Java/LongestPalindromicSubsequence.java)
 - [x] LongestValidParentheses [(java)](./Java/LongestValidParentheses.java)
 - [x] LoveCalculator [(java)](./Java/LoveCalculator.java)
 - [x] MancunianKOrderedLCS [(java)](./Java/MancunianKOrderedLCS.java)
@@ -346,7 +348,9 @@ pie
 - [x] MaximalSquare [(java)](./Java/MaximalSquare.java)
 - [x] MaximumLengthOfRepeatedSubarray [(java)](./Java/MaximumLengthOfRepeatedSubarray.java)
 - [x] MaximumSubarray [(java)](./Java/MaximumSubarray.java)
+- [x] MinimumASCIIDeleteSumForTwoStrings [(java)](./Java/MinimumASCIIDeleteSumForTwoStrings.java)
 - [x] MinimumPathSum [(java)](./Java/MinimumPathSum.java)
+- [x] NumberOfSubmatricesThatSumToTarget [(java)](./Java/NumberOfSubmatricesThatSumToTarget.java)
 - [x] PaintingFence [(java)](./Java/PaintingFence.java)
 - [x] PalindromePartitioning [(java)](./Java/PalindromePartitioning.java)
 - [x] PalindromicCharacteristics [(java)](./Java/PalindromicCharacteristics.java)
