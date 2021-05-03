@@ -24,7 +24,7 @@ post-order: left->right->node
 // idea: coi in-order la thu tu sap xep cac node 
     => dua vao thu tu nay => build tree bang pre-order.
 // in-order: HashMap<int, index>
-// use idea of mock_35 (treat as BST): https://www.interviewbit.com/problems/valid-bst-from-preorder/
+// use idea of mock_35 (treat as BST): `valid-bst-from-preorder`
 // with new order
 // extend: pre-post, post-in
 */

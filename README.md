@@ -1,7 +1,7 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
 ```java
-Number of problems : 357
+Number of problems : 374
 - acm.timus.ru : 1
 - codechef.com : 2
 - codeforces.com : 115
@@ -10,7 +10,7 @@ Number of problems : 357
 - hackerearth.com : 18
 - hackerrank.com : 10
 - icpcarchive.ecs.baylor.edu : 3
-- interviewbit.com : 1
+- interviewbit.com : 18
 - interviewsansar.com : 1
 - leetcode.com : 128
 - lightoj.com : 8
@@ -31,7 +31,7 @@ pie
 	"hackerearth.com" : 18
 	"hackerrank.com" : 10
 	"icpcarchive.ecs.baylor.edu" : 3
-	"interviewbit.com" : 1
+	"interviewbit.com" : 18
 	"interviewsansar.com" : 1
 	"leetcode.com" : 128
 	"lightoj.com" : 8
@@ -49,14 +49,16 @@ pie
 - [x] MMass [(java)](./Java/MMass.java)
 - [x] StreetParade [(java)](./Java/StreetParade.java)
 - [x] Test [(java)](./Java/Test.java)
-### #array (33)
+### #array (38)
 - [x] CheckIfItIsAStraightLine [(java)](./Java/CheckIfItIsAStraightLine.java)
 - [x] CombinationSumII [(java)](./Java/CombinationSumII.java)
 - [x] ConstructBinaryTreeFromInorderAndPostorderTraversal [(java)](./Java/ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
 - [x] ConstructBinaryTreeFromPreorderAndInorderTraversal [(java)](./Java/ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
 - [x] CountSquareSubmatricesWithAllOnes [(java)](./Java/CountSquareSubmatricesWithAllOnes.java)
 - [x] CountingElements [(java)](./Java/CountingElements.java)
+- [x] FindDuplicateInArray [(java)](./Java/FindDuplicateInArray.java)
 - [x] FindtheDuplicateNumber [(cpp)](./C++/FindtheDuplicateNumber.cpp)
+- [x] FirstMissingInteger [(java)](./Java/FirstMissingInteger.java)
 - [x] FirstMissingPositive [(java)](./Java/FirstMissingPositive.java)
 - [x] GetMaximumInGeneratedArray [(java)](./Java/GetMaximumInGeneratedArray.java)
 - [x] HeightChecker [(java)](./Java/HeightChecker.java)
@@ -65,11 +67,14 @@ pie
 - [x] LeftmostColumnWithAtLeastAOne [(java)](./Java/LeftmostColumnWithAtLeastAOne.java)
 - [x] MajorityElement [(java)](./Java/MajorityElement.java)
 - [x] MaximalRectangle [(java)](./Java/MaximalRectangle.java)
+- [x] MaximumAbsoluteDifference [(java)](./Java/MaximumAbsoluteDifference.java)
 - [x] MaximumLengthOfRepeatedSubarray [(java)](./Java/MaximumLengthOfRepeatedSubarray.java)
 - [x] MaximumSubarray [(java)](./Java/MaximumSubarray.java)
 - [x] MaximumSumCircularSubarray [(java)](./Java/MaximumSumCircularSubarray.java)
 - [x] MedianOfTwoSortedArrays [(java)](./Java/MedianOfTwoSortedArrays.java)
+- [x] MinStepsInInfiniteGrid [(java)](./Java/MinStepsInInfiniteGrid.java)
 - [x] MinimumPathSum [(java)](./Java/MinimumPathSum.java)
+- [x] NextPermutation [(java)](./Java/NextPermutation.java)
 - [x] Pascal'sTriangleII [(py)](./Python/Pascal'sTriangleII.py)
 - [x] PerformStringShifts [(java)](./Java/PerformStringShifts.java)
 - [x] ProductOfArrayExceptSelf [(java)](./Java/ProductOfArrayExceptSelf.java)
@@ -178,10 +183,12 @@ pie
 - [x] ValidPerfectSquare [(java)](./Java/ValidPerfectSquare.java)
 - [x] VasyaAndString [(cpp)](./C++/VasyaAndString.cpp)
 - [x] VasyaBasketball [(java)](./Java/VasyaBasketball.java)
-### #binary-search-tree (3)
+### #binary-search-tree (5)
+- [x] ConstructBinaryTreeFromInorderAndPreorder [(java)](./Java/ConstructBinaryTreeFromInorderAndPreorder.java)
 - [x] DistinctCount [(java)](./Java/DistinctCount.java)
 - [x] MinimumLoss [(java)](./Java/MinimumLoss.java)
 - [x] MonkAndFriends [(java)](./Java/MonkAndFriends.java)
+- [x] ValidBSTFromPreorder [(java)](./Java/ValidBSTFromPreorder.java)
 ### #bit-manipulation (23)
 - [x] AishAndXOR [(java)](./Java/AishAndXOR.java)
 - [x] Array [(java)](./Java/Array.java)
@@ -217,8 +224,9 @@ pie
 - [x] BestGift [(java)](./Java/BestGift.java)
 - [x] NicholasAndPermutation [(java)](./Java/NicholasAndPermutation.java)
 - [x] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
-### #deque (1)
+### #deque (2)
 - [x] Plugin [(cpp)](./C++/Plugin.cpp) [(java)](./Java/Plugin.java)
+- [x] SlidingWindowMaximum [(java)](./Java/SlidingWindowMaximum.java)
 ### #dfs (32)
 - [x] AbcPath [(java)](./Java/AbcPath.java)
 - [x] BinaryTreeMaximumPathSum [(java)](./Java/BinaryTreeMaximumPathSum.java)
@@ -456,7 +464,7 @@ pie
 - [x] TheMonkAndPrateek [(java)](./Java/TheMonkAndPrateek.java) [(java)](./Java/TheMonkAndPrateek.java)
 - [x] TwoSum [(cpp)](./C++/TwoSum.cpp)
 - [x] WattoAndMechanism [(java)](./Java/WattoAndMechanism.java)
-### #heap (11)
+### #heap (12)
 - [x] AddAll [(java)](./Java/AddAll.java)
 - [x] FindKPairsWithSmallestSums [(java)](./Java/FindKPairsWithSmallestSums.java)
 - [x] FindTheMostCompetitiveSubsequence [(java)](./Java/FindTheMostCompetitiveSubsequence.java)
@@ -465,6 +473,7 @@ pie
 - [x] Median [(cpp)](./C++/Median.cpp)
 - [x] MergeKSortedLists [(java)](./Java/MergeKSortedLists.java)
 - [x] MonkAndMultiplication [(java)](./Java/MonkAndMultiplication.java)
+- [x] NMaxPairCombinations [(java)](./Java/NMaxPairCombinations.java)
 - [x] QHeap1 [(java)](./Java/QHeap1.java)
 - [x] RoyTrendingTopic [(java)](./Java/RoyTrendingTopic.java)
 - [x] YourQueue [(java)](./Java/YourQueue.java)
@@ -547,10 +556,11 @@ pie
 - [x] TheTowerOfBabylon [(java)](./Java/TheTowerOfBabylon.java)
 - [x] Trainsorting [(java)](./Java/Trainsorting.java)
 - [x] WavioSequence [(java)](./Java/WavioSequence.java)
-### #map (5)
+### #map (6)
 - [x] FindTwoNumbersWithPredictedSum [(cpp)](./C++/FindTwoNumbersWithPredictedSum.cpp)
 - [x] HandOfStraights [(py)](./Python/HandOfStraights.py)
 - [x] MonkAndFriends [(java)](./Java/MonkAndFriends.java)
+- [x] NMaxPairCombinations [(java)](./Java/NMaxPairCombinations.java)
 - [x] RemoveDuplicatesFromSortedArray [(cpp)](./C++/RemoveDuplicatesFromSortedArray.cpp)
 - [x] Towers [(java)](./Java/Towers.java)
 ### #math (28)
@@ -624,12 +634,13 @@ pie
 - [x] RoyTrendingTopic [(java)](./Java/RoyTrendingTopic.java)
 - [x] easyExamInBerSU [(cpp)](./C++/easyExamInBerSU.cpp)
 - [x] hardExamInBerSU [(cpp)](./C++/hardExamInBerSU.cpp)
-### #queue (10)
+### #queue (11)
 - [x] FerryLoadingIII [(java)](./Java/FerryLoadingIII.java)
 - [x] FindTheMostCompetitiveSubsequence [(java)](./Java/FindTheMostCompetitiveSubsequence.java)
 - [x] GuessDequePriorityQueue [(cpp)](./C++/GuessDequePriorityQueue.cpp) [(java)](./Java/GuessDequePriorityQueue.java)
 - [x] PrinterQueue [(cpp)](./C++/PrinterQueue.cpp)
 - [x] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
+- [x] SlidingWindowMaximum [(java)](./Java/SlidingWindowMaximum.java)
 - [x] StreetParade [(java)](./Java/StreetParade.java)
 - [x] Test [(java)](./Java/Test.java)
 - [x] Thor [(java)](./Java/Thor.java)
@@ -716,7 +727,7 @@ pie
 ### #special-problem (2)
 - [x] ProcessingQueries [(java)](./Java/ProcessingQueries.java)
 - [x] Taxi [(java)](./Java/Taxi.java)
-### #stack (17)
+### #stack (18)
 - [x] BackspaceStringCompare [(java)](./Java/BackspaceStringCompare.java)
 - [x] BalanceBrackets [(cpp)](./C++/BalanceBrackets.cpp)
 - [x] BinaryTreeInorderTraversal [(java)](./Java/BinaryTreeInorderTraversal.java)
@@ -731,6 +742,7 @@ pie
 - [x] ParenthesesBalance [(cpp)](./C++/ParenthesesBalance.cpp) [(java)](./Java/ParenthesesBalance.java)
 - [x] RegularBracketSequence [(java)](./Java/RegularBracketSequence.java)
 - [x] RemoveKDigits [(java)](./Java/RemoveKDigits.java)
+- [x] SlidingWindowMaximum [(java)](./Java/SlidingWindowMaximum.java)
 - [x] StreetParade [(java)](./Java/StreetParade.java)
 - [x] Test [(java)](./Java/Test.java)
 - [x] TransformExpression [(java)](./Java/TransformExpression.java)
@@ -786,7 +798,7 @@ pie
 - [x] LonelyIsland [(java)](./Java/LonelyIsland.java)
 - [x] RareOrder [(java)](./Java/RareOrder.java)
 - [x] TopologicalSortingKahn [(java)](./Java/TopologicalSortingKahn.java)
-### #tree (18)
+### #tree (29)
 - [x] BinaryTreeInorderTraversal [(java)](./Java/BinaryTreeInorderTraversal.java)
 - [x] BinaryTreeMaximumPathSum [(java)](./Java/BinaryTreeMaximumPathSum.java)
 - [x] BinaryTreeZigzagLevelOrderTraversal [(java)](./Java/BinaryTreeZigzagLevelOrderTraversal.java)
@@ -794,16 +806,27 @@ pie
 - [x] CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABT [(java)](./Java/CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABT.java)
 - [x] ConstructBinarySearchTreeFromPreorderTraversal [(java)](./Java/ConstructBinarySearchTreeFromPreorderTraversal.java)
 - [x] ConstructBinaryTreeFromInorderAndPostorderTraversal [(java)](./Java/ConstructBinaryTreeFromInorderAndPostorderTraversal.java)
+- [x] ConstructBinaryTreeFromInorderAndPreorder [(java)](./Java/ConstructBinaryTreeFromInorderAndPreorder.java)
 - [x] ConstructBinaryTreeFromPreorderAndInorderTraversal [(java)](./Java/ConstructBinaryTreeFromPreorderAndInorderTraversal.java)
 - [x] CousinsInBinaryTree [(java)](./Java/CousinsInBinaryTree.java)
 - [x] DiameterOfBinaryTree [(java)](./Java/DiameterOfBinaryTree.java)
 - [x] FlattenBinaryTreeToLinkedList [(java)](./Java/FlattenBinaryTreeToLinkedList.java)
+- [x] IdenticalBinaryTrees [(java)](./Java/IdenticalBinaryTrees.java)
+- [x] InorderTraversal [(java)](./Java/InorderTraversal.java)
 - [x] InvertBinaryTree [(java)](./Java/InvertBinaryTree.java)
+- [x] InvertTheBinaryTree [(java)](./Java/InvertTheBinaryTree.java)
 - [x] KthSmallestElementInABST [(java)](./Java/KthSmallestElementInABST.java)
+- [x] KthSmallestElementInTree [(java)](./Java/KthSmallestElementInTree.java)
+- [x] LeastCommonAncestor [(java)](./Java/LeastCommonAncestor.java)
 - [x] LowestCommonAncestorOfABinaryTree [(java)](./Java/LowestCommonAncestorOfABinaryTree.java)
+- [x] MaxDepthOfBinaryTree [(java)](./Java/MaxDepthOfBinaryTree.java)
 - [x] OldBerlandLanguage [(java)](./Java/OldBerlandLanguage.java)
+- [x] PathToGivenNode [(java)](./Java/PathToGivenNode.java)
+- [x] PostorderTraversal [(java)](./Java/PostorderTraversal.java)
+- [x] PreorderTraversal [(java)](./Java/PreorderTraversal.java)
 - [x] SearchInABinarySearchTree [(java)](./Java/SearchInABinarySearchTree.java)
 - [x] SymmetricTree [(java)](./Java/SymmetricTree.java)
+- [x] ValidBSTFromPreorder [(java)](./Java/ValidBSTFromPreorder.java)
 - [x] ValidateBinarySearchTree [(java)](./Java/ValidateBinarySearchTree.java)
 ### #trie (8)
 - [x] ConsistencyChecker [(cpp)](./C++/ConsistencyChecker.cpp) [(java)](./Java/ConsistencyChecker.java)
