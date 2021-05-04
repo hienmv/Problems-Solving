@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings
-// #dynamic-programming
+// #dynamic-programming #lcs
 /*
 Given two strings s1, s2, find the lowest ASCII sum of deleted characters to make two strings equal.
 
@@ -52,57 +52,55 @@ Given two strings s1, s2, find the lowest ASCII sum of deleted characters to mak
         => else 
           dp[i][j] = Min(dp[i][j-1] + S2[j], dp[i-1][j] + S1[i]);
 */
-public class Solution {
-    public int minimumDeleteSum(String s1, String s2) {
-        int sum_s1 = 0;
-        int sum_s2 = 0; 
-        for(char c : s1.toCharArray()) {
-          sum_s1 += c;
-        }
-        for(char c : s2.toCharArray()) {
-          sum_s2 += c;
-        }
-        
-        int m = s1.length();
-        int n = s2.length();
-        int[][] dp = new int[m+1][n+1];
-        for (int i = 0; i <= m; i++) {
-          for (int j = 0; j <= n; j++) {
-            if (i == 0 || j == 0) {
-              dp[i][j] = 0;
-            } else if (s1.charAt(i-1) == s2.charAt(j-1)) {
-              dp[i][j] = s1.charAt(i-1) + dp[i-1][j-1];
-            } else {
-              dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
-            }
-          }
-        }
-        
-        return sum_s1 + sum_s2 - 2 * dp[m][n];
+public class MinimumASCIIDeleteSumForTwoStrings {
+  public int minimumDeleteSum(String s1, String s2) {
+    int sum_s1 = 0;
+    int sum_s2 = 0;
+    for (char c : s1.toCharArray()) {
+      sum_s1 += c;
     }
-    
-    
-    public int minimumDeleteSumDirect(String s1, String s2) {
-        int m = s1.length();
-        int n = s2.length();
-        int[][] dp = new int[m+1][n+1];
-        for (int i = 0; i <= m; i++) {
-          for (int j = 0; j <= n; j++) {
-            if (i == 0 && j == 0) {
-              dp[i][j] = 0;
-            } else if (i == 0) {
-              dp[i][j] = dp[i][j-1] + s2.charAt(j-1);
-            } else if (j == 0) {
-              dp[i][j] = dp[i-1][j] + s1.charAt(i-1);
-            } else if (s1.charAt(i-1) == s2.charAt(j-1)) {
-              dp[i][j] = dp[i-1][j-1];
-            } else {
-              dp[i][j] = Math.min(dp[i-1][j] + s1.charAt(i-1), dp[i][j-1] + s2.charAt(j-1));
-            }
-          }
-        }
-        
-        return dp[m][n];
+    for (char c : s2.toCharArray()) {
+      sum_s2 += c;
     }
+
+    int m = s1.length();
+    int n = s2.length();
+    int[][] dp = new int[m + 1][n + 1];
+    for (int i = 0; i <= m; i++) {
+      for (int j = 0; j <= n; j++) {
+        if (i == 0 || j == 0) {
+          dp[i][j] = 0;
+        } else if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+          dp[i][j] = s1.charAt(i - 1) + dp[i - 1][j - 1];
+        } else {
+          dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+        }
+      }
+    }
+
+    return sum_s1 + sum_s2 - 2 * dp[m][n];
+  }
+
+  public int minimumDeleteSumDirect(String s1, String s2) {
+    int m = s1.length();
+    int n = s2.length();
+    int[][] dp = new int[m + 1][n + 1];
+    for (int i = 0; i <= m; i++) {
+      for (int j = 0; j <= n; j++) {
+        if (i == 0 && j == 0) {
+          dp[i][j] = 0;
+        } else if (i == 0) {
+          dp[i][j] = dp[i][j - 1] + s2.charAt(j - 1);
+        } else if (j == 0) {
+          dp[i][j] = dp[i - 1][j] + s1.charAt(i - 1);
+        } else if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+          dp[i][j] = dp[i - 1][j - 1];
+        } else {
+          dp[i][j] = Math.min(dp[i - 1][j] + s1.charAt(i - 1), dp[i][j - 1] + s2.charAt(j - 1));
+        }
+      }
+    }
+
+    return dp[m][n];
+  }
 }
-    

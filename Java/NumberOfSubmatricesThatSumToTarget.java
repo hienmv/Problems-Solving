@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/submissions/
 // #array #dynamic-programming #sliding-window
-class Solution {
+class NumberOfSubmatricesThatSumToTarget {
     public int numSubmatrixSumTarget(int[][] matrix, int target) {
         /*  vs 1 array:
             sum[i] la tong cac phan tu tu index 0 -> index i.

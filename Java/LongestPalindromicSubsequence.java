@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/longest-palindromic-subsequence/submissions/
-// #dynamic-programming
+// #dynamic-programming #lcs
 /*
 Input: s = "bbbab"
 Output: 4
@@ -39,7 +39,7 @@ Explanation: One possible longest palindromic subsequence is "bbbb".
       => dp[i][j] = Max(dp[i][j-1], dp[i+1][j])
 */
 
-public class Solution {
+public class LongestPalindromicSubsequence {
   public int longestPalindromeSubseq(String s) {
     int n = s.length(); 
     // dp[i][j] : max length of palindrome subsequence from i -> j,
