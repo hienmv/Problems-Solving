@@ -6,6 +6,7 @@ public class ReadMeGenerator {
   private static class Item implements Comparable {
     String name;
     String path;
+    String original_path;
     String extension;
 
     Item(String path) {
@@ -13,6 +14,7 @@ public class ReadMeGenerator {
       int dot_index = path.lastIndexOf(".");
       this.name = path.substring(slash_index + 1, dot_index);
       this.extension = path.substring(dot_index + 1);
+      this.original_path = path;
       this.path = path.replace("../", "");
     }
 
@@ -24,8 +26,16 @@ public class ReadMeGenerator {
       return " [(" + this.extension + ")](./" + this.path + ")";
     }
 
+    public String getOriginalPath() {
+      return " [(" + this.extension + ")](./" + this.original_path + ")";
+    }
+
     public String toString() {
       return getName() + getPath();
+    }
+
+    public String toOriginalString() {
+      return getName() + getOriginalPath();
     }
 
     public int compareTo(Object o) {
@@ -214,10 +224,10 @@ public class ReadMeGenerator {
     for (Map.Entry<Integer, ArrayList<Item>> entry : statisticURL.entrySet()) {
       ArrayList<Item> urls = entry.getValue();
       writer.write(
-          "## URL count " + entry.getKey() + "(" + urls.size() + ") :" + System.lineSeparator());
+          "## URL count " + entry.getKey() + " (" + urls.size() + ") :" + System.lineSeparator());
       Collections.sort(urls);
       for (Item url : urls) {
-        writer.write(url + System.lineSeparator());
+        writer.write("- " + url.toOriginalString() + System.lineSeparator());
       }
     }
 
