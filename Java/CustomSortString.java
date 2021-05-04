@@ -1,7 +1,6 @@
 // https://leetcode.com/problems/custom-sort-string/
 // #string
 class Solution {
-  // https://leetcode.com/problems/custom-sort-string/
   public String customSortString(String S, String T) {
     // count frequency of each character in T
     // iterate each character in S, and build new T.

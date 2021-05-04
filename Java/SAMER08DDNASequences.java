@@ -1,9 +1,9 @@
 /**
- * http://www.spoj.com/problems/SAMER08D/
+ * #dynamic-programming #lcs
  * https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3299
- * (12147 - DNA Sequences) #dynamic-programming #lcs
+ * (12147 - DNA Sequences)
  *
- * <p>k = 3 >= k abcde abcd
+ * <p>// k = 3 >= k abcde abcd
  */
 import java.util.Scanner;
 

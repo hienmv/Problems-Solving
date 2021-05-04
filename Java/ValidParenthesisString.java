@@ -2,7 +2,7 @@
 // #string
 class Solution {
   /**
-   * https://leetcode.com/problems/valid-parenthesis-string/ count min, max of potential valid '(' |
+   * count min, max of potential valid '(' | Example:
    * "(())((())()()(*)(*()(())())())()()((()())((()))(*"
    *
    * <p>min: 1 max: 3

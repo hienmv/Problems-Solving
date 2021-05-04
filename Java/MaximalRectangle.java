@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/maximal-rectangle/
-// #array #hash-table #dynamic-programming #stack
+// #array #hash-table #dynamic-programming #stack #todo
 /*
 [
     ["0","1","1","0","1"],
@@ -39,7 +39,7 @@ dpY: [
 
 0 1 1 2
 
-/* https://leetcode.com/problems/largest-rectangle-in-histogram/ */
+/* todo ? leetcode.com/problems/largest-rectangle-in-histogram/ */
 /*
 - nhieu bien
 -> thu co dinh tung bien.

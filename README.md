@@ -1,7 +1,7 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
 ```java
-Number of problems : 378
+Number of problems : 376
 - acm.timus.ru : 1
 - codechef.com : 2
 - codeforces.com : 115
@@ -11,8 +11,7 @@ Number of problems : 378
 - hackerrank.com : 10
 - icpcarchive.ecs.baylor.edu : 3
 - interviewbit.com : 18
-- interviewsansar.com : 1
-- leetcode.com : 131
+- leetcode.com : 130
 - lightoj.com : 8
 - oeis.org : 1
 - onlinejudge.org : 4
@@ -32,8 +31,7 @@ pie
 	"hackerrank.com" : 10
 	"icpcarchive.ecs.baylor.edu" : 3
 	"interviewbit.com" : 18
-	"interviewsansar.com" : 1
-	"leetcode.com" : 131
+	"leetcode.com" : 130
 	"lightoj.com" : 8
 	"oeis.org" : 1
 	"onlinejudge.org" : 4
@@ -773,7 +771,7 @@ pie
 - [x] ValidParenthesisString [(java)](./Java/ValidParenthesisString.java)
 - [x] VasyaAndString [(cpp)](./C++/VasyaAndString.cpp)
 - [x] WattoAndMechanism [(java)](./Java/WattoAndMechanism.java)
-### #todo (22)
+### #todo (23)
 - [ ] BeautifulArray [(java)](./Java/BeautifulArray.java)
 - [ ] BinaryTreeInorderTraversal [(java)](./Java/BinaryTreeInorderTraversal.java)
 - [ ] ColorfulGraph [(java)](./Java/ColorfulGraph.java)
@@ -788,6 +786,7 @@ pie
 - [ ] Garland [(java)](./Java/Garland.java)
 - [ ] HardProblem [(java)](./Java/HardProblem.java)
 - [ ] LoveCalculator [(java)](./Java/LoveCalculator.java)
+- [ ] MaximalRectangle [(java)](./Java/MaximalRectangle.java)
 - [ ] MaximumSumCircularSubarray [(java)](./Java/MaximumSumCircularSubarray.java)
 - [ ] MinimizeAbsoluteDifferenceBetter [(java)](./Java/MinimizeAbsoluteDifferenceBetter.java)
 - [ ] PoloThePenguinAndTheXOR [(java)](./Java/PoloThePenguinAndTheXOR.java)

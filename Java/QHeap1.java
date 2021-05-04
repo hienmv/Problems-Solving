@@ -1,6 +1,7 @@
 /**
  * https://www.hackerrank.com/challenges/qheap1/problem #heap #priority-queue
- * https://www.interviewsansar.com/2015/05/16/what-is-time-complexity-for-offer-poll-and-peek-methods-in-priority-queue
+ *
+ * <p>reference:www.interviewsansar.com/2015/05/16/what-is-time-complexity-for-offer-poll-and-peek-methods-in-priority-queue
  */
 import java.util.PriorityQueue;
 import java.util.Scanner;
