@@ -11,51 +11,51 @@
 import java.util.Scanner;
 
 public class Array {
-	static String findSatisfyingSegment() {
-		Scanner scanner = new Scanner(System.in);
-		int n = scanner.nextInt();
-		int k = scanner.nextInt();
-		
-		// special case
-		if  (k == 1) {
-			return "1 1";
-		}
+  static String findSatisfyingSegment() {
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    int k = scanner.nextInt();
 
-		int firstIdx = 0;
-		int lastIdx = 0;
-		int numDistinct = 0;
-		int[] arrNum = new int[100001];
-		int[] arr = new int[n];
-		for(int i=0; i < n; i++) {
-			int temp = scanner.nextInt();
-			arr[i] = temp;
-			if (arrNum[arr[i]] == 0) {
-				numDistinct += 1;
-			}
-			arrNum[arr[i]] +=1;
+    // special case
+    if (k == 1) {
+      return "1 1";
+    }
 
-			// find out exactly distinct k numbers
-			if (numDistinct == k) {
-				lastIdx = i;
-				break;
-			}
-		}
-		// find out the best firstIdx
-		if (lastIdx != 0) {
-			while (firstIdx < lastIdx) {
-				if (arrNum[arr[firstIdx]] == 1) {
-					return (firstIdx + 1) + " " + (lastIdx + 1);
-				} else {
-					arrNum[arr[firstIdx]] -= 1;
-					firstIdx++;
-				}
-			}
-		}
+    int firstIdx = 0;
+    int lastIdx = 0;
+    int numDistinct = 0;
+    int[] arrNum = new int[100001];
+    int[] arr = new int[n];
+    for (int i = 0; i < n; i++) {
+      int temp = scanner.nextInt();
+      arr[i] = temp;
+      if (arrNum[arr[i]] == 0) {
+        numDistinct += 1;
+      }
+      arrNum[arr[i]] += 1;
 
-		return "-1 -1";
-	}
+      // find out exactly distinct k numbers
+      if (numDistinct == k) {
+        lastIdx = i;
+        break;
+      }
+    }
+    // find out the best firstIdx
+    if (lastIdx != 0) {
+      while (firstIdx < lastIdx) {
+        if (arrNum[arr[firstIdx]] == 1) {
+          return (firstIdx + 1) + " " + (lastIdx + 1);
+        } else {
+          arrNum[arr[firstIdx]] -= 1;
+          firstIdx++;
+        }
+      }
+    }
 
-	public static void main(String[] args) {
-		System.out.println(findSatisfyingSegment());
-	}
+    return "-1 -1";
+  }
+
+  public static void main(String[] args) {
+    System.out.println(findSatisfyingSegment());
+  }
 }

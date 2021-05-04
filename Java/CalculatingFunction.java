@@ -8,16 +8,17 @@ import java.util.Scanner;
 
 public class CalculatingFunction {
 
-	static long calculate() {
-		Scanner scanner = new Scanner(System.in);
-		long input = scanner.nextLong();
-		long result = input / 2;
-		if (input % 2 != 0) {
-			result -= input; 
-		}
-		return result;
-	}
-	public static void main( String args[]) {
-		System.out.println(calculate());
-	}
+  static long calculate() {
+    Scanner scanner = new Scanner(System.in);
+    long input = scanner.nextLong();
+    long result = input / 2;
+    if (input % 2 != 0) {
+      result -= input;
+    }
+    return result;
+  }
+
+  public static void main(String args[]) {
+    System.out.println(calculate());
+  }
 }

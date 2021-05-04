@@ -4,52 +4,52 @@
 Given two strings s1, s2, find the lowest ASCII sum of deleted characters to make two strings equal.
 
 // step 1: find LCS
-// step 2: iterate each string 
+// step 2: iterate each string
   -> caculate characters not in LCS.
-  
+
   aaaaazzzz
   zzzzaaaaa
-  
+
   xoa z: 8*z=976
   xoa a: 10*a970
-  aaaaa 
-  
+  aaaaa
+
   dp => LCS: "aa"
-  
-  S1  = "aaz", i ++  => character, 
+
+  S1  = "aaz", i ++  => character,
   LCS = "aa", index: ++
     -> f
-    
+
     LCS da duyet het r: => ...
-    
-    
+
+
     ** indirect **
     => dp[i][j] => max sum by ASCII of CS at (i,j) - i (S1), j (S2).
-    
+
       => S1[i-1] == S2[j-1]
           => dp[i][j] = (value of cur_character by ASCII) + dp[i-1][j-1]
-      else 
+      else
         => dp[i][j] = Max(dp[i-1][j], dp[i][j-1])
-        
-        
+
+
       => S1] => sum value - dp[m][n]
       S2
 
 
 
 
-    ** direct ** 
+    ** direct **
       dp[i][j] = min delete of S1[:i] & S2[:j]
         => i == 0 && j == 0 => dp[i][j] = 0;
         => i == 0
           dp[i][j] = dp[i][j-1] + S2[j];
         => j == 0
           dp[i][j] = dp[i-1][j] + S1[i];
-        
-        
+
+
         => s1[i-1] == s2[j-1]
             => dp[i][j] = dp[i-1][j-1];
-        => else 
+        => else
           dp[i][j] = Min(dp[i][j-1] + S2[j], dp[i-1][j] + S1[i]);
 */
 public class MinimumASCIIDeleteSumForTwoStrings {

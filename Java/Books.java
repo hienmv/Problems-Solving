@@ -13,48 +13,48 @@ import java.util.Scanner;
 
 public class Books {
 
-	static int calMaxNumBooks() {
-		Scanner scanner = new Scanner(System.in);
-		int numberOfBooks = scanner.nextInt();
-		int freeMinutes = scanner.nextInt();
+  static int calMaxNumBooks() {
+    Scanner scanner = new Scanner(System.in);
+    int numberOfBooks = scanner.nextInt();
+    int freeMinutes = scanner.nextInt();
 
-		int[] bookMinuteArr = new int[numberOfBooks];
-		for (int i=0; i < numberOfBooks; i++) {
-			int minute = scanner.nextInt();
-			bookMinuteArr[i] = minute;
-		}
+    int[] bookMinuteArr = new int[numberOfBooks];
+    for (int i = 0; i < numberOfBooks; i++) {
+      int minute = scanner.nextInt();
+      bookMinuteArr[i] = minute;
+    }
 
-		int maxBooksBeRead = 0;
-		int count = 0;
-		int firstIdx = 0;
-		int lastIdx = 0;
-		while (lastIdx < numberOfBooks) {
-			if (bookMinuteArr[lastIdx] <= freeMinutes) {
-				freeMinutes -= bookMinuteArr[lastIdx];
-				count++;
-				lastIdx++;
-				if(count > maxBooksBeRead) {
-					maxBooksBeRead = count;
-				}
-			} else {
-				freeMinutes += bookMinuteArr[firstIdx];
-	        	count--;
-	        	firstIdx++;
-	        	/*
-				if (count > 0) {
-					freeMinutes += bookMinuteArr[firstIdx];
-					firstIdx++;
-					count--;
-				} else {
-					lastIdx++;
-				}
-				*/
-			}
-		}
-		return maxBooksBeRead;
-	}
+    int maxBooksBeRead = 0;
+    int count = 0;
+    int firstIdx = 0;
+    int lastIdx = 0;
+    while (lastIdx < numberOfBooks) {
+      if (bookMinuteArr[lastIdx] <= freeMinutes) {
+        freeMinutes -= bookMinuteArr[lastIdx];
+        count++;
+        lastIdx++;
+        if (count > maxBooksBeRead) {
+          maxBooksBeRead = count;
+        }
+      } else {
+        freeMinutes += bookMinuteArr[firstIdx];
+        count--;
+        firstIdx++;
+        /*
+        if (count > 0) {
+        	freeMinutes += bookMinuteArr[firstIdx];
+        	firstIdx++;
+        	count--;
+        } else {
+        	lastIdx++;
+        }
+        */
+      }
+    }
+    return maxBooksBeRead;
+  }
 
-	public static void main(String[] args) {
-		System.out.println(calMaxNumBooks());
-	}
+  public static void main(String[] args) {
+    System.out.println(calMaxNumBooks());
+  }
 }

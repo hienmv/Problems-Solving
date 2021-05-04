@@ -1,8 +1,8 @@
 /*
 #dynamic-programming
--> 
-base k 
-N digits 
+->
+base k
+N digits
  N - 1 digits,
   ....
 
@@ -23,18 +23,18 @@ example: k = 7
 import java.util.Scanner;
 
 class KbasedNumbers {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        long lastSuffix0Nums = 0;
-        long lastSuffixNot0Nums = k - 1;
-        long temp;
-        for (int i=2; i <= n; i++) {
-            temp = lastSuffixNot0Nums;
-            lastSuffixNot0Nums = (k - 1) * (lastSuffixNot0Nums + lastSuffix0Nums); 
-            lastSuffix0Nums = temp;
-        }
-        System.out.println(lastSuffix0Nums + lastSuffixNot0Nums);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int k = sc.nextInt();
+    long lastSuffix0Nums = 0;
+    long lastSuffixNot0Nums = k - 1;
+    long temp;
+    for (int i = 2; i <= n; i++) {
+      temp = lastSuffixNot0Nums;
+      lastSuffixNot0Nums = (k - 1) * (lastSuffixNot0Nums + lastSuffix0Nums);
+      lastSuffix0Nums = temp;
     }
+    System.out.println(lastSuffix0Nums + lastSuffixNot0Nums);
+  }
 }

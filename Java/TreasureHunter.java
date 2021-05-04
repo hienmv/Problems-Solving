@@ -1,12 +1,8 @@
-/** https://codeforces.com/problemset/problem/505/C
- * #bfs #dynamic-programming
- */
-import java.util.Scanner;
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+/** https://codeforces.com/problemset/problem/505/C #bfs #dynamic-programming */
 import java.io.*;
+import java.util.Arrays;
+import java.util.Scanner;
+
 /* Bottom Up - take time, rework
 public class TreasureHunter {
     private static class Node {
@@ -39,11 +35,12 @@ public class TreasureHunter {
         // k(k + 1) + 2(k + 1)
         // (k+1) * (k+2) >= 60000
         // => k = 245
-        
+
         // min_jump = d - 245 => 0
         // max_jump = d + 245 => 500
         => max_jump = 500
- *//*
+ */
+/*
         max_jump = 500;
         int[][] gems = new int[max][max_jump];
         for(int[] gems_pos : gems) {
@@ -115,81 +112,68 @@ class MyScanner {
 */
 // Top down
 /**
-/*
-dp[i][j]: max gem from n to i, last jump j
-    -> dp[i+j-1][j-1]   if i+j-1 <= n
-    -> dp[i+j  ][j  ]   if i+j   <= n
-    -> dp[i+j+1][j+1]   if i+j+1 <= n
-    dp(i, j) = arr[i] + max(dp(i+j-1, j-1), dp(i+j, j), dp(i+j+1, j+1))
-
-dp(d, d)
-
-DP top-down
-function dp(int i, int j):
-  if f[i][j] != -1:
-    return f[i][j]
-  if i == n:
-    return f[i][j] = arr[i]
-  f[i][j] = 0
-  if step j-1 is valid:
-    f[i][j] = max(f[i][j], arr[i] + dp(i+j-1, j-1))
-  if step j is valid:
-    f[i][j] = max(f[i][j], arr[i] + dp(i+j, j))
-  if step j-1 is valid:
-    f[i][j] = max(f[i][j], arr[i] + dp(i+j+1, j+1))
-  return f[i][j]
-*/
+ * /* dp[i][j]: max gem from n to i, last jump j -> dp[i+j-1][j-1] if i+j-1 <= n -> dp[i+j ][j ] if
+ * i+j <= n -> dp[i+j+1][j+1] if i+j+1 <= n dp(i, j) = arr[i] + max(dp(i+j-1, j-1), dp(i+j, j),
+ * dp(i+j+1, j+1))
+ *
+ * <p>dp(d, d)
+ *
+ * <p>DP top-down function dp(int i, int j): if f[i][j] != -1: return f[i][j] if i == n: return
+ * f[i][j] = arr[i] f[i][j] = 0 if step j-1 is valid: f[i][j] = max(f[i][j], arr[i] + dp(i+j-1,
+ * j-1)) if step j is valid: f[i][j] = max(f[i][j], arr[i] + dp(i+j, j)) if step j-1 is valid:
+ * f[i][j] = max(f[i][j], arr[i] + dp(i+j+1, j+1)) return f[i][j]
+ */
 public class TreasureHunter {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int max = 30001;
-        int n = sc.nextInt();
-        int d = sc.nextInt();
-        int[] arr = new int[max];
-        int last_pos = 0;
-        for (int i = 0; i < n; i++){
-            last_pos = sc.nextInt();
-            arr[last_pos] += 1;
-        }
-        int max_jump = 500;
-        int[][] gems = new int[last_pos+1][max_jump];
-        for(int[] gems_pos : gems) {
-            Arrays.fill(gems_pos, -1);
-        }
-        int result = dp(d, d, d, gems, arr);
-        System.out.println(result);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int max = 30001;
+    int n = sc.nextInt();
+    int d = sc.nextInt();
+    int[] arr = new int[max];
+    int last_pos = 0;
+    for (int i = 0; i < n; i++) {
+      last_pos = sc.nextInt();
+      arr[last_pos] += 1;
     }
-    // d + 250                  d           <=>     250             (d-250)
-    // j                       j-d+250      
-    // -250
-    private static int dp(int i, int j, int d, int[][] gems, int[] arr) {
-        int n = gems.length;
-        int jump = j - d + 250;
-        if (gems[i][jump] != -1) {
-            return gems[i][jump];
-        }
-        if (i == n - 1) {
-            gems[i][jump] = arr[i];
-            return gems[i][jump];
-        }
-        // initialize
-        gems[i][jump] = 0;
-
-        // j - 1
-        if (i + j - 1 < n && j - 1 > 0 && Math.abs(j - d) < 250) {
-            gems[i][jump] = Math.max(gems[i][jump], dp(i + j - 1, j - 1, d, gems, arr));
-        }
-        // j
-        if (i + j < n && j > 0 && Math.abs(j - d) < 250) {
-            gems[i][jump] = Math.max(gems[i][jump], dp(i + j, j, d, gems, arr));
-        }
-        // j + 1
-        if (i + j + 1 < n && j + 1 > 0 && Math.abs(j - d) < 250) {
-            gems[i][jump] = Math.max(gems[i][jump], dp(i + j + 1, j + 1, d, gems, arr));
-        }
-
-        gems[i][jump] += arr[i];
-
-        return gems[i][jump];
+    int max_jump = 500;
+    int[][] gems = new int[last_pos + 1][max_jump];
+    for (int[] gems_pos : gems) {
+      Arrays.fill(gems_pos, -1);
     }
+    int result = dp(d, d, d, gems, arr);
+    System.out.println(result);
+  }
+  // d + 250                  d           <=>     250             (d-250)
+  // j                       j-d+250
+  // -250
+  private static int dp(int i, int j, int d, int[][] gems, int[] arr) {
+    int n = gems.length;
+    int jump = j - d + 250;
+    if (gems[i][jump] != -1) {
+      return gems[i][jump];
+    }
+    if (i == n - 1) {
+      gems[i][jump] = arr[i];
+      return gems[i][jump];
+    }
+    // initialize
+    gems[i][jump] = 0;
+
+    // j - 1
+    if (i + j - 1 < n && j - 1 > 0 && Math.abs(j - d) < 250) {
+      gems[i][jump] = Math.max(gems[i][jump], dp(i + j - 1, j - 1, d, gems, arr));
+    }
+    // j
+    if (i + j < n && j > 0 && Math.abs(j - d) < 250) {
+      gems[i][jump] = Math.max(gems[i][jump], dp(i + j, j, d, gems, arr));
+    }
+    // j + 1
+    if (i + j + 1 < n && j + 1 > 0 && Math.abs(j - d) < 250) {
+      gems[i][jump] = Math.max(gems[i][jump], dp(i + j + 1, j + 1, d, gems, arr));
+    }
+
+    gems[i][jump] += arr[i];
+
+    return gems[i][jump];
+  }
 }

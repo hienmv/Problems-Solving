@@ -18,7 +18,7 @@ class Solution {
             for (int i = l + 1; i <= r; i++) {
                 if (nums[i] - pre == k) result++;
                 if (i != r && nums[r] - nums[i-1] == k) result++;
-            }   
+            }
         }
         return result;
     }
@@ -37,24 +37,23 @@ Co nhieu dai luong
     cnt(presum[i]) = presum[r] - K
 */
 class Solution {
-    public int subarraySum(int[] nums, int k) {
-        int result = 0;
-        //      value, cnt
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int presum = 0;
-        map.put(0, 1);
-        for (int i = 0; i < nums.length; i++) {
-            presum += nums[i];
-            if (map.containsKey(presum - k)) {
-                result += map.get(presum - k);
-            }
-            if (map.containsKey(presum)) {
-                map.replace(presum, map.get(presum) + 1);
-            }
-            else {
-                map.put(presum, 1);
-            }
-        }
-        return result;
+  public int subarraySum(int[] nums, int k) {
+    int result = 0;
+    //      value, cnt
+    HashMap<Integer, Integer> map = new HashMap<>();
+    int presum = 0;
+    map.put(0, 1);
+    for (int i = 0; i < nums.length; i++) {
+      presum += nums[i];
+      if (map.containsKey(presum - k)) {
+        result += map.get(presum - k);
+      }
+      if (map.containsKey(presum)) {
+        map.replace(presum, map.get(presum) + 1);
+      } else {
+        map.put(presum, 1);
+      }
     }
+    return result;
+  }
 }

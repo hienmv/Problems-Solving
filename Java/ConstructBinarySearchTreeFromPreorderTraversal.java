@@ -1,13 +1,8 @@
 // https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
-// #tree 
+// #tree
 /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
+ * Definition for a binary tree node. public class TreeNode { int val; TreeNode left; TreeNode
+ * right; TreeNode(int x) { val = x; } }
  */
 /*
 
@@ -91,26 +86,27 @@ class Solution {
 }
 */
 class Solution {
-    public TreeNode bstFromPreorder(int[] preorder) {
-        if(preorder.length == 0) return null;
-        int[] idx = {0};
-        int INF = 1000000007;
-        TreeNode root = helper(preorder, -INF, INF, idx);
-        return root;
+  public TreeNode bstFromPreorder(int[] preorder) {
+    if (preorder.length == 0) return null;
+    int[] idx = {0};
+    int INF = 1000000007;
+    TreeNode root = helper(preorder, -INF, INF, idx);
+    return root;
+  }
+
+  private TreeNode helper(int[] preorder, int mn, int mx, int[] idx) {
+    if (idx[0] >= preorder.length) {
+      return null;
     }
-    private TreeNode helper(int[] preorder, int mn, int mx, int[] idx) {
-        if (idx[0] >= preorder.length) {
-            return null;
-        }
-        int value = preorder[idx[0]];
-        if (value > mx || value < mn) {
-            return null;
-        }
-        TreeNode root = new TreeNode(value);
-        idx[0] += 1;
-        root.left = helper(preorder, mn, value, idx);
-        root.right = helper(preorder, value, mx, idx);
-        
-        return root;
+    int value = preorder[idx[0]];
+    if (value > mx || value < mn) {
+      return null;
     }
+    TreeNode root = new TreeNode(value);
+    idx[0] += 1;
+    root.left = helper(preorder, mn, value, idx);
+    root.right = helper(preorder, value, mx, idx);
+
+    return root;
+  }
 }

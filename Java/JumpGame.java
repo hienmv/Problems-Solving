@@ -6,7 +6,7 @@ class Solution {
         int lastStep = nums.length - 1;
         if (lastStep == 0) return true;
         if (nums[0] >= lastStep) return true;
-        
+
         int i = 0;
         while(i <= lastStep) {
             int maxCurStep = i + nums[i];
@@ -25,7 +25,7 @@ class Solution {
     }
 }
 */
-/* BETTER WAY 
+/* BETTER WAY
 
 i ----------------------i
     j--------------------------------n
@@ -36,7 +36,7 @@ class Solution {
         int lastStep = nums.length - 1;
         if (lastStep == 0) return true;
         if (nums[0] >= lastStep) return true;
-        
+
         int i = 0;
         int maxCurStep = i + nums[i];
         while(i <= lastStep) {
@@ -65,23 +65,23 @@ for i = 0 .. lastStep:
 return maxCurStep >= lastStep
 */
 class Solution {
-    public boolean canJump(int[] nums) {
-        
-        int lastStep = nums.length - 1;
-        if (lastStep == 0) return true;
-        if (nums[0] >= lastStep) return true;
-        
-        int maxCurStep = 0;
-        for (int i = 0; i <= lastStep; i++) {
-            if (i > maxCurStep) {
-                return false;
-            }
-            maxCurStep = Math.max(maxCurStep, i + nums[i]);
-        }
-        
-        if (maxCurStep >= lastStep) {
-            return true;
-        }
+  public boolean canJump(int[] nums) {
+
+    int lastStep = nums.length - 1;
+    if (lastStep == 0) return true;
+    if (nums[0] >= lastStep) return true;
+
+    int maxCurStep = 0;
+    for (int i = 0; i <= lastStep; i++) {
+      if (i > maxCurStep) {
         return false;
+      }
+      maxCurStep = Math.max(maxCurStep, i + nums[i]);
     }
+
+    if (maxCurStep >= lastStep) {
+      return true;
+    }
+    return false;
+  }
 }

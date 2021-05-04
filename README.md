@@ -1,7 +1,7 @@
 # Problems-Solving
 My implementation of useful data structures, algorithms, as well as my solutions to programming puzzles.
 ```java
-Number of problems : 377
+Number of problems : 378
 - acm.timus.ru : 1
 - codechef.com : 2
 - codeforces.com : 115
@@ -16,7 +16,7 @@ Number of problems : 377
 - lightoj.com : 8
 - oeis.org : 1
 - onlinejudge.org : 4
-- spoj.com : 27
+- spoj.com : 28
 - urionlinejudge.com.br : 2
 - uva.onlinejudge.org : 34
 ```
@@ -37,7 +37,7 @@ pie
 	"lightoj.com" : 8
 	"oeis.org" : 1
 	"onlinejudge.org" : 4
-	"spoj.com" : 27
+	"spoj.com" : 28
 	"urionlinejudge.com.br" : 2
 	"uva.onlinejudge.org" : 34
 ```
@@ -89,7 +89,8 @@ pie
 - [x] SubsetsII [(java)](./Java/SubsetsII.java)
 - [x] TwoSum [(cpp)](./C++/TwoSum.cpp)
 - [x] UniquePaths [(java)](./Java/UniquePaths.java)
-### #backtracking (11)
+### #backtracking (12)
+- [x] AdvancedFruits [(java)](./Java/AdvancedFruits.java)
 - [x] BoggleGame [(java)](./Java/BoggleGame.java)
 - [x] CombinationSumII [(java)](./Java/CombinationSumII.java)
 - [x] DiggerOctaves [(java)](./Java/DiggerOctaves.java)
@@ -175,7 +176,7 @@ pie
 - [x] QueriesLessEqualElement [(java)](./Java/QueriesLessEqualElement.java)
 - [x] ReallyBigNumbers [(java)](./Java/ReallyBigNumbers.java)
 - [x] ReversePairs [(java)](./Java/ReversePairs.java)
-- [x] SearchA2DMatrixII [(java)](./Java/SearchA2DMatrixII.java)
+- [x] SearchA2DMatrixII [(cpp)](./C++/SearchA2DMatrixII.cpp)
 - [x] SearchInRotatedSortedArray [(java)](./Java/SearchInRotatedSortedArray.java)
 - [x] SearchInsertPosition [(java)](./Java/SearchInsertPosition.java)
 - [x] SingleElementInASortedArray [(java)](./Java/SingleElementInASortedArray.java)
@@ -288,7 +289,7 @@ pie
 - [x] MergeKSortedLists [(java)](./Java/MergeKSortedLists.java)
 - [x] PaintingFence [(java)](./Java/PaintingFence.java)
 - [x] ReversePairs [(java)](./Java/ReversePairs.java)
-- [x] SearchA2DMatrixII [(java)](./Java/SearchA2DMatrixII.java)
+- [x] SearchA2DMatrixII [(cpp)](./C++/SearchA2DMatrixII.cpp)
 - [x] TheClosestPairProblem [(java)](./Java/TheClosestPairProblem.java)
 - [x] TrickyFunction [(java)](./Java/TrickyFunction.java)
 ### #dsu (17)
@@ -355,7 +356,7 @@ pie
 - [x] PalindromePartitioning [(java)](./Java/PalindromePartitioning.java)
 - [x] PalindromicCharacteristics [(java)](./Java/PalindromicCharacteristics.java)
 - [x] PhilosophersStone [(java)](./Java/PhilosophersStone.java)
-- [x] PickTheSticks [(java)](./Java/PickTheSticks.java) [(java)](./Java/PickTheSticks.java)
+- [x] PickTheSticks [(java)](./Java/PickTheSticks.java)
 - [x] PoloPenguinAndTest [(java)](./Java/PoloPenguinAndTest.java)
 - [x] PrinceAndPrincess [(java)](./Java/PrinceAndPrincess.java)
 - [x] PushDominoes [(java)](./Java/PushDominoes.java)
